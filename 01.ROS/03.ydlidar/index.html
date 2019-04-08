@@ -206,8 +206,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.install/" title="ROS" class="md-nav__link">
-      ROS
+    <a href="../01.install/" title="Jetson NanoにROSを構築" class="md-nav__link">
+      Jetson NanoにROSを構築
     </a>
   </li>
 
@@ -238,9 +238,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ydlidar
+      </label>
+    
     <a href="./" title="ydlidar" class="md-nav__link md-nav__link--active">
       ydlidar
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="起動" class="md-nav__link">
+    起動
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -279,6 +308,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="起動" class="md-nav__link">
+    起動
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -291,7 +336,26 @@
                 
                 
                 <h1 id="ydlidar">ydlidar</h1>
-<p><a href="https://github.com/EAIBOT/ydlidar">https://github.com/EAIBOT/ydlidar</a></p>
+<p>Git clone</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws/
+$ git clone https://github.com/EAIBOT/ydlidar.git
+$ <span class=nb>cd</span> ydlidar
+$ catkin_make
+</pre></div></td></tr></table></p>
+<p>Install</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ roscd ydlidar/startup
+$ sudo chmod <span class=m>777</span> ./*
+$ sudo sh initenv.sh
+</pre></div></td></tr></table></p>
+<h2 id="_1">起動</h2>
+<p>起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch ydlidar lidar_view.launch
+</pre></div></td></tr></table></p>
                 
                   
                 

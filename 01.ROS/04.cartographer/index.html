@@ -206,8 +206,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.install/" title="ROS" class="md-nav__link">
-      ROS
+    <a href="../01.install/" title="Jetson NanoにROSを構築" class="md-nav__link">
+      Jetson NanoにROSを構築
     </a>
   </li>
 
@@ -293,6 +293,34 @@
                 <h1 id="cartographer">Cartographer</h1>
 <p><a href="https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html#system-requirements">https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html#system-requirements</a>
 <a href="https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html#building-installation">https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html#building-installation</a></p>
+<p>wtool, ninjaのインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get update
+sudo apt-get install -y python-wstool python-rosdep ninja-build
+</pre></div></td></tr></table></p>
+<p>catkin_wsに環境構築</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir catkin_ws
+cd catkin_ws
+wstool init src
+wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
+wstool update -t src
+</pre></div></td></tr></table></p>
+<p>proto3と依存パッケージをインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>src/cartographer/scripts/install_proto3.sh
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span><span class=n>ROS_DISTRO</span><span class=cp>}</span> -y
+</pre></div></td></tr></table></p>
+<p>CatographerのBuildとインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>catkin_make_isolated --install --use-ninja
+</pre></div></td></tr></table></p>
                 
                   
                 
