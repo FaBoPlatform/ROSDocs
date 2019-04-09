@@ -310,6 +310,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      02.連携
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        02.連携
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02.連携/01.setting/" title="連携" class="md-nav__link">
+      連携
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -342,40 +378,36 @@
 <p>Jetson Nano用のパッケージをセットアップ</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3
-4
-5</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo apt update
-
-ROS Desktop packageをインストール
 </pre></div></td></tr></table></p>
-<p>sudo apt install ros-melodic-desktop
- ```</p>
-<p>rosdepの初期化</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo rosdep init 
-rosdep update
-</pre></div></td></tr></table></p>
-<p>環境編数に登録</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>echo &quot;source /opt/ros/melodic/setup.bash&quot; &gt;&gt;〜/ .bashrc 
-source〜/ .bashrc
-</pre></div></td></tr></table></p>
-<p>Catkin Workspaceの作成</p>
+<p>ROS Desktop packageをインストール</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev python-rosinstall python-rosinstall-generator python-wstool build-essential git
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt install ros-melodic-desktop
+ ```
+
+rosdepの初期化
+</pre></div></td></tr></table></p>
+<p>sudo rosdep init 
+rosdep update</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>環境編数に登録
+</pre></div></td></tr></table></p>
+<p>echo "source /opt/ros/melodic/setup.bash" &gt;&gt;〜/ .bashrc 
+source〜/ .bashrc</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>Catkin Workspaceの作成
+</pre></div></td></tr></table></p>
+<p>sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev python-rosinstall python-rosinstall-generator python-wstool build-essential git
 mkdir -p ~/catkin_ws/src 
 cd ~/catkin_ws/
-catkin_make
+catkin_make</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>環境編数に登録
 </pre></div></td></tr></table></p>
-<p>環境編数に登録</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>echo &quot;source〜/ catkin_ws / devel / setup.bash&quot; &gt;&gt;〜/ .bashrc 
+<p>echo "source〜/ catkin_ws / devel / setup.bash" &gt;&gt;〜/ .bashrc 
 source〜/ .bashrc
-</pre></div></td></tr></table></p>
+```</p>
                 
                   
                 
