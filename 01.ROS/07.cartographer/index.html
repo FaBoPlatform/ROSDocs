@@ -463,25 +463,25 @@
 <h2 id="2">2種類のインストール方法</h2>
 <p>Google Cartographerのインストール方法は次の2種類の方法があります。<br></p>
 <h3 id="_1">パッケージでインストール</h3>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt install ros-melodic-cartographer-ros
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo apt install ros-melodic-cartographer-ros
 </pre></div></td></tr></table></p>
 <h3 id="build">Buildしてインストール</h3>
 <p>Buildには4-5時間かかる</p>
 <p>wtool, ninjaのインストール</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get update
-sudo apt-get install -y python-wstool python-rosdep ninja-build
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install -y python-wstool python-rosdep ninja-build
 </pre></div></td></tr></table></p>
 <p>catkin_wsに環境構築</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
-5</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir ~/catkin_ws
-cd  ~/catkin_ws
-wstool init src
-wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
-wstool update -t src
+5</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ mkdir ~/catkin_ws
+$ <span class=nb>cd</span>  ~/catkin_ws
+$ wstool init src
+$ wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
+$ wstool update -t src
 </pre></div></td></tr></table></p>
 <p>proto3と依存パッケージをインストール</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1

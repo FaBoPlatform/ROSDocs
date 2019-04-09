@@ -353,8 +353,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ros" title="各種ROSの起動" class="md-nav__link">
+    各種ROSの起動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" title="地図の保存" class="md-nav__link">
     地図の保存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pc" title="PCからサクセス" class="md-nav__link">
+    PCからサクセス
   </a>
   
 </li>
@@ -403,8 +417,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ros" title="各種ROSの起動" class="md-nav__link">
+    各種ROSの起動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" title="地図の保存" class="md-nav__link">
     地図の保存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pc" title="PCからサクセス" class="md-nav__link">
+    PCからサクセス
   </a>
   
 </li>
@@ -434,8 +462,8 @@
                 
                 
                 <h1 id="_1">連携</h1>
-<p>lidar.lanch</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_oxfggc60fkarwkz checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_oxfggc60fkarwkz-panel role=tab><label for=tab-group-0-0_oxfggc60fkarwkz class=code-tab-label data-lang id=tab-group-0-0_oxfggc60fkarwkz-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_oxfggc60fkarwkz-panel aria-labelledby=tab-group-0-0_oxfggc60fkarwkz-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<p>ydlidar.launchを新規作成する</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -482,17 +510,20 @@
      &lt;node pkg=&quot;tf&quot; type=&quot;static_transform_publisher&quot; name=&quot;base_link_to_laser4&quot;
     args=&quot;0.2245 0.0 1.5 0.0 0.0  0.0 /base_link /base_laser 40&quot; /&gt;  
 &lt;/launch&gt;
-</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_mfkhqq0vbfjpmj0 class=code-tab data-lang aria-controls=tab-group-0-1_mfkhqq0vbfjpmj0-panel role=tab><label for=tab-group-0-1_mfkhqq0vbfjpmj0 class=code-tab-label data-lang id=tab-group-0-1_mfkhqq0vbfjpmj0-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_mfkhqq0vbfjpmj0-panel aria-labelledby=tab-group-0-1_mfkhqq0vbfjpmj0-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></p>
+<p>ydlidar.launchをコピー</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ roscd jetbot_navigation
 $ mkdir -p laser/driver
-$ sudo cp ~/slam_ws/src/ydlidar/launch/lidar.launch laser/driver/lidar.launch
-</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-2_fa723wcbihv1yt5 class=code-tab data-lang aria-controls=tab-group-0-2_fa723wcbihv1yt5-panel role=tab><label for=tab-group-0-2_fa723wcbihv1yt5 class=code-tab-label data-lang id=tab-group-0-2_fa723wcbihv1yt5-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-2_fa723wcbihv1yt5-panel aria-labelledby=tab-group-0-2_fa723wcbihv1yt5-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+$ sudo cp ~/slam_ws/src/ydlidar/launch/ydlidar.launch laser/driver/ydlidar.launch
+</pre></div></td></tr></table></p>
+<p>Update</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/slam_ws
 $ catkin_make_isolated --install --use-ninja
-</pre></div></td></tr></table></div></div>
-
-<p>/catkin_ws/src/cartographer_ros/cartographer_ros/configuration_files</p>
+</pre></div></td></tr></table></p>
+<p><code>/catkin_ws/src/cartographer_ros/cartographer_ros/configuration_files/revo_lds_.lua</code></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
@@ -605,8 +636,9 @@ POSE_GRAPH.constraint_builder.min_score = 0.65
 
 return options
 </pre></div></td></tr></table></p>
-<p>~/slam_ws/src/cartographer_ros/cartographer_ros/launch/demo_revo_lds.launch</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_1sv8adrmejx7gcc checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_1sv8adrmejx7gcc-panel role=tab><label for=tab-group-2-0_1sv8adrmejx7gcc class=code-tab-label data-lang id=tab-group-2-0_1sv8adrmejx7gcc-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_1sv8adrmejx7gcc-panel aria-labelledby=tab-group-2-0_1sv8adrmejx7gcc-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<p>CartographerのROS設定をおこなう</p>
+<p><code>~/slam_ws/src/cartographer_ros/cartographer_ros/launch/demo_revo_lds.launch</code></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -673,21 +705,27 @@ return options
       <span class=na>args=</span><span class=s>&quot;-d $(find cartographer_ros)/configuration_files/demo_2d.rviz&quot;</span> <span class=nt>/&gt;</span>
 
 <span class=nt>&lt;/launch&gt;</span>
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_8zx1xkrx5z9q3iv class=code-tab data-lang aria-controls=tab-group-2-1_8zx1xkrx5z9q3iv-panel role=tab><label for=tab-group-2-1_8zx1xkrx5z9q3iv class=code-tab-label data-lang id=tab-group-2-1_8zx1xkrx5z9q3iv-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_8zx1xkrx5z9q3iv-panel aria-labelledby=tab-group-2-1_8zx1xkrx5z9q3iv-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></p>
+<p>Update</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/slam_ws/
 $ catkin_make_isolated --install --use-ninja
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-2_bls0l71idtglltt class=code-tab data-lang aria-controls=tab-group-2-2_bls0l71idtglltt-panel role=tab><label for=tab-group-2-2_bls0l71idtglltt class=code-tab-label data-lang id=tab-group-2-2_bls0l71idtglltt-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-2_bls0l71idtglltt-panel aria-labelledby=tab-group-2-2_bls0l71idtglltt-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ roslaunch ydlidar lidar.launch
+</pre></div></td></tr></table></p>
+<h2 id="ros">各種ROSの起動</h2>
+<p>ydlidar.launch, demo_revo_lds.kaunchを起動する</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ roslaunch ydlidar ydlidar.launch
 $ roslaunch cartographer_ros demo_revo_lds.launch
-</pre></div></td></tr></table></div></div>
-
+</pre></div></td></tr></table></p>
 <h2 id="_2">地図の保存</h2>
+<p>地図に保存する</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ mkdir -p ~/map
 $ rosrun map_server map_saver -f ~/map/lidar_2d
 $ ls ~/map 
 </pre></div></td></tr></table></p>
+<h2 id="pc">PCからサクセス</h2>
 <h2 id="_3">参考</h2>
 <ul>
 <li><a href="https://qiita.com/PINTO/items/4845c438cac05eda4d1e">https://qiita.com/PINTO/items/4845c438cac05eda4d1e</a></li>
