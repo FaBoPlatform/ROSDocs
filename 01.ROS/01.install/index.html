@@ -383,31 +383,32 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C
 sudo apt update
 </pre></div></td></tr></table></p>
 <p>ROS Desktop packageをインストール</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt install ros-melodic-desktop
+</pre></div></td></tr></table></p>
+<p>rosdepの初期化</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo rosdep init 
+rosdep update
+</pre></div></td></tr></table></p>
+<p>環境編数に登録</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>echo &quot;source /opt/ros/melodic/setup.bash&quot; &gt;&gt;〜/ .bashrc 
+source〜/ .bashrc
+</pre></div></td></tr></table></p>
+<p>Catkin Workspaceの作成</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt install ros-melodic-desktop
- ```
-
-rosdepの初期化
-</pre></div></td></tr></table></p>
-<p>sudo rosdep init 
-rosdep update</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>環境編数に登録
-</pre></div></td></tr></table></p>
-<p>echo "source /opt/ros/melodic/setup.bash" &gt;&gt;〜/ .bashrc 
-source〜/ .bashrc</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>Catkin Workspaceの作成
-</pre></div></td></tr></table></p>
-<p>sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev python-rosinstall python-rosinstall-generator python-wstool build-essential git
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev python-rosinstall python-rosinstall-generator python-wstool build-essential git
 mkdir -p ~/catkin_ws/src 
 cd ~/catkin_ws/
-catkin_make</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>環境編数に登録
+catkin_make
 </pre></div></td></tr></table></p>
-<p>echo "source〜/ catkin_ws / devel / setup.bash" &gt;&gt;〜/ .bashrc 
+<p>環境編数に登録</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>echo &quot;source〜/ catkin_ws / devel / setup.bash&quot; &gt;&gt;〜/ .bashrc 
 source〜/ .bashrc
-```</p>
+</pre></div></td></tr></table></p>
                 
                   
                 
