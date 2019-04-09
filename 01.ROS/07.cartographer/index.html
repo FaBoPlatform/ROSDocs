@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" class="no-js">
   <head>
     
@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -60,6 +60,9 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
     
     
   </head>
@@ -97,22 +100,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                FaBo ROS Docs
-              </span>
-              <span class="md-header-nav__topic">
-                Cartographer
-              </span>
-            
+            <span class="md-header-nav__topic">
+              FaBo ROS Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Cartographer
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -135,7 +135,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -317,16 +316,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="パッケージをインストール" class="md-nav__link">
-    パッケージをインストール
+  <a href="#2" title="2種類のインストール方法" class="md-nav__link">
+    2種類のインストール方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="パッケージでインストール" class="md-nav__link">
+    パッケージでインストール
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#build" title="自分でBuildする場合" class="md-nav__link">
-    自分でBuildする場合
+        
+          <li class="md-nav__item">
+  <a href="#build" title="Buildしてインストール" class="md-nav__link">
+    Buildしてインストール
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -403,16 +415,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="パッケージをインストール" class="md-nav__link">
-    パッケージをインストール
+  <a href="#2" title="2種類のインストール方法" class="md-nav__link">
+    2種類のインストール方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="パッケージでインストール" class="md-nav__link">
+    パッケージでインストール
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#build" title="自分でBuildする場合" class="md-nav__link">
-    自分でBuildする場合
+        
+          <li class="md-nav__item">
+  <a href="#build" title="Buildしてインストール" class="md-nav__link">
+    Buildしてインストール
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -434,10 +459,12 @@
                 
                 
                 <h1 id="cartographer">Cartographer</h1>
-<h2 id="_1">パッケージをインストール</h2>
+<h2 id="2">2種類のインストール方法</h2>
+<p>Google Cartographerのインストール方法は次の2種類の方法があります。<br></p>
+<h3 id="_1">パッケージでインストール</h3>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt install ros-melodic-cartographer-ros
 </pre></div></td></tr></table></p>
-<h2 id="build">自分でBuildする場合</h2>
+<h3 id="build">Buildしてインストール</h3>
 <p>Buildには4-5時間かかる</p>
 <p>wtool, ninjaのインストール</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
@@ -449,8 +476,8 @@ sudo apt-get install -y python-wstool python-rosdep ninja-build
 2
 3
 4
-5</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir catkin_ws
-cd catkin_ws
+5</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir ~/catkin_ws
+cd  ~/catkin_ws
 wstool init src
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
 wstool update -t src
@@ -530,15 +557,13 @@ rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
+      <script src="../../assets/javascripts/application.dc02f8ce.js"></script>
       
         
         
@@ -547,10 +572,6 @@ rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span
           
             
               
-                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
-              
-              
-                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
@@ -558,9 +579,6 @@ rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-      
-    
-    
       
     
   </body>
