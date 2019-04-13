@@ -652,10 +652,10 @@
 <span class=n>options</span> <span class=o>=</span> <span class=p>{</span>
   <span class=n>map_builder</span> <span class=o>=</span> <span class=n>MAP_BUILDER</span><span class=p>,</span>
   <span class=n>trajectory_builder</span> <span class=o>=</span> <span class=n>TRAJECTORY_BUILDER</span><span class=p>,</span>
-<span class=hll>  <span class=n>map_frame</span> <span class=o>=</span> <span class=s>&quot;map&quot;</span><span class=p>,</span>
-</span><span class=hll>  <span class=n>tracking_frame</span> <span class=o>=</span> <span class=s>&quot;laser&quot;</span><span class=p>,</span>
-</span>  <span class=n>published_frame</span> <span class=o>=</span> <span class=s>&quot;laser&quot;</span><span class=p>,</span>
-  <span class=n>odom_frame</span> <span class=o>=</span> <span class=s>&quot;odom&quot;</span><span class=p>,</span>
+  <span class=n>map_frame</span> <span class=o>=</span> <span class=s>&quot;map&quot;</span><span class=p>,</span>
+<span class=hll>  <span class=n>tracking_frame</span> <span class=o>=</span> <span class=s>&quot;laser&quot;</span><span class=p>,</span>
+</span><span class=hll>  <span class=n>published_frame</span> <span class=o>=</span> <span class=s>&quot;laser&quot;</span><span class=p>,</span>
+</span>  <span class=n>odom_frame</span> <span class=o>=</span> <span class=s>&quot;odom&quot;</span><span class=p>,</span>
   <span class=n>provide_odom_frame</span> <span class=o>=</span> <span class=nb>true</span><span class=p>,</span>
   <span class=n>use_odometry</span> <span class=o>=</span> <span class=nb>false</span><span class=p>,</span>
   <span class=n>use_nav_sat</span> <span class=o>=</span> <span class=nb>false</span><span class=p>,</span>
@@ -697,8 +697,10 @@
 </pre></div></td></tr></table></p>
 <p>Build</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws
-$ catkin_make_isolated --install --use-ninja
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws
+$ catkin_make_isolated --install --use-
+$ <span class=nb>source</span> install_isolated/setup.bash
 </pre></div></td></tr></table></p>
 <p>起動</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
