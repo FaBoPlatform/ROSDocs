@@ -596,15 +596,13 @@
 22
 23
 24
-25
-26</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=nt>&lt;launch&gt;</span>
+25</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=nt>&lt;launch&gt;</span>
   <span class=nt>&lt;param</span> <span class=na>name=</span><span class=s>&quot;/use_sim_time&quot;</span> <span class=na>value=</span><span class=s>&quot;true&quot;</span> <span class=nt>/&gt;</span>
 
   <span class=nt>&lt;node</span> <span class=na>name=</span><span class=s>&quot;cartographer_node&quot;</span> <span class=na>pkg=</span><span class=s>&quot;cartographer_ros&quot;</span>
     <span class=na>type=</span><span class=s>&quot;cartographer_node&quot;</span> 
     <span class=na>args=</span><span class=s>&quot; -configuration_directory $(find cartographer_ros)/configuration_files -configuration_basename revo_lds.lua&quot;</span>
     <span class=na>output=</span><span class=s>&quot;screen&quot;</span><span class=nt>&gt;</span>
-    <span class=nt>&lt;remap</span> <span class=na>from=</span><span class=s>&quot;laser&quot;</span> <span class=na>to=</span><span class=s>&quot;scan&quot;</span> <span class=nt>/&gt;</span>
   <span class=nt>&lt;/node&gt;</span>
 
   <span class=nt>&lt;node</span> 
