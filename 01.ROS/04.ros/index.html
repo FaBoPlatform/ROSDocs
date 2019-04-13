@@ -591,7 +591,9 @@
 21
 22
 23
-24</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=nt>&lt;launch&gt;</span>
+24
+25
+26</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=nt>&lt;launch&gt;</span>
   <span class=nt>&lt;param</span> <span class=na>name=</span><span class=s>&quot;/use_sim_time&quot;</span> <span class=na>value=</span><span class=s>&quot;true&quot;</span> <span class=nt>/&gt;</span>
 
   <span class=nt>&lt;node</span> <span class=na>name=</span><span class=s>&quot;cartographer_node&quot;</span> <span class=na>pkg=</span><span class=s>&quot;cartographer_ros&quot;</span>
@@ -606,14 +608,16 @@
       <span class=na>name=</span><span class=s>&quot;cartographer_occupancy_grid_node&quot;</span> 
       <span class=na>pkg=</span><span class=s>&quot;cartographer_ros&quot;</span>
       <span class=na>type=</span><span class=s>&quot;cartographer_occupancy_grid_node&quot;</span> 
-      <span class=na>args=</span><span class=s>&quot;-resolution 0.05&quot;</span> <span class=nt>/&gt;</span>
-
+      <span class=na>args=</span><span class=s>&quot;-resolution 0.05&quot;</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;/node&gt;</span>
   <span class=nt>&lt;node</span> 
       <span class=na>name=</span><span class=s>&quot;rviz&quot;</span> 
       <span class=na>pkg=</span><span class=s>&quot;rviz&quot;</span> 
       <span class=na>type=</span><span class=s>&quot;rviz&quot;</span> 
       <span class=na>required=</span><span class=s>&quot;true&quot;</span>
-      <span class=na>args=</span><span class=s>&quot;-d $(find cartographer_ros)/configuration_files/demo_2d.rviz&quot;</span> <span class=nt>/&gt;</span>
+      <span class=na>args=</span><span class=s>&quot;-d $(find cartographer_ros)/configuration_files/demo_2d.rviz&quot;</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;/node&gt;</span>
+
 <span class=nt>&lt;/launch&gt;</span>
 </pre></div></td></tr></table></p>
 <p>~/catkin_ws/src/cartographer_ros/cartographer_ros/configuration_files/revo_lds.lua</p>
