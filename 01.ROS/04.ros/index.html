@@ -567,7 +567,7 @@
 <span class=nt>&lt;/launch&gt;</span>
 </pre></div></td></tr></table></p>
 <h2 id="cartographer-jetson-nano">Cartographer (Jetson nano側)</h2>
-<p>demo_revo_lds.launch</p>
+<p>~/catkin_ws/src/cartographer_ros/cartographer_ros/launch/demo_revo_lds.launch</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
@@ -598,7 +598,7 @@
 
 <span class=nt>&lt;/launch&gt;</span>
 </pre></div></td></tr></table></p>
-<p>revo_lds.lua</p>
+<p>~/catkin_ws/src/cartographer_ros/cartographer_ros/configuration_files/revo_lds.lua</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
@@ -646,54 +646,59 @@
 45
 46
 47
-48</pre></div></td><td class=code><div class=codehilite><pre><span></span>include &quot;map_builder.lua&quot;
-include &quot;trajectory_builder.lua&quot;
+48</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=n>include</span> <span class=s>&quot;map_builder.lua&quot;</span>
+<span class=n>include</span> <span class=s>&quot;trajectory_builder.lua&quot;</span>
 
-options = {
-  map_builder = MAP_BUILDER,
-  trajectory_builder = TRAJECTORY_BUILDER,
-  map_frame = &quot;map&quot;,
-  tracking_frame = &quot;laser&quot;,
-  published_frame = &quot;laser&quot;,
-  odom_frame = &quot;odom&quot;,
-  provide_odom_frame = true,
-  use_odometry = false,
-  use_nav_sat = false,
-  use_landmarks = false,
-  publish_frame_projected_to_2d = false,
-  num_laser_scans = 1,
-  num_multi_echo_laser_scans = 0,
-  num_subdivisions_per_laser_scan = 1,
-  num_point_clouds = 0,
-  lookup_transform_timeout_sec = 0.2,
-  submap_publish_period_sec = 0.3,
-  pose_publish_period_sec = 5e-3,
-  trajectory_publish_period_sec = 30e-3,
-  rangefinder_sampling_ratio = 1.,
-  odometry_sampling_ratio = 1.,
-  fixed_frame_pose_sampling_ratio = 1.,
-  imu_sampling_ratio = 1.,
-  landmarks_sampling_ratio = 1.,
-}
+<span class=n>options</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=n>map_builder</span> <span class=o>=</span> <span class=n>MAP_BUILDER</span><span class=p>,</span>
+  <span class=n>trajectory_builder</span> <span class=o>=</span> <span class=n>TRAJECTORY_BUILDER</span><span class=p>,</span>
+  <span class=n>map_frame</span> <span class=o>=</span> <span class=s>&quot;map&quot;</span><span class=p>,</span>
+  <span class=n>tracking_frame</span> <span class=o>=</span> <span class=s>&quot;laser&quot;</span><span class=p>,</span>
+  <span class=n>published_frame</span> <span class=o>=</span> <span class=s>&quot;laser&quot;</span><span class=p>,</span>
+  <span class=n>odom_frame</span> <span class=o>=</span> <span class=s>&quot;odom&quot;</span><span class=p>,</span>
+  <span class=n>provide_odom_frame</span> <span class=o>=</span> <span class=nb>true</span><span class=p>,</span>
+  <span class=n>use_odometry</span> <span class=o>=</span> <span class=nb>false</span><span class=p>,</span>
+  <span class=n>use_nav_sat</span> <span class=o>=</span> <span class=nb>false</span><span class=p>,</span>
+  <span class=n>use_landmarks</span> <span class=o>=</span> <span class=nb>false</span><span class=p>,</span>
+  <span class=n>publish_frame_projected_to_2d</span> <span class=o>=</span> <span class=nb>false</span><span class=p>,</span>
+  <span class=n>num_laser_scans</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
+  <span class=n>num_multi_echo_laser_scans</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span>
+  <span class=n>num_subdivisions_per_laser_scan</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
+  <span class=n>num_point_clouds</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span>
+  <span class=n>lookup_transform_timeout_sec</span> <span class=o>=</span> <span class=mf>0.2</span><span class=p>,</span>
+  <span class=n>submap_publish_period_sec</span> <span class=o>=</span> <span class=mf>0.3</span><span class=p>,</span>
+  <span class=n>pose_publish_period_sec</span> <span class=o>=</span> <span class=mf>5e-3</span><span class=p>,</span>
+  <span class=n>trajectory_publish_period_sec</span> <span class=o>=</span> <span class=mf>30e-3</span><span class=p>,</span>
+  <span class=n>rangefinder_sampling_ratio</span> <span class=o>=</span> <span class=mf>1.</span><span class=p>,</span>
+  <span class=n>odometry_sampling_ratio</span> <span class=o>=</span> <span class=mf>1.</span><span class=p>,</span>
+  <span class=n>fixed_frame_pose_sampling_ratio</span> <span class=o>=</span> <span class=mf>1.</span><span class=p>,</span>
+  <span class=n>imu_sampling_ratio</span> <span class=o>=</span> <span class=mf>1.</span><span class=p>,</span>
+  <span class=n>landmarks_sampling_ratio</span> <span class=o>=</span> <span class=mf>1.</span><span class=p>,</span>
+<span class=p>}</span>
 
 
-MAP_BUILDER.use_trajectory_builder_2d = true
+<span class=n>MAP_BUILDER</span><span class=p>.</span><span class=n>use_trajectory_builder_2d</span> <span class=o>=</span> <span class=nb>true</span>
 
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 35
-TRAJECTORY_BUILDER_2D.min_range = 0.08
-TRAJECTORY_BUILDER_2D.max_range = 16.
-TRAJECTORY_BUILDER_2D.missing_data_ray_length = 1.
-TRAJECTORY_BUILDER_2D.use_imu_data = false
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.1
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 10.
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight = 1e-1
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>submaps</span><span class=p>.</span><span class=n>num_range_data</span> <span class=o>=</span> <span class=mi>35</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>min_range</span> <span class=o>=</span> <span class=mf>0.08</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>max_range</span> <span class=o>=</span> <span class=mf>16.</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>missing_data_ray_length</span> <span class=o>=</span> <span class=mf>1.</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>use_imu_data</span> <span class=o>=</span> <span class=nb>false</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>use_online_correlative_scan_matching</span> <span class=o>=</span> <span class=nb>true</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>real_time_correlative_scan_matcher</span><span class=p>.</span><span class=n>linear_search_window</span> <span class=o>=</span> <span class=mf>0.1</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>real_time_correlative_scan_matcher</span><span class=p>.</span><span class=n>translation_delta_cost_weight</span> <span class=o>=</span> <span class=mf>10.</span>
+<span class=n>TRAJECTORY_BUILDER_2D</span><span class=p>.</span><span class=n>real_time_correlative_scan_matcher</span><span class=p>.</span><span class=n>rotation_delta_cost_weight</span> <span class=o>=</span> <span class=mf>1e-1</span>
 
-POSE_GRAPH.optimization_problem.huber_scale = 1e2
-POSE_GRAPH.optimize_every_n_nodes = 35
-POSE_GRAPH.constraint_builder.min_score = 0.65
+<span class=n>POSE_GRAPH</span><span class=p>.</span><span class=n>optimization_problem</span><span class=p>.</span><span class=n>huber_scale</span> <span class=o>=</span> <span class=mf>1e2</span>
+<span class=n>POSE_GRAPH</span><span class=p>.</span><span class=n>optimize_every_n_nodes</span> <span class=o>=</span> <span class=mi>35</span>
+<span class=n>POSE_GRAPH</span><span class=p>.</span><span class=n>constraint_builder</span><span class=p>.</span><span class=n>min_score</span> <span class=o>=</span> <span class=mf>0.65</span>
 
-return options
+<span class=k>return</span> <span class=n>options</span>
+</pre></div></td></tr></table></p>
+<p>起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ roslaunch ydlidar lidar.launch
+$ roslaunch cartographer_ros demo_revo_lds.launch
 </pre></div></td></tr></table></p>
 <h2 id="cartographer-pc">Cartographer (PC側)</h2>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
