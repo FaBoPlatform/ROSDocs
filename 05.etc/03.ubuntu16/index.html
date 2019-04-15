@@ -312,8 +312,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03.SLAM(TX2)/01.ros/" title="Jetson NanoにROSを構築" class="md-nav__link">
-      Jetson NanoにROSを構築
+    <a href="../../03.SLAM(TX2)/01.ros/" title="TX2にROSを構築" class="md-nav__link">
+      TX2にROSを構築
     </a>
   </li>
 
@@ -324,8 +324,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03.SLAM(TX2)/02.cartographer/" title="Jetson NanoにCartographerを構築" class="md-nav__link">
-      Jetson NanoにCartographerを構築
+    <a href="../../03.SLAM(TX2)/02.cartographer/" title="TX2にCartographerを構築" class="md-nav__link">
+      TX2にCartographerを構築
     </a>
   </li>
 
@@ -336,8 +336,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03.SLAM(TX2)/03.ydlidar/" title="Jetson NanoにYDLiDAR" class="md-nav__link">
-      Jetson NanoにYDLiDAR
+    <a href="../../03.SLAM(TX2)/03.ydlidar/" title="TX2にYDLiDAR" class="md-nav__link">
+      TX2にYDLiDAR
     </a>
   </li>
 
@@ -654,7 +654,7 @@
                 <h1 id="ubuntu-1604ros">Ubuntu 16.04にROSを構築</h1>
 <h2 id="docker">Dockerの起動</h2>
 <h2 id="_1">設定</h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_bzoqux1y1z8e2jg checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_bzoqux1y1z8e2jg-panel role=tab><label for=tab-group-0-0_bzoqux1y1z8e2jg class=code-tab-label data-lang id=tab-group-0-0_bzoqux1y1z8e2jg-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_bzoqux1y1z8e2jg-panel aria-labelledby=tab-group-0-0_bzoqux1y1z8e2jg-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-0><input name=tab-group-0 type=radio id=tab-group-0-0_5ro5xl8v227o89a checked=checked class=code-tab data-lang aria-controls=tab-group-0-0_5ro5xl8v227o89a-panel role=tab><label for=tab-group-0-0_5ro5xl8v227o89a class=code-tab-label data-lang id=tab-group-0-0_5ro5xl8v227o89a-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-0_5ro5xl8v227o89a-panel aria-labelledby=tab-group-0-0_5ro5xl8v227o89a-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
@@ -663,16 +663,16 @@
 RUN apt-get update \
   &amp;&amp; apt-get install -y ros-melodic-desktop \
     &amp;&amp; rm -rf /var/lib/apt/lists/ \
-</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_3xnkdul0ym40e2v class=code-tab data-lang aria-controls=tab-group-0-1_3xnkdul0ym40e2v-panel role=tab><label for=tab-group-0-1_3xnkdul0ym40e2v class=code-tab-label data-lang id=tab-group-0-1_3xnkdul0ym40e2v-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_3xnkdul0ym40e2v-panel aria-labelledby=tab-group-0-1_3xnkdul0ym40e2v-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker build -t ros-cartographer .
-</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-2_55ecqrd5igw1bmz class=code-tab data-lang aria-controls=tab-group-0-2_55ecqrd5igw1bmz-panel role=tab><label for=tab-group-0-2_55ecqrd5igw1bmz class=code-tab-label data-lang id=tab-group-0-2_55ecqrd5igw1bmz-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-2_55ecqrd5igw1bmz-panel aria-labelledby=tab-group-0-2_55ecqrd5igw1bmz-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-1_2jimpq53bzcpi0z class=code-tab data-lang aria-controls=tab-group-0-1_2jimpq53bzcpi0z-panel role=tab><label for=tab-group-0-1_2jimpq53bzcpi0z class=code-tab-label data-lang id=tab-group-0-1_2jimpq53bzcpi0z-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-1_2jimpq53bzcpi0z-panel aria-labelledby=tab-group-0-1_2jimpq53bzcpi0z-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker build -t ros-cartographer .
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-2_3bn3blcghcljg09 class=code-tab data-lang aria-controls=tab-group-0-2_3bn3blcghcljg09-panel role=tab><label for=tab-group-0-2_3bn3blcghcljg09 class=code-tab-label data-lang id=tab-group-0-2_3bn3blcghcljg09-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-2_3bn3blcghcljg09-panel aria-labelledby=tab-group-0-2_3bn3blcghcljg09-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4</pre></div></td><td class=code><div class=codehilite><pre><span></span>open -a Xqurtz
 ip=$(ifconfig en0 | grep inet | awk &#39;$1==&quot;inet&quot; {print $2}&#39;)
 echo $ip
 xhost + $ip
-</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-3_vpg8x1kkow9i5qv class=code-tab data-lang aria-controls=tab-group-0-3_vpg8x1kkow9i5qv-panel role=tab><label for=tab-group-0-3_vpg8x1kkow9i5qv class=code-tab-label data-lang id=tab-group-0-3_vpg8x1kkow9i5qv-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-3_vpg8x1kkow9i5qv-panel aria-labelledby=tab-group-0-3_vpg8x1kkow9i5qv-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker run -it -e DISPLAY=$ip:0 --name ros-test ros-cartographer
-</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-4_0tycrflr9oeg5c7 class=code-tab data-lang aria-controls=tab-group-0-4_0tycrflr9oeg5c7-panel role=tab><label for=tab-group-0-4_0tycrflr9oeg5c7 class=code-tab-label data-lang id=tab-group-0-4_0tycrflr9oeg5c7-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-4_0tycrflr9oeg5c7-panel aria-labelledby=tab-group-0-4_0tycrflr9oeg5c7-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker exec -it ros-cartographer bin/bash
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-3_95x2qbggit7cbnk class=code-tab data-lang aria-controls=tab-group-0-3_95x2qbggit7cbnk-panel role=tab><label for=tab-group-0-3_95x2qbggit7cbnk class=code-tab-label data-lang id=tab-group-0-3_95x2qbggit7cbnk-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-3_95x2qbggit7cbnk-panel aria-labelledby=tab-group-0-3_95x2qbggit7cbnk-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker run -it -e DISPLAY=$ip:0 --name ros-test ros-cartographer
+</pre></div></td></tr></table></div><input name=tab-group-0 type=radio id=tab-group-0-4_ouky17zjexccdfi class=code-tab data-lang aria-controls=tab-group-0-4_ouky17zjexccdfi-panel role=tab><label for=tab-group-0-4_ouky17zjexccdfi class=code-tab-label data-lang id=tab-group-0-4_ouky17zjexccdfi-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-0-4_ouky17zjexccdfi-panel aria-labelledby=tab-group-0-4_ouky17zjexccdfi-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>docker exec -it ros-cartographer bin/bash
 </pre></div></td></tr></table></div></div>
 
 <p>Rosdepの初期化</p>
@@ -697,8 +697,8 @@ $ catkin_make
 $ <span class=nb>source</span> ~/.bashrc
 </pre></div></td></tr></table></p>
 <h2 id="cartographer">Cartographerをインストール</h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-4><input name=tab-group-4 type=radio id=tab-group-4-0_s3tagotimuxhktr checked=checked class=code-tab data-lang aria-controls=tab-group-4-0_s3tagotimuxhktr-panel role=tab><label for=tab-group-4-0_s3tagotimuxhktr class=code-tab-label data-lang id=tab-group-4-0_s3tagotimuxhktr-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-0_s3tagotimuxhktr-panel aria-labelledby=tab-group-4-0_s3tagotimuxhktr-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ apt install ros-melodic-cartographer-ros
-</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-1_xrizk2s712c6c7c class=code-tab data-lang aria-controls=tab-group-4-1_xrizk2s712c6c7c-panel role=tab><label for=tab-group-4-1_xrizk2s712c6c7c class=code-tab-label data-lang id=tab-group-4-1_xrizk2s712c6c7c-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-1_xrizk2s712c6c7c-panel aria-labelledby=tab-group-4-1_xrizk2s712c6c7c-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-4><input name=tab-group-4 type=radio id=tab-group-4-0_c5iw47e693tnodn checked=checked class=code-tab data-lang aria-controls=tab-group-4-0_c5iw47e693tnodn-panel role=tab><label for=tab-group-4-0_c5iw47e693tnodn class=code-tab-label data-lang id=tab-group-4-0_c5iw47e693tnodn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-0_c5iw47e693tnodn-panel aria-labelledby=tab-group-4-0_c5iw47e693tnodn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ apt install ros-melodic-cartographer-ros
+</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-1_gvt6l53yd49p8cp class=code-tab data-lang aria-controls=tab-group-4-1_gvt6l53yd49p8cp-panel role=tab><label for=tab-group-4-1_gvt6l53yd49p8cp class=code-tab-label data-lang id=tab-group-4-1_gvt6l53yd49p8cp-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-1_gvt6l53yd49p8cp-panel aria-labelledby=tab-group-4-1_gvt6l53yd49p8cp-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
@@ -715,10 +715,10 @@ $ src/cartographer/scripts/install_proto3.sh
 $ rm -rf protobuf/
 $ rosdep install --from-paths src --ignore-src -r -y --os<span class=o>=</span>ubuntu:xenial
 $ catkin_make_isolated --install --use-ninja
-</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-2_9dzc7elnwlp7stc class=code-tab data-lang aria-controls=tab-group-4-2_9dzc7elnwlp7stc-panel role=tab><label for=tab-group-4-2_9dzc7elnwlp7stc class=code-tab-label data-lang id=tab-group-4-2_9dzc7elnwlp7stc-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-2_9dzc7elnwlp7stc-panel aria-labelledby=tab-group-4-2_9dzc7elnwlp7stc-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-2_l2tnxodafb3ackd class=code-tab data-lang aria-controls=tab-group-4-2_l2tnxodafb3ackd-panel role=tab><label for=tab-group-4-2_l2tnxodafb3ackd class=code-tab-label data-lang id=tab-group-4-2_l2tnxodafb3ackd-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-2_l2tnxodafb3ackd-panel aria-labelledby=tab-group-4-2_l2tnxodafb3ackd-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws/src/cartographer_ros/cartographer_ros/launch/
 $ vim backpack_2d.launch
-</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-3_3kvqlc6qvjxji6n class=code-tab data-lang aria-controls=tab-group-4-3_3kvqlc6qvjxji6n-panel role=tab><label for=tab-group-4-3_3kvqlc6qvjxji6n class=code-tab-label data-lang id=tab-group-4-3_3kvqlc6qvjxji6n-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-3_3kvqlc6qvjxji6n-panel aria-labelledby=tab-group-4-3_3kvqlc6qvjxji6n-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-3_l9w1xgd07r4scqm class=code-tab data-lang aria-controls=tab-group-4-3_l9w1xgd07r4scqm-panel role=tab><label for=tab-group-4-3_l9w1xgd07r4scqm class=code-tab-label data-lang id=tab-group-4-3_l9w1xgd07r4scqm-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-3_l9w1xgd07r4scqm-panel aria-labelledby=tab-group-4-3_l9w1xgd07r4scqm-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -773,7 +773,7 @@ $ vim backpack_2d.launch
   <span class=nt>/&gt;</span>
 
 <span class=nt>&lt;/launch&gt;</span>
-</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-4_ap274dp91vi28tv class=code-tab data-lang aria-controls=tab-group-4-4_ap274dp91vi28tv-panel role=tab><label for=tab-group-4-4_ap274dp91vi28tv class=code-tab-label data-lang id=tab-group-4-4_ap274dp91vi28tv-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-4_ap274dp91vi28tv-panel aria-labelledby=tab-group-4-4_ap274dp91vi28tv-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-4_obvkugz23alr0p6 class=code-tab data-lang aria-controls=tab-group-4-4_obvkugz23alr0p6-panel role=tab><label for=tab-group-4-4_obvkugz23alr0p6 class=code-tab-label data-lang id=tab-group-4-4_obvkugz23alr0p6-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-4_obvkugz23alr0p6-panel aria-labelledby=tab-group-4-4_obvkugz23alr0p6-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws
 $ catkin_make_isolated --install --use-ninja
