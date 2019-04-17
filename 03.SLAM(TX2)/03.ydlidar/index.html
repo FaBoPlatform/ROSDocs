@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" class="no-js">
   <head>
     
@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -60,6 +60,9 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
     
     
   </head>
@@ -97,22 +100,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                FaBo ROS Docs
-              </span>
-              <span class="md-header-nav__topic">
-                TX2にYDLiDAR
-              </span>
-            
+            <span class="md-header-nav__topic">
+              FaBo ROS Docs
+            </span>
+            <span class="md-header-nav__topic">
+              TX2にYDLiDAR
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -135,7 +135,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -372,8 +371,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#udev" title="udev" class="md-nav__link">
-    udev
+  <a href="#add-device-configration" title="Add device configration" class="md-nav__link">
+    Add device configration
   </a>
   
 </li>
@@ -614,8 +613,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#udev" title="udev" class="md-nav__link">
-    udev
+  <a href="#add-device-configration" title="Add device configration" class="md-nav__link">
+    Add device configration
   </a>
   
 </li>
@@ -643,10 +642,10 @@
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws/src
 $ git clone https://github.com/EAIBOT/ydlidar.git
-$ <span class=nb>cd</span> ~/catkin_ws
+$ <span class=nb>cd</span> ..
 </pre></div></td></tr></table></p>
 <p>scan_msg.scan_time, scan_msg.time_incrementのフォーマットが合っていないようなので、YDLiDARのIssue<a href="https://github.com/EAIBOT/ydlidar/issues/14">https://github.com/EAIBOT/ydlidar/issues/14</a>にあがっている修正を実施する。</p>
-<p>/catkin_ws/src/ydlidar/src/ydlidar_node.cpp</p>
+<p>vi ~/catkin_ws/src/ydlidar/src/ydlidar_node.cpp</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
@@ -706,12 +705,10 @@ $ <span class=nb>cd</span> ~/catkin_ws
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/catkin_ws
 $ catkin_make_isolated --install --use-ninja
 </pre></div></td></tr></table></p>
-<h2 id="udev">udev</h2>
+<h2 id="add-device-configration">Add device configration</h2>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/ros_catkin_ws/src/ydlidar/startup
-$ chmod <span class=m>777</span> *
-$ sudo sh initenv.sh
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ chmod <span class=m>755</span> ~/catkin_ws/src/ydlidar/startup/initenv.sh
+$ sudo ~/catkin_ws/src/ydlidar/startup/initenv.sh
 </pre></div></td></tr></table></p>
                 
                   
@@ -776,15 +773,13 @@ $ sudo sh initenv.sh
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
+      <script src="../../assets/javascripts/application.dc02f8ce.js"></script>
       
         
         
@@ -793,10 +788,6 @@ $ sudo sh initenv.sh
           
             
               
-                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
-              
-              
-                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
@@ -804,9 +795,6 @@ $ sudo sh initenv.sh
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-      
-    
-    
       
     
   </body>
