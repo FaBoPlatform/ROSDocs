@@ -1,0 +1,72 @@
+SLAMにはリアルタイムでマップを作成しながら自己位置推定を行うonline SLAMと、<br>
+事前に記録したセンサー値をrosbag playで流してマップ作成を行うoffline SLAMの2通りの方法があります。<br>
+
+SLAMは基本的にはリアルタイムのonline SLAMを指しますが、3D Lidarの場合は計算速度が不足するため、offline SLAMの方が精度のいいマップを作成出来ます。<br>
+2D Lidarの場合は、情報量が少ないためonline SLAMでもマップを作成出来ますが、ここではonline SLAMとoffline SLAMの2通りの方法を説明します。
+
+
+
+offline slam準備
+https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html
+
+まず、cartographer_rosを使う場合は、
+source install_isolated/setup.bash
+を実行する必要があります。これは[Catkin Workspaceの作成]の`catkin_make`で生成したリソースです。
+source /home/ubuntu/catkin_ws/install_isolated/setup.bash
+
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/launch/backpack_2d.launch \
+        /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d.launch
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/launch/demo_backpack_2d_localization.launch \
+        /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch \
+        /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization_only.launch
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_backpack_2d.launch \
+        /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/launch/offline_backpack_2d.launch \
+        /opt/ros/melodic/share/cartographer_ros/launch/offline_ydlidar_2d.launch
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d.lua
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_localization.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_only.lua
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_backpack_2d.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_backpack_2d_ci.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_localization_evaluation.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua
+
+sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_server.lua \
+        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_server.lua
+
+
+Localization-onlyモードもあるけれども、2D Lidarはonline SLAMが動いていても処理付加が大きくはないので、Localization中もマップ作成出来る状態を維持しておくことにする。
+https://google-cartographer-ros.readthedocs.io/en/latest/going_further.html#localization-only
+
+Localization-onlyモードにする場合、以下を追加する
+TRAJECTORY_BUILDER.pure_localization_trimmer = {
+    max_submaps_to_keep = 3,
+}
+
+
+online SLAMではpbstreamを作る事が出来ない。rosbagファイル必須。
+走行終了後、
+rosservice call /finish_trajectory 0
+rosservice call /write_state gridmap.pbstream
+roslaunch cartographer_ros cartographer_pbstream_to_ros_map \
+  -map_filestem=gridmap.png \
+  -pbstream_filename=gridmap.pbstream
+
+
