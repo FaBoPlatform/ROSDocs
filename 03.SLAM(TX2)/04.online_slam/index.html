@@ -896,6 +896,8 @@ source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d_rviz.launch
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/YDLIDAR-Cartographer.png" /><br></p>
+<p>他のPCのROSバージョンが異なる場合は、RVizは<code>md5sum Error</code>が発生して正常に動作しない可能性があります。<br>
+<a href="https://answers.ros.org/question/261071/rviz-client-md5sum-error/">https://answers.ros.org/question/261071/rviz-client-md5sum-error/</a></p>
 <h2 id="03save_to_mapsh">03.save_to_map.sh</h2>
 <p>走行後、ros mapとして保存することが出来ます。<br>
 <code>gridmap_2d.pgm</code>とgridmap_2d.yaml<code>が作成されます。&lt;br&gt;
