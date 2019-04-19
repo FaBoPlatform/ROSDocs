@@ -36,7 +36,7 @@
     
     
       
-        <title>Cartographer/YDLIDAR 2Dマップ保存 - FaBo ROS Docs</title>
+        <title>自己位置推定 - FaBo ROS Docs</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#cartographerydlidar-2d" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
               FaBo ROS Docs
             </span>
             <span class="md-header-nav__topic">
-              Cartographer/YDLIDAR 2Dマップ保存
+              自己位置推定
             </span>
           
         </div>
@@ -337,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../03.ydlidar/" title="TX2にYDLiDAR" class="md-nav__link">
+    <a href="../03.ydlidar_install/" title="TX2にYDLiDAR" class="md-nav__link">
       TX2にYDLiDAR
     </a>
   </li>
@@ -349,8 +349,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../04.setting/" title="YLiDARとCartographer連携" class="md-nav__link">
-      YLiDARとCartographer連携
+    <a href="../04.online_slam/" title="Online SLAM" class="md-nav__link">
+      Online SLAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05.offline_slam/" title="Offline SLAM" class="md-nav__link">
+      Offline SLAM
     </a>
   </li>
 
@@ -370,11 +382,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Cartographer/YDLIDAR 2Dマップ保存
+        自己位置推定
       </label>
     
-    <a href="./" title="Cartographer/YDLIDAR 2Dマップ保存" class="md-nav__link md-nav__link--active">
-      Cartographer/YDLIDAR 2Dマップ保存
+    <a href="./" title="自己位置推定" class="md-nav__link md-nav__link--active">
+      自己位置推定
     </a>
     
       
@@ -388,23 +400,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="起動" class="md-nav__link">
-    起動
+  <a href="#_2" title="実行" class="md-nav__link">
+    実行
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="走行" class="md-nav__link">
+  <a href="#rviz" title="RViz" class="md-nav__link">
+    RViz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="走行" class="md-nav__link">
     走行
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="保存" class="md-nav__link">
-    保存
+  <a href="#_4" title="説明" class="md-nav__link">
+    説明
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#06localizationsh" title="06.localization.sh" class="md-nav__link">
+    06.localization.sh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02rvizsh" title="02.rviz.sh" class="md-nav__link">
+    02.rviz.sh
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -416,6 +455,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07.ydlidar_cartographer_ros/" title="YDLIDAR Cartographer ROS" class="md-nav__link">
+      YDLIDAR Cartographer ROS
+    </a>
   </li>
 
         
@@ -604,6 +655,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      07.LiDAR
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        07.LiDAR
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07.LiDAR/list/" title="LiDAR List" class="md-nav__link">
+      LiDAR List
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -625,23 +712,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="起動" class="md-nav__link">
-    起動
+  <a href="#_2" title="実行" class="md-nav__link">
+    実行
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="走行" class="md-nav__link">
+  <a href="#rviz" title="RViz" class="md-nav__link">
+    RViz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="走行" class="md-nav__link">
     走行
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="保存" class="md-nav__link">
-    保存
+  <a href="#_4" title="説明" class="md-nav__link">
+    説明
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#06localizationsh" title="06.localization.sh" class="md-nav__link">
+    06.localization.sh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02rvizsh" title="02.rviz.sh" class="md-nav__link">
+    02.rviz.sh
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -662,53 +776,79 @@
               
                 
                 
-                <h1 id="cartographerydlidar-2d">Cartographer/YDLIDAR 2Dマップ保存</h1>
-<h2 id="_1">起動</h2>
-<p>まずは起動します。<br></p>
+                <h1 id="_1">自己位置推定</h1>
+<h2 id="_2">実行</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/github/YDLIDAR-Cartographer-ROS/scripts
+./06.localization.sh myroom.bag.pbstream
+</pre></div></td></tr></table></p>
+<h2 id="rviz">RViz</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./02.rviz.sh
+</pre></div></td></tr></table></p>
+<p><img alt="" src="../img/localization.png" /><br></p>
+<h2 id="_3">走行</h2>
+<p>ラジコンに乗せて部屋の中を移動します。<br>
+<img alt="" src="../img/localization2.png" /><br></p>
+<h2 id="_4">説明</h2>
+<h3 id="06localizationsh">06.localization.sh</h3>
+<p>引数にマップデータを指定します。<br></p>
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_x1h7s2bzkc1mpqh checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_x1h7s2bzkc1mpqh-panel role=tab><label for=tab-group-2-0_x1h7s2bzkc1mpqh class=code-tab-label data-lang id=tab-group-2-0_x1h7s2bzkc1mpqh-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_x1h7s2bzkc1mpqh-panel aria-labelledby=tab-group-2-0_x1h7s2bzkc1mpqh-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.localization.sh input.bag.pbstream
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_gtn6lemnwwv6ws1 class=code-tab data-lang aria-controls=tab-group-2-1_gtn6lemnwwv6ws1-panel role=tab><label for=tab-group-2-1_gtn6lemnwwv6ws1 class=code-tab-label data-lang id=tab-group-2-1_gtn6lemnwwv6ws1-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_gtn6lemnwwv6ws1-panel aria-labelledby=tab-group-2-1_gtn6lemnwwv6ws1-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class=code><div class=codehilite><pre><span></span># usage:
+# ./localization.sh input.bag.pbstream
+
+case $1 in
+    /*\.pbstream)
+        INPUT_PB=$1
+        ;;
+    *.pbstream)
+        INPUT_PB=<span class=nv>$PWD</span>/$1
+esac
+echo <span class=cp>${</span><span class=n>INPUT_PB</span><span class=cp>}</span>
+</pre></div></td></tr></table></div></div>
+
+<p>ラジコンの走行中はモニターが見れないので、他のPCでRVizを起動出来るようにexportを有効にすることが出来ます。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3
-4
-5</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>export</span> <span class=nv>ROS_MASTER_URI</span><span class=o>=</span>http://自分のIP:11311
-$ <span class=nb>export</span> <span class=nv>ROS_IP</span><span class=o>=</span>自分のIP
-$ roscore <span class=p>&amp;</span>
-$ roslaunch ydlidar lidar.launch <span class=p>&amp;</span>
-$ roslaunch cartographer_ros demo_revo_lds.launch <span class=p>&amp;</span>
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://自分のIP:11311
+export ROS_IP=自分のIP
+source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 </pre></div></td></tr></table></p>
-<p>走行中にマップの作製具合を確認したいので、他のPCでRVizを起動します。<br></p>
+<p>roscoreを起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>roscore &amp;
+sleep 5 # wait until roscore launch
+</pre></div></td></tr></table></p>
+<p>YDLIDARを起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch ydlidar lidar.launch &amp;
+sleep 15 # wait until ydlidar launch
+</pre></div></td></tr></table></p>
+<p>Localizationを起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d_localization.launch load_state_filename:=<span class=cp>${</span><span class=n>INPUT_PB</span><span class=cp>}</span>
+</pre></div></td></tr></table></p>
+<h3 id="02rvizsh">02.rviz.sh</h3>
+<p>他のPCでRVizを起動する場合は、exportを有効にします。<br>
+この場合、02.rviz.shは他のPC上で実行することになります。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>export</span> <span class=nv>ROS_MASTER_URI</span><span class=o>=</span>http://roscoreを起動しているマシンのIP:11311
-$ <span class=nb>export</span> <span class=nv>ROS_ID</span><span class=o>=</span>自分のIP
-$ roslaunch cartographer_ros demo_rviz.launch
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
+export ROS_ID=自分のIP
+source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 </pre></div></td></tr></table></p>
-<p><img alt="" src="../img/YDLiDAR-Cartographer.png" /><br></p>
-<h2 id="_2">走行</h2>
-<p>ラジコンに乗せて部屋の中を移動してマップを作成していきます。<br>
-<img alt="" src="../img/rccar.jpg" /><br></p>
-<h2 id="_3">保存</h2>
-<p>走行後、マップを保存します。<br>
-他のPCで起動したRVizの画面:<br>
-<img alt="" src="../img/YDLiDAR-SLAM.png" /><br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ mkdir ~/map
-$ rosrun map_server map_saver -f ~/map/lidar_2d
+<p>rvizを起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d_rviz.launch
 </pre></div></td></tr></table></p>
-<p><code>lidar_2d.pgm</code>と<code>lidar_2d.yaml</code>が作成されます。<br>
-<img alt="" src="../img/lidar_2d.png" /><br>
-lidar_2d.yaml<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class=code><div class=codehilite><pre><span></span>image: /home/ubuntu/map/lidar_2d.pgm
-resolution: 0.050000
-origin: [-10.260829, -12.100000, 0.000000]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
-</pre></div></td></tr></table></p>
+<p><img alt="" src="../img/localization.png" /><br></p>
                 
                   
                 
@@ -729,7 +869,7 @@ free_thresh: 0.196
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../04.setting/" title="YLiDARとCartographer連携" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../05.offline_slam/" title="Offline SLAM" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -738,19 +878,19 @@ free_thresh: 0.196
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                YLiDARとCartographer連携
+                Offline SLAM
               </span>
             </div>
           </a>
         
         
-          <a href="../../04.Jetson/01.Jetson/" title="Jetson" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../07.ydlidar_cartographer_ros/" title="YDLIDAR Cartographer ROS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Jetson
+                YDLIDAR Cartographer ROS
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
