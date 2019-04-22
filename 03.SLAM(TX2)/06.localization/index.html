@@ -429,6 +429,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#localization" title="Localizationとは？" class="md-nav__link">
+    Localizationとは？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#06localizationsh" title="06.localization.sh" class="md-nav__link">
     06.localization.sh
   </a>
@@ -741,6 +748,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#localization" title="Localizationとは？" class="md-nav__link">
+    Localizationとは？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#06localizationsh" title="06.localization.sh" class="md-nav__link">
     06.localization.sh
   </a>
@@ -783,17 +797,24 @@
 ./06.localization.sh myroom.bag.pbstream
 </pre></div></td></tr></table></p>
 <h2 id="rviz">RViz</h2>
+<p>RVizは他のPCで起動する時は、スクリプト内にあるIPアドレス設定をおこなってください。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./02.rviz.sh
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/localization.png" /><br></p>
 <h2 id="_3">走行</h2>
 <p>ラジコンに乗せて部屋の中を移動します。<br>
-<img alt="" src="../img/localization2.png" /><br></p>
+<img alt="" src="../img/localization2.png" /><br>
+<a href="https://www.youtube.com/watch?v=qhoVwlwEMwQ"><img alt="Localization" src="https://img.youtube.com/vi/qhoVwlwEMwQ/1.jpg" /></a></p>
 <h2 id="_4">説明</h2>
+<h3 id="localization">Localizationとは？</h3>
+<p>Localizationとは、マップの中で自分の位置を推定することです。<br>
+動画の初期には位置ずれが発生しています。<br>
+少し走行すると、動画の最後にはマップの中で自分の位置が正確に判明していることがわかります。これがLocalizationの機能です。<br>
+<a href="https://www.youtube.com/watch?v=hTvcx-LZyx4"><img alt="What is Localization?" src="https://img.youtube.com/vi/hTvcx-LZyx4/1.jpg" /></a></p>
 <h3 id="06localizationsh">06.localization.sh</h3>
 <p>引数にマップデータを指定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_tbqzsd0wmdpn3dc checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_tbqzsd0wmdpn3dc-panel role=tab><label for=tab-group-2-0_tbqzsd0wmdpn3dc class=code-tab-label data-lang id=tab-group-2-0_tbqzsd0wmdpn3dc-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_tbqzsd0wmdpn3dc-panel aria-labelledby=tab-group-2-0_tbqzsd0wmdpn3dc-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.localization.sh input.bag.pbstream
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_4skgr22gr4cwwuo class=code-tab data-lang aria-controls=tab-group-2-1_4skgr22gr4cwwuo-panel role=tab><label for=tab-group-2-1_4skgr22gr4cwwuo class=code-tab-label data-lang id=tab-group-2-1_4skgr22gr4cwwuo-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_4skgr22gr4cwwuo-panel aria-labelledby=tab-group-2-1_4skgr22gr4cwwuo-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_8drexp2b2won5o5 checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_8drexp2b2won5o5-panel role=tab><label for=tab-group-2-0_8drexp2b2won5o5 class=code-tab-label data-lang id=tab-group-2-0_8drexp2b2won5o5-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_8drexp2b2won5o5-panel aria-labelledby=tab-group-2-0_8drexp2b2won5o5-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.localization.sh input.bag.pbstream
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_9ls4pgzm7c7n158 class=code-tab data-lang aria-controls=tab-group-2-1_9ls4pgzm7c7n158-panel role=tab><label for=tab-group-2-1_9ls4pgzm7c7n158 class=code-tab-label data-lang id=tab-group-2-1_9ls4pgzm7c7n158-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_9ls4pgzm7c7n158-panel aria-labelledby=tab-group-2-1_9ls4pgzm7c7n158-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4

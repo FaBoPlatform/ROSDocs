@@ -426,13 +426,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ydlidar_2d_localization_onlylaunch" title="ydlidar_2d_localization_only.launch" class="md-nav__link">
-    ydlidar_2d_localization_only.launch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#assets_writer_ydlidar_2dlaunch" title="assets_writer_ydlidar_2d.launch" class="md-nav__link">
     assets_writer_ydlidar_2d.launch
   </a>
@@ -442,6 +435,13 @@
         <li class="md-nav__item">
   <a href="#offline_ydlidar_2dlaunch" title="offline_ydlidar_2d.launch" class="md-nav__link">
     offline_ydlidar_2d.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline_node_ydlidar_2dlaunch" title="offline_node_ydlidar_2d.launch" class="md-nav__link">
+    offline_node_ydlidar_2d.launch
   </a>
   
 </li>
@@ -463,13 +463,6 @@
         <li class="md-nav__item">
   <a href="#ydlidar_2d_localizationlua" title="ydlidar_2d_localization.lua" class="md-nav__link">
     ydlidar_2d_localization.lua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ydlidar_2d_localization_onlylua" title="ydlidar_2d_localization_only.lua" class="md-nav__link">
-    ydlidar_2d_localization_only.lua
   </a>
   
 </li>
@@ -776,13 +769,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ydlidar_2d_localization_onlylaunch" title="ydlidar_2d_localization_only.launch" class="md-nav__link">
-    ydlidar_2d_localization_only.launch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#assets_writer_ydlidar_2dlaunch" title="assets_writer_ydlidar_2d.launch" class="md-nav__link">
     assets_writer_ydlidar_2d.launch
   </a>
@@ -792,6 +778,13 @@
         <li class="md-nav__item">
   <a href="#offline_ydlidar_2dlaunch" title="offline_ydlidar_2d.launch" class="md-nav__link">
     offline_ydlidar_2d.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline_node_ydlidar_2dlaunch" title="offline_node_ydlidar_2d.launch" class="md-nav__link">
+    offline_node_ydlidar_2d.launch
   </a>
   
 </li>
@@ -813,13 +806,6 @@
         <li class="md-nav__item">
   <a href="#ydlidar_2d_localizationlua" title="ydlidar_2d_localization.lua" class="md-nav__link">
     ydlidar_2d_localization.lua
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ydlidar_2d_localization_onlylua" title="ydlidar_2d_localization_only.lua" class="md-nav__link">
-    ydlidar_2d_localization_only.lua
   </a>
   
 </li>
@@ -911,50 +897,44 @@
 29
 30
 31
-32
-33
-34
-35</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo cp /opt/ros/melodic/share/cartographer_ros/launch/backpack_2d.launch \
-        /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d.launch
+32</pre></div></td><td class=code><div class=codehilite><pre><span></span>cp ~/catkin_ws/install_isolated/share/cartographer_ros/launch/backpack_2d.launch \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/launch/ydlidar_2d.launch
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/launch/demo_backpack_2d_localization.launch \
-        /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/launch/demo_backpack_2d_localization.launch \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/launch/online_ydlidar_2d_localization.launch
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch \
-        /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization_only.launch
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/launch/assets_writer_backpack_2d.launch \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_backpack_2d.launch \
-        /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_backpack_2d.launch \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_ydlidar_2d.launch
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/launch/offline_backpack_2d.launch \
-        /opt/ros/melodic/share/cartographer_ros/launch/offline_ydlidar_2d.launch
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_node.launch \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_node_ydlidar_2d.launch
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d.lua
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d.lua \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d.lua
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_localization.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d_localization.lua \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_only.lua
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_backpack_2d.lua \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_backpack_2d.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_backpack_2d_ci.lua \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_backpack_2d_ci.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d_localization_evaluation.lua \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua
 
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_localization_evaluation.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua
-
-sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_server.lua \
-        /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_server.lua
+cp ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d_server.lua \
+        ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_server.lua
 </pre></div></td></tr></table></p>
 <p>それぞれ編集していきますが、YDLIDARの計測距離は中国語で書かれた情報をもとにします。<br></p>
 <h2 id="ydlidar_2dlaunch">ydlidar_2d.launch</h2>
 <p>online SLAMの時に利用します。</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_82t6x6k8d1n0fqr checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_82t6x6k8d1n0fqr-panel role=tab><label for=tab-group-1-0_82t6x6k8d1n0fqr class=code-tab-label data-lang id=tab-group-1-0_82t6x6k8d1n0fqr-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_82t6x6k8d1n0fqr-panel aria-labelledby=tab-group-1-0_82t6x6k8d1n0fqr-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d.launch
-</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_2ypqu76f07p9kuu class=code-tab data-lang aria-controls=tab-group-1-1_2ypqu76f07p9kuu-panel role=tab><label for=tab-group-1-1_2ypqu76f07p9kuu class=code-tab-label data-lang id=tab-group-1-1_2ypqu76f07p9kuu-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_2ypqu76f07p9kuu-panel aria-labelledby=tab-group-1-1_2ypqu76f07p9kuu-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_dwsefz6rvw8x3al checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_dwsefz6rvw8x3al-panel role=tab><label for=tab-group-1-0_dwsefz6rvw8x3al class=code-tab-label data-lang id=tab-group-1-0_dwsefz6rvw8x3al-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_dwsefz6rvw8x3al-panel aria-labelledby=tab-group-1-0_dwsefz6rvw8x3al-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/ydlidar_2d.launch
+</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_1w2lxc38mbthnc2 class=code-tab data-lang aria-controls=tab-group-1-1_1w2lxc38mbthnc2-panel role=tab><label for=tab-group-1-1_1w2lxc38mbthnc2 class=code-tab-label data-lang id=tab-group-1-1_1w2lxc38mbthnc2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_1w2lxc38mbthnc2-panel aria-labelledby=tab-group-1-1_1w2lxc38mbthnc2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -966,8 +946,8 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 10
 11
 12</pre></div></td><td class=code><div class=codehilite><pre><span></span>launch
---- /opt/ros/melodic/share/cartographer_ros/launch/backpack_2d.launch   2018-06-01 21:27:27.000000000 +0900
-+++ /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d.launch    2019-04-18 10:45:11.633852650 +0900
+--- ~/catkin_ws/install_isolated/share/cartographer_ros/launch/backpack_2d.launch   2018-06-01 21:27:27.000000000 +0900
++++ ~/catkin_ws/install_isolated/share/cartographer_ros/launch/ydlidar_2d.launch    2019-04-18 10:45:11.633852650 +0900
 @@ -24,7 +24,7 @@
    <span class=nt>&lt;node</span> <span class=na>name=</span><span class=s>&quot;cartographer_node&quot;</span> <span class=na>pkg=</span><span class=s>&quot;cartographer_ros&quot;</span>
        <span class=na>type=</span><span class=s>&quot;cartographer_node&quot;</span> <span class=na>args=</span><span class=s>&quot;</span>
@@ -981,10 +961,10 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 
 <h2 id="ydlidar_2d_localizationlaunch">ydlidar_2d_localization.launch</h2>
 <p>自己位置推定の時に利用します。<br>
-他のPCでrvizを起動出来るようにするために、<code>rviz</code>はは削除します。<br>
+他のPCでrvizを起動出来るようにするために、<code>rviz</code>は削除します。<br>
 リアルタイムで自己位置推定を行うために、<code>rosbag play</code>は削除します。</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_lv2u2z4vpwk628c checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_lv2u2z4vpwk628c-panel role=tab><label for=tab-group-2-0_lv2u2z4vpwk628c class=code-tab-label data-lang id=tab-group-2-0_lv2u2z4vpwk628c-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_lv2u2z4vpwk628c-panel aria-labelledby=tab-group-2-0_lv2u2z4vpwk628c-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_6cwwnphr7rgkfv9 class=code-tab data-lang aria-controls=tab-group-2-1_6cwwnphr7rgkfv9-panel role=tab><label for=tab-group-2-1_6cwwnphr7rgkfv9 class=code-tab-label data-lang id=tab-group-2-1_6cwwnphr7rgkfv9-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_6cwwnphr7rgkfv9-panel aria-labelledby=tab-group-2-1_6cwwnphr7rgkfv9-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_qnfl3c8xmr87eh7 checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_qnfl3c8xmr87eh7-panel role=tab><label for=tab-group-2-0_qnfl3c8xmr87eh7 class=code-tab-label data-lang id=tab-group-2-0_qnfl3c8xmr87eh7-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_qnfl3c8xmr87eh7-panel aria-labelledby=tab-group-2-0_qnfl3c8xmr87eh7-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/ydlidar_2d_localization.launch
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_lepev5sx6vpnufd class=code-tab data-lang aria-controls=tab-group-2-1_lepev5sx6vpnufd-panel role=tab><label for=tab-group-2-1_lepev5sx6vpnufd class=code-tab-label data-lang id=tab-group-2-1_lepev5sx6vpnufd-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_lepev5sx6vpnufd-panel aria-labelledby=tab-group-2-1_lepev5sx6vpnufd-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1003,8 +983,26 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 17
 18
 19
-20</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/launch/demo_backpack_2d_localization.launch 2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch   2019-04-18 17:13:52.222148292 +0900</span>
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/demo_backpack_2d_localization.launch  2019-04-22 14:07:23.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/ydlidar_2d_localization.launch    2019-04-22 15:46:46.144449938 +0900</span>
+<span class=gu>@@ -15,7 +15,7 @@</span>
+ --&gt;
+
+ &lt;launch&gt;
+<span class=gd>-  &lt;param name=&quot;/use_sim_time&quot; value=&quot;true&quot; /&gt;</span>
+<span class=gi>+  &lt;param name=&quot;/use_sim_time&quot; value=&quot;false&quot; /&gt;</span>
+
+   &lt;param name=&quot;robot_description&quot;
+     textfile=&quot;$(find cartographer_ros)/urdf/backpack_2d.urdf&quot; /&gt;
 <span class=gu>@@ -26,7 +26,7 @@</span>
    &lt;node name=&quot;cartographer_node&quot; pkg=&quot;cartographer_ros&quot;
        type=&quot;cartographer_node&quot; args=&quot;
@@ -1025,36 +1023,10 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
  &lt;/launch&gt;
 </pre></div></td></tr></table></div></div>
 
-<h2 id="ydlidar_2d_localization_onlylaunch">ydlidar_2d_localization_only.launch</h2>
-<p>マップが完全に完成している場合、SLAMを動作させずに、自己位置推定のみの実行で処理を軽くする事が出来ます。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_jbhdh5rdry3siva checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_jbhdh5rdry3siva-panel role=tab><label for=tab-group-3-0_jbhdh5rdry3siva class=code-tab-label data-lang id=tab-group-3-0_jbhdh5rdry3siva-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_jbhdh5rdry3siva-panel aria-labelledby=tab-group-3-0_jbhdh5rdry3siva-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization_only.launch
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_a8s0nai4g2cj3wy class=code-tab data-lang aria-controls=tab-group-3-1_a8s0nai4g2cj3wy-panel role=tab><label for=tab-group-3-1_a8s0nai4g2cj3wy class=code-tab-label data-lang id=tab-group-3-1_a8s0nai4g2cj3wy-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_a8s0nai4g2cj3wy-panel aria-labelledby=tab-group-3-1_a8s0nai4g2cj3wy-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization.launch   2019-04-18 17:13:52.222148292 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/launch/ydlidar_2d_localization_only.launch  2019-04-18 11:58:26.981743821 +0900</span>
-<span class=gu>@@ -26,7 +26,7 @@</span>
-   &lt;node name=&quot;cartographer_node&quot; pkg=&quot;cartographer_ros&quot;
-       type=&quot;cartographer_node&quot; args=&quot;
-           -configuration_directory $(find cartographer_ros)/configuration_files
-<span class=gd>-          -configuration_basename ydlidar_2d_localization.lua</span>
-<span class=gi>+          -configuration_basename ydlidar_2d_localization_only.lua</span>
-           -load_state_filename $(arg load_state_filename)&quot;
-       output=&quot;screen&quot;&gt;
-     &lt;remap from=&quot;echoes&quot; to=&quot;horizontal_laser_2d&quot; /&gt;
-</pre></div></td></tr></table></div></div>
-
 <h2 id="assets_writer_ydlidar_2dlaunch">assets_writer_ydlidar_2d.launch</h2>
 <p>軌跡を出力する時に使います。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-4><input name=tab-group-4 type=radio id=tab-group-4-0_gt7mp0zfim5lkn2 checked=checked class=code-tab data-lang aria-controls=tab-group-4-0_gt7mp0zfim5lkn2-panel role=tab><label for=tab-group-4-0_gt7mp0zfim5lkn2 class=code-tab-label data-lang id=tab-group-4-0_gt7mp0zfim5lkn2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-0_gt7mp0zfim5lkn2-panel aria-labelledby=tab-group-4-0_gt7mp0zfim5lkn2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch
-</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-1_jlsaesql4adfmu1 class=code-tab data-lang aria-controls=tab-group-4-1_jlsaesql4adfmu1-panel role=tab><label for=tab-group-4-1_jlsaesql4adfmu1 class=code-tab-label data-lang id=tab-group-4-1_jlsaesql4adfmu1-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-1_jlsaesql4adfmu1-panel aria-labelledby=tab-group-4-1_jlsaesql4adfmu1-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_c9jmzqur4upnis2 checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_c9jmzqur4upnis2-panel role=tab><label for=tab-group-3-0_c9jmzqur4upnis2 class=code-tab-label data-lang id=tab-group-3-0_c9jmzqur4upnis2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_c9jmzqur4upnis2-panel aria-labelledby=tab-group-3-0_c9jmzqur4upnis2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch
+</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_ldd3uz662276fad class=code-tab data-lang aria-controls=tab-group-3-1_ldd3uz662276fad-panel role=tab><label for=tab-group-3-1_ldd3uz662276fad class=code-tab-label data-lang id=tab-group-3-1_ldd3uz662276fad-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_ldd3uz662276fad-panel aria-labelledby=tab-group-3-1_ldd3uz662276fad-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1064,8 +1036,8 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
  8
  9
 10
-11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_backpack_2d.launch 2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch  2019-04-18 14:12:12.519944597 +0900</span>
+11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/assets_writer_backpack_2d.launch  2019-04-22 14:07:23.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/assets_writer_ydlidar_2d.launch   2019-04-22 14:49:13.010335933 +0900</span>
 <span class=gu>@@ -15,7 +15,7 @@</span>
  --&gt;
 
@@ -1079,8 +1051,8 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 
 <h2 id="offline_ydlidar_2dlaunch">offline_ydlidar_2d.launch</h2>
 <p>offline SLAMは自己位置推定のためのpbstreamフォーマットのマップを作成する時に使います。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-5><input name=tab-group-5 type=radio id=tab-group-5-0_ylz3bbhimn87qrj checked=checked class=code-tab data-lang aria-controls=tab-group-5-0_ylz3bbhimn87qrj-panel role=tab><label for=tab-group-5-0_ylz3bbhimn87qrj class=code-tab-label data-lang id=tab-group-5-0_ylz3bbhimn87qrj-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-0_ylz3bbhimn87qrj-panel aria-labelledby=tab-group-5-0_ylz3bbhimn87qrj-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/launch/offline_ydlidar_2d.launch
-</pre></div></td></tr></table></div><input name=tab-group-5 type=radio id=tab-group-5-1_en0hoe3pmlsf5ai class=code-tab data-lang aria-controls=tab-group-5-1_en0hoe3pmlsf5ai-panel role=tab><label for=tab-group-5-1_en0hoe3pmlsf5ai class=code-tab-label data-lang id=tab-group-5-1_en0hoe3pmlsf5ai-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-1_en0hoe3pmlsf5ai-panel aria-labelledby=tab-group-5-1_en0hoe3pmlsf5ai-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-4><input name=tab-group-4 type=radio id=tab-group-4-0_a5ctgm076gru9qo checked=checked class=code-tab data-lang aria-controls=tab-group-4-0_a5ctgm076gru9qo-panel role=tab><label for=tab-group-4-0_a5ctgm076gru9qo class=code-tab-label data-lang id=tab-group-4-0_a5ctgm076gru9qo-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-0_a5ctgm076gru9qo-panel aria-labelledby=tab-group-4-0_a5ctgm076gru9qo-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_ydlidar_2d.launch
+</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-1_er1kqnoumcvbzdu class=code-tab data-lang aria-controls=tab-group-4-1_er1kqnoumcvbzdu-panel role=tab><label for=tab-group-4-1_er1kqnoumcvbzdu class=code-tab-label data-lang id=tab-group-4-1_er1kqnoumcvbzdu-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-1_er1kqnoumcvbzdu-panel aria-labelledby=tab-group-4-1_er1kqnoumcvbzdu-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1100,27 +1072,102 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 18
 19
 20
-21</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/launch/offline_backpack_2d.launch   2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/launch/offline_ydlidar_2d.launch    2019-04-18 16:28:06.797046959 +0900</span>
-<span class=gu>@@ -19,9 +19,6 @@</span>
+21
+22
+23</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_backpack_2d.launch    2019-04-22 14:09:24.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_ydlidar_2d.launch 2019-04-22 16:31:09.331096972 +0900</span>
+<span class=gu>@@ -16,18 +16,14 @@</span>
+
+ &lt;launch&gt;
+   &lt;arg name=&quot;bag_filenames&quot;/&gt;
+<span class=gd>-  &lt;arg name=&quot;no_rviz&quot; default=&quot;false&quot;/&gt;</span>
+<span class=gd>-  &lt;arg name=&quot;rviz_config&quot; default=&quot;$(find cartographer_ros)/configuration_files/demo_2d.rviz&quot;/&gt;</span>
+   &lt;arg name=&quot;configuration_directory&quot; default=&quot;$(find cartographer_ros)/configuration_files&quot;/&gt;
+<span class=gd>-  &lt;arg name=&quot;configuration_basenames&quot; default=&quot;backpack_2d.lua&quot;/&gt;</span>
+<span class=gi>+  &lt;arg name=&quot;configuration_basenames&quot; default=&quot;ydlidar_2d.lua&quot;/&gt;</span>
+   &lt;arg name=&quot;urdf_filenames&quot; default=&quot;$(find cartographer_ros)/urdf/backpack_2d.urdf&quot;/&gt;
+   &lt;arg name=&quot;launch_prefix&quot; default=&quot;&quot;/&gt;
+
+   &lt;remap from=&quot;echoes&quot; to=&quot;horizontal_laser_2d&quot;/&gt;
+<span class=gd>-  &lt;include file=&quot;$(find cartographer_ros)/launch/offline_node.launch&quot;&gt;</span>
+<span class=gi>+  &lt;include file=&quot;$(find cartographer_ros)/launch/offline_node_ydlidar_2d.launch&quot;&gt;</span>
+     &lt;arg name=&quot;bag_filenames&quot; value=&quot;$(arg bag_filenames)&quot;/&gt;
+<span class=gd>-    &lt;arg name=&quot;no_rviz&quot; value=&quot;$(arg no_rviz)&quot;/&gt;</span>
+<span class=gd>-    &lt;arg name=&quot;rviz_config&quot; value=&quot;$(arg rviz_config)&quot;/&gt;</span>
+     &lt;arg name=&quot;configuration_directory&quot; value=&quot;$(arg configuration_directory)&quot;/&gt;
+     &lt;arg name=&quot;configuration_basenames&quot; value=&quot;$(arg configuration_basenames)&quot;/&gt;
+     &lt;arg name=&quot;urdf_filenames&quot; value=&quot;$(arg urdf_filenames)&quot;/&gt;
+</pre></div></td></tr></table></div></div>
+
+<h2 id="offline_node_ydlidar_2dlaunch">offline_node_ydlidar_2d.launch</h2>
+<p>offline SLAMを起動する時に使います。<br>
+rvizは他のPCで起動するため、rvizの設定を削除します。<br></p>
+<div class=md-fenced-code-tabs id=tab-tab-group-5><input name=tab-group-5 type=radio id=tab-group-5-0_93tgtteaur2amk8 checked=checked class=code-tab data-lang aria-controls=tab-group-5-0_93tgtteaur2amk8-panel role=tab><label for=tab-group-5-0_93tgtteaur2amk8 class=code-tab-label data-lang id=tab-group-5-0_93tgtteaur2amk8-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-0_93tgtteaur2amk8-panel aria-labelledby=tab-group-5-0_93tgtteaur2amk8-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_node_ydlidar_2d.launch
+</pre></div></td></tr></table></div><input name=tab-group-5 type=radio id=tab-group-5-1_ygsn0jda0qkbelx class=code-tab data-lang aria-controls=tab-group-5-1_ygsn0jda0qkbelx-panel role=tab><label for=tab-group-5-1_ygsn0jda0qkbelx class=code-tab-label data-lang id=tab-group-5-1_ygsn0jda0qkbelx-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-1_ygsn0jda0qkbelx-panel aria-labelledby=tab-group-5-1_ygsn0jda0qkbelx-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_node.launch   2019-04-22 14:09:24.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/offline_node_ydlidar_2d.launch    2019-04-22 16:33:45.214304025 +0900</span>
+<span class=gu>@@ -16,8 +16,6 @@</span>
+
+ &lt;launch&gt;
+   &lt;arg name=&quot;bag_filenames&quot;/&gt;
+<span class=gd>-  &lt;arg name=&quot;no_rviz&quot;/&gt;</span>
+<span class=gd>-  &lt;arg name=&quot;rviz_config&quot;/&gt;</span>
+   &lt;arg name=&quot;configuration_directory&quot;/&gt;
+   &lt;arg name=&quot;configuration_basenames&quot;/&gt;
+   &lt;arg name=&quot;urdf_filenames&quot;/&gt;
+<span class=gu>@@ -25,21 +23,7 @@</span>
+
    &lt;param name=&quot;/use_sim_time&quot; value=&quot;true&quot; /&gt;
 
-   &lt;group unless=&quot;$(arg no_rviz)&quot;&gt;
-<span class=gd>-    &lt;node name=&quot;rviz&quot; pkg=&quot;rviz&quot; type=&quot;rviz&quot; required=&quot;true&quot;</span>
-<span class=gd>-        args=&quot;-d $(find cartographer_ros)/configuration_files/demo_2d.rviz&quot; /&gt;</span>
+<span class=gd>-  &lt;group unless=&quot;$(arg no_rviz)&quot;&gt;</span>
+<span class=gd>-    &lt;node name=&quot;rviz&quot;</span>
+<span class=gd>-          pkg=&quot;rviz&quot;</span>
+<span class=gd>-          type=&quot;rviz&quot;</span>
+<span class=gd>-          required=&quot;true&quot;</span>
+<span class=gd>-          args=&quot;-d $(arg rviz_config)&quot; /&gt;</span>
 <span class=gd>-</span>
-     &lt;node name=&quot;cartographer_occupancy_grid_node&quot; pkg=&quot;cartographer_ros&quot;
-         type=&quot;cartographer_occupancy_grid_node&quot; args=&quot;-resolution 0.05&quot; /&gt;
-   &lt;/group&gt;
-<span class=gu>@@ -30,7 +27,7 @@</span>
-       required=&quot;$(arg no_rviz)&quot;
+<span class=gd>-    &lt;node name=&quot;cartographer_occupancy_grid_node&quot;</span>
+<span class=gd>-        pkg=&quot;cartographer_ros&quot;</span>
+<span class=gd>-        type=&quot;cartographer_occupancy_grid_node&quot;</span>
+<span class=gd>-        args=&quot;-resolution 0.05&quot; /&gt;</span>
+<span class=gd>-  &lt;/group&gt;</span>
+<span class=gd>-</span>
+   &lt;node name=&quot;cartographer_offline_node&quot; pkg=&quot;cartographer_ros&quot;
+<span class=gd>-      required=&quot;$(arg no_rviz)&quot;</span>
        type=&quot;cartographer_offline_node&quot; args=&quot;
-           -configuration_directory $(find cartographer_ros)/configuration_files
-<span class=gd>-          -configuration_basenames backpack_2d.lua</span>
-<span class=gi>+          -configuration_basenames ydlidar_2d.lua</span>
-           -urdf_filenames $(find cartographer_ros)/urdf/backpack_2d.urdf
-           -bag_filenames $(arg bag_filenames)&quot;
-       output=&quot;screen&quot;&gt;
+           -configuration_directory $(arg configuration_directory)
+           -configuration_basenames $(arg configuration_basenames)
 </pre></div></td></tr></table></div></div>
 
 <h2 id="ydlidar_2d_rvizlaunch">ydlidar_2d_rviz.launch</h2>
@@ -1153,8 +1200,8 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 <p>online SLAMの時に使います。<br>
 <code>tracking_frame</code>とpublished_frame`はYDLIDARドライバー側のlaunch設定と同じにします。<br>
 他の値は中国語の情報をもとに設定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-7><input name=tab-group-7 type=radio id=tab-group-7-0_kxyr5hr4ls4gcxm checked=checked class=code-tab data-lang aria-controls=tab-group-7-0_kxyr5hr4ls4gcxm-panel role=tab><label for=tab-group-7-0_kxyr5hr4ls4gcxm class=code-tab-label data-lang id=tab-group-7-0_kxyr5hr4ls4gcxm-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-7-0_kxyr5hr4ls4gcxm-panel aria-labelledby=tab-group-7-0_kxyr5hr4ls4gcxm-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d.lua
-</pre></div></td></tr></table></div><input name=tab-group-7 type=radio id=tab-group-7-1_916aiqnxwi7bssq class=code-tab data-lang aria-controls=tab-group-7-1_916aiqnxwi7bssq-panel role=tab><label for=tab-group-7-1_916aiqnxwi7bssq class=code-tab-label data-lang id=tab-group-7-1_916aiqnxwi7bssq-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-7-1_916aiqnxwi7bssq-panel aria-labelledby=tab-group-7-1_916aiqnxwi7bssq-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-7><input name=tab-group-7 type=radio id=tab-group-7-0_u37wm0bu3qms1sm checked=checked class=code-tab data-lang aria-controls=tab-group-7-0_u37wm0bu3qms1sm-panel role=tab><label for=tab-group-7-0_u37wm0bu3qms1sm class=code-tab-label data-lang id=tab-group-7-0_u37wm0bu3qms1sm-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-7-0_u37wm0bu3qms1sm-panel aria-labelledby=tab-group-7-0_u37wm0bu3qms1sm-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d.lua
+</pre></div></td></tr></table></div><input name=tab-group-7 type=radio id=tab-group-7-1_rfg72umub8lvyfc class=code-tab data-lang aria-controls=tab-group-7-1_rfg72umub8lvyfc-panel role=tab><label for=tab-group-7-1_rfg72umub8lvyfc class=code-tab-label data-lang id=tab-group-7-1_rfg72umub8lvyfc-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-7-1_rfg72umub8lvyfc-panel aria-labelledby=tab-group-7-1_rfg72umub8lvyfc-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1198,9 +1245,10 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 42
 43
 44
-45</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d.lua2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d.lua  2019-04-18 12:38:36.510971973 +0900</span>
-<span class=gu>@@ -19,17 +19,17 @@</span>
+45
+46</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d.lua  2019-04-22 14:09:24.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d.lua   2019-04-22 16:42:17.430961870 +0900</span>
+<span class=gu>@@ -19,8 +19,8 @@</span>
    map_builder = MAP_BUILDER,
    trajectory_builder = TRAJECTORY_BUILDER,
    map_frame = &quot;map&quot;,
@@ -1211,6 +1259,7 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
    odom_frame = &quot;odom&quot;,
    provide_odom_frame = true,
    publish_frame_projected_to_2d = false,
+<span class=gu>@@ -28,9 +28,9 @@</span>
    use_odometry = false,
    use_nav_sat = false,
    use_landmarks = false,
@@ -1223,7 +1272,7 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
    num_point_clouds = 0,
    lookup_transform_timeout_sec = 0.2,
    submap_publish_period_sec = 0.3,
-<span class=gu>@@ -43,6 +43,18 @@</span>
+<span class=gu>@@ -44,6 +44,18 @@</span>
  }
 
  MAP_BUILDER.use_trajectory_builder_2d = true
@@ -1247,35 +1296,8 @@ sudo cp /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_
 
 <h2 id="ydlidar_2d_localizationlua">ydlidar_2d_localization.lua</h2>
 <p>自己位置推定の時に使います。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-8><input name=tab-group-8 type=radio id=tab-group-8-0_yyx4okpyo8a3qjw checked=checked class=code-tab data-lang aria-controls=tab-group-8-0_yyx4okpyo8a3qjw-panel role=tab><label for=tab-group-8-0_yyx4okpyo8a3qjw class=code-tab-label data-lang id=tab-group-8-0_yyx4okpyo8a3qjw-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-8-0_yyx4okpyo8a3qjw-panel aria-labelledby=tab-group-8-0_yyx4okpyo8a3qjw-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua
-</pre></div></td></tr></table></div><input name=tab-group-8 type=radio id=tab-group-8-1_w4jlyawvos0wc44 class=code-tab data-lang aria-controls=tab-group-8-1_w4jlyawvos0wc44-panel role=tab><label for=tab-group-8-1_w4jlyawvos0wc44 class=code-tab-label data-lang id=tab-group-8-1_w4jlyawvos0wc44-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-8-1_w4jlyawvos0wc44-panel aria-labelledby=tab-group-8-1_w4jlyawvos0wc44-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_localization.lua    2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua 2019-04-18 11:21:39.245829761 +0900</span>
-<span class=gu>@@ -12,7 +12,7 @@</span>
- -- See the License for the specific language governing permissions and
- -- limitations under the License.
-
-<span class=gd>-include &quot;backpack_2d.lua&quot;</span>
-<span class=gi>+include &quot;ydlidar_2d.lua&quot;</span>
-
- TRAJECTORY_BUILDER.pure_localization = true
- POSE_GRAPH.optimize_every_n_nodes = 20
-</pre></div></td></tr></table></div></div>
-
-<h2 id="ydlidar_2d_localization_onlylua">ydlidar_2d_localization_only.lua</h2>
-<p>SLAMを動作させずに自己位置推定だけを動作させる時に使います。<br>
-Cartographer ROSのドキュメントを見て変更していますが、今はまだ問題があって機能していません。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-9><input name=tab-group-9 type=radio id=tab-group-9-0_eeiex4pfcpx9iop checked=checked class=code-tab data-lang aria-controls=tab-group-9-0_eeiex4pfcpx9iop-panel role=tab><label for=tab-group-9-0_eeiex4pfcpx9iop class=code-tab-label data-lang id=tab-group-9-0_eeiex4pfcpx9iop-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-0_eeiex4pfcpx9iop-panel aria-labelledby=tab-group-9-0_eeiex4pfcpx9iop-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_only.lua
-</pre></div></td></tr></table></div><input name=tab-group-9 type=radio id=tab-group-9-1_0vtuip4pzum7h1d class=code-tab data-lang aria-controls=tab-group-9-1_0vtuip4pzum7h1d-panel role=tab><label for=tab-group-9-1_0vtuip4pzum7h1d class=code-tab-label data-lang id=tab-group-9-1_0vtuip4pzum7h1d-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-1_0vtuip4pzum7h1d-panel aria-labelledby=tab-group-9-1_0vtuip4pzum7h1d-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-8><input name=tab-group-8 type=radio id=tab-group-8-0_0zmw2b9nus3rb6r checked=checked class=code-tab data-lang aria-controls=tab-group-8-0_0zmw2b9nus3rb6r-panel role=tab><label for=tab-group-8-0_0zmw2b9nus3rb6r class=code-tab-label data-lang id=tab-group-8-0_0zmw2b9nus3rb6r-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-8-0_0zmw2b9nus3rb6r-panel aria-labelledby=tab-group-8-0_0zmw2b9nus3rb6r-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua
+</pre></div></td></tr></table></div><input name=tab-group-8 type=radio id=tab-group-8-1_lw465cm5agpuco1 class=code-tab data-lang aria-controls=tab-group-8-1_lw465cm5agpuco1-panel role=tab><label for=tab-group-8-1_lw465cm5agpuco1 class=code-tab-label data-lang id=tab-group-8-1_lw465cm5agpuco1-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-8-1_lw465cm5agpuco1-panel aria-labelledby=tab-group-8-1_lw465cm5agpuco1-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1286,16 +1308,24 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
  9
 10
 11
-12</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua 2019-04-18 11:21:39.245829761 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_only.lua    2019-04-18 11:25:45.757409678 +0900</span>
-<span class=gu>@@ -15,6 +15,9 @@</span>
- include &quot;ydlidar_2d.lua&quot;
+12
+13
+14
+15
+16</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d_localization.lua 2019-04-22 14:09:24.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_localization.lua  2019-04-22 15:55:32.454030881 +0900</span>
+<span class=gu>@@ -12,11 +12,11 @@</span>
+ -- See the License for the specific language governing permissions and
+ -- limitations under the License.
 
- TRAJECTORY_BUILDER.pure_localization = true
-<span class=gi>+TRAJECTORY_BUILDER.pure_localization_trimmer = {</span>
-<span class=gi>+    max_submaps_to_keep = 3,</span>
-<span class=gi>+}</span>
- POSE_GRAPH.optimize_every_n_nodes = 20
+<span class=gd>-include &quot;backpack_2d.lua&quot;</span>
+<span class=gi>+include &quot;ydlidar_2d.lua&quot;</span>
+
+ TRAJECTORY_BUILDER.pure_localization_trimmer = {
+   max_submaps_to_keep = 3,
+ }
+<span class=gd>-POSE_GRAPH.optimize_every_n_nodes = 20</span>
+<span class=gi>+POSE_GRAPH.optimize_every_n_nodes = 2</span>
 
  return options
 </pre></div></td></tr></table></div></div>
@@ -1304,8 +1334,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 <p>軌跡を出力する時に使います。<br>
 <code>tracking_frame</code>はYDLIDARドライバー側の設定と同じにします。<br>
 計測距離は中国語の情報にもとづいて設定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-10><input name=tab-group-10 type=radio id=tab-group-10-0_epyccjutv73bxal checked=checked class=code-tab data-lang aria-controls=tab-group-10-0_epyccjutv73bxal-panel role=tab><label for=tab-group-10-0_epyccjutv73bxal class=code-tab-label data-lang id=tab-group-10-0_epyccjutv73bxal-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-10-0_epyccjutv73bxal-panel aria-labelledby=tab-group-10-0_epyccjutv73bxal-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua
-</pre></div></td></tr></table></div><input name=tab-group-10 type=radio id=tab-group-10-1_o5wy58b031662z0 class=code-tab data-lang aria-controls=tab-group-10-1_o5wy58b031662z0-panel role=tab><label for=tab-group-10-1_o5wy58b031662z0 class=code-tab-label data-lang id=tab-group-10-1_o5wy58b031662z0-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-10-1_o5wy58b031662z0-panel aria-labelledby=tab-group-10-1_o5wy58b031662z0-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-9><input name=tab-group-9 type=radio id=tab-group-9-0_a5v1vij271znbv9 checked=checked class=code-tab data-lang aria-controls=tab-group-9-0_a5v1vij271znbv9-panel role=tab><label for=tab-group-9-0_a5v1vij271znbv9 class=code-tab-label data-lang id=tab-group-9-0_a5v1vij271znbv9-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-0_a5v1vij271znbv9-panel aria-labelledby=tab-group-9-0_a5v1vij271znbv9-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua
+</pre></div></td></tr></table></div><input name=tab-group-9 type=radio id=tab-group-9-1_fgkevyglse6wpw1 class=code-tab data-lang aria-controls=tab-group-9-1_fgkevyglse6wpw1-panel role=tab><label for=tab-group-9-1_fgkevyglse6wpw1 class=code-tab-label data-lang id=tab-group-9-1_fgkevyglse6wpw1-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-1_fgkevyglse6wpw1-panel aria-labelledby=tab-group-9-1_fgkevyglse6wpw1-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1322,8 +1352,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 15
 16
 17
-18</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_backpack_2d.lua   2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua    2019-04-18 16:39:53.198405055 +0900</span>
+18</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_backpack_2d.lua    2019-04-22 14:07:23.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d.lua 2019-04-22 15:36:56.908096159 +0900</span>
 <span class=gu>@@ -22,12 +22,12 @@</span>
  include &quot;transform.lua&quot;
 
@@ -1344,8 +1374,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 
 <h2 id="assets_writer_ydlidar_2d_cilua">assets_writer_ydlidar_2d_ci.lua</h2>
 <p><code>assets_writer_ydlidar_2d.lua</code>と設定方針は同じです。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-11><input name=tab-group-11 type=radio id=tab-group-11-0_dvdkzoooqoiwtu3 checked=checked class=code-tab data-lang aria-controls=tab-group-11-0_dvdkzoooqoiwtu3-panel role=tab><label for=tab-group-11-0_dvdkzoooqoiwtu3 class=code-tab-label data-lang id=tab-group-11-0_dvdkzoooqoiwtu3-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-11-0_dvdkzoooqoiwtu3-panel aria-labelledby=tab-group-11-0_dvdkzoooqoiwtu3-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua
-</pre></div></td></tr></table></div><input name=tab-group-11 type=radio id=tab-group-11-1_9z2u5o0eafbaj5c class=code-tab data-lang aria-controls=tab-group-11-1_9z2u5o0eafbaj5c-panel role=tab><label for=tab-group-11-1_9z2u5o0eafbaj5c class=code-tab-label data-lang id=tab-group-11-1_9z2u5o0eafbaj5c-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-11-1_9z2u5o0eafbaj5c-panel aria-labelledby=tab-group-11-1_9z2u5o0eafbaj5c-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-10><input name=tab-group-10 type=radio id=tab-group-10-0_x8a95y3n4c0c738 checked=checked class=code-tab data-lang aria-controls=tab-group-10-0_x8a95y3n4c0c738-panel role=tab><label for=tab-group-10-0_x8a95y3n4c0c738 class=code-tab-label data-lang id=tab-group-10-0_x8a95y3n4c0c738-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-10-0_x8a95y3n4c0c738-panel aria-labelledby=tab-group-10-0_x8a95y3n4c0c738-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua
+</pre></div></td></tr></table></div><input name=tab-group-10 type=radio id=tab-group-10-1_raenyokc8cukflq class=code-tab data-lang aria-controls=tab-group-10-1_raenyokc8cukflq-panel role=tab><label for=tab-group-10-1_raenyokc8cukflq class=code-tab-label data-lang id=tab-group-10-1_raenyokc8cukflq-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-10-1_raenyokc8cukflq-panel aria-labelledby=tab-group-10-1_raenyokc8cukflq-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1362,8 +1392,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 15
 16
 17
-18</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_backpack_2d_ci.lua    2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua 2019-04-18 16:38:39.646331066 +0900</span>
+18</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_backpack_2d_ci.lua 2019-04-22 14:07:23.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/assets_writer_ydlidar_2d_ci.lua  2019-04-22 15:37:16.064351546 +0900</span>
 <span class=gu>@@ -22,12 +22,12 @@</span>
  include &quot;transform.lua&quot;
 
@@ -1376,7 +1406,7 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 <span class=gd>-      min_range = 1.,</span>
 <span class=gd>-      max_range = 60.,</span>
 <span class=gi>+      min_range = 0.08,</span>
-<span class=gi>+      max_range = 15.,</span>
+<span class=gi>+      max_range = 16.,</span>
      },
      {
        action = &quot;dump_num_points&quot;,
@@ -1384,8 +1414,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 
 <h2 id="ydlidar_2d_localization_evaluationlua">ydlidar_2d_localization_evaluation.lua</h2>
 <p>自己位置推定の時に使うようです。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-12><input name=tab-group-12 type=radio id=tab-group-12-0_bsubv3aakj50sku checked=checked class=code-tab data-lang aria-controls=tab-group-12-0_bsubv3aakj50sku-panel role=tab><label for=tab-group-12-0_bsubv3aakj50sku class=code-tab-label data-lang id=tab-group-12-0_bsubv3aakj50sku-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-12-0_bsubv3aakj50sku-panel aria-labelledby=tab-group-12-0_bsubv3aakj50sku-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo vi /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua
-</pre></div></td></tr></table></div><input name=tab-group-12 type=radio id=tab-group-12-1_tk1y6rumxjm6ihh class=code-tab data-lang aria-controls=tab-group-12-1_tk1y6rumxjm6ihh-panel role=tab><label for=tab-group-12-1_tk1y6rumxjm6ihh class=code-tab-label data-lang id=tab-group-12-1_tk1y6rumxjm6ihh-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-12-1_tk1y6rumxjm6ihh-panel aria-labelledby=tab-group-12-1_tk1y6rumxjm6ihh-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-11><input name=tab-group-11 type=radio id=tab-group-11-0_rwmj3jw780nksqa checked=checked class=code-tab data-lang aria-controls=tab-group-11-0_rwmj3jw780nksqa-panel role=tab><label for=tab-group-11-0_rwmj3jw780nksqa class=code-tab-label data-lang id=tab-group-11-0_rwmj3jw780nksqa-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-11-0_rwmj3jw780nksqa-panel aria-labelledby=tab-group-11-0_rwmj3jw780nksqa-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua
+</pre></div></td></tr></table></div><input name=tab-group-11 type=radio id=tab-group-11-1_od67rr1c0te5w5j class=code-tab data-lang aria-controls=tab-group-11-1_od67rr1c0te5w5j-panel role=tab><label for=tab-group-11-1_od67rr1c0te5w5j class=code-tab-label data-lang id=tab-group-11-1_od67rr1c0te5w5j-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-11-1_od67rr1c0te5w5j-panel aria-labelledby=tab-group-11-1_od67rr1c0te5w5j-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1395,8 +1425,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
  8
  9
 10
-11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /opt/ros/melodic/share/cartographer_ros/configuration_files/backpack_2d_localization_evaluation.lua 2018-06-01 21:27:27.000000000 +0900</span>
-<span class=gi>+++ /opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua  2019-04-18 11:44:36.647488588 +0900</span>
+11</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/backpack_2d_localization_evaluation.lua  2019-04-22 14:07:23.000000000 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_localization_evaluation.lua   2019-04-22 14:49:16.078433115 +0900</span>
 <span class=gu>@@ -12,7 +12,7 @@</span>
  -- See the License for the specific language governing permissions and
  -- limitations under the License.
@@ -1410,8 +1440,8 @@ Cartographer ROSのドキュメントを見て変更していますが、今は�
 
 <h2 id="ydlidar_2d_serverlua">ydlidar_2d_server.lua</h2>
 <p>変更なし</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-13><input name=tab-group-13 type=radio id=tab-group-13-0_d4ex7kwjpwo38a6 checked=checked class=code-tab data-lang aria-controls=tab-group-13-0_d4ex7kwjpwo38a6-panel role=tab><label for=tab-group-13-0_d4ex7kwjpwo38a6 class=code-tab-label data-lang id=tab-group-13-0_d4ex7kwjpwo38a6-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-13-0_d4ex7kwjpwo38a6-panel aria-labelledby=tab-group-13-0_d4ex7kwjpwo38a6-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>/opt/ros/melodic/share/cartographer_ros/configuration_files/ydlidar_2d_server.lua
-</pre></div></td></tr></table></div><input name=tab-group-13 type=radio id=tab-group-13-1_afwbxmnkxq2z8fo class=code-tab data-lang aria-controls=tab-group-13-1_afwbxmnkxq2z8fo-panel role=tab><label for=tab-group-13-1_afwbxmnkxq2z8fo class=code-tab-label data-lang id=tab-group-13-1_afwbxmnkxq2z8fo-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-13-1_afwbxmnkxq2z8fo-panel aria-labelledby=tab-group-13-1_afwbxmnkxq2z8fo-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-12><input name=tab-group-12 type=radio id=tab-group-12-0_ffn1vzb1gv9wgnr checked=checked class=code-tab data-lang aria-controls=tab-group-12-0_ffn1vzb1gv9wgnr-panel role=tab><label for=tab-group-12-0_ffn1vzb1gv9wgnr class=code-tab-label data-lang id=tab-group-12-0_ffn1vzb1gv9wgnr-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-12-0_ffn1vzb1gv9wgnr-panel aria-labelledby=tab-group-12-0_ffn1vzb1gv9wgnr-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>~/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/ydlidar_2d_server.lua
+</pre></div></td></tr></table></div><input name=tab-group-12 type=radio id=tab-group-12-1_x21c82srajcgjag class=code-tab data-lang aria-controls=tab-group-12-1_x21c82srajcgjag-panel role=tab><label for=tab-group-12-1_x21c82srajcgjag class=code-tab-label data-lang id=tab-group-12-1_x21c82srajcgjag-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-12-1_x21c82srajcgjag-panel aria-labelledby=tab-group-12-1_x21c82srajcgjag-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
@@ -1425,6 +1455,7 @@ return MAP_BUILDER_SERVER
 <h2 id="_1">参考</h2>
 <ul>
 <li><a href="https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html">https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html</a></li>
+<li><a href="https://github.com/googlecartographer/cartographer_ros/issues/1122">https://github.com/googlecartographer/cartographer_ros/issues/1122</a></li>
 <li><a href="https://www.mindthink.me/2018/11/01/cartographer%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E4%B9%8B%E4%BA%8C%EF%BC%9A-%E4%BD%BF%E7%94%A8-eai-ydlidar-%E5%AE%9E%E7%8E%B0-cartographer-2d-slam/">https://www.mindthink.me/2018/11/01/cartographer%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E4%B9%8B%E4%BA%8C%EF%BC%9A-%E4%BD%BF%E7%94%A8-eai-ydlidar-%E5%AE%9E%E7%8E%B0-cartographer-2d-slam/</a></li>
 <li><a href="https://www.ncnynl.com/archives/201811/2789.html">https://www.ncnynl.com/archives/201811/2789.html</a></li>
 <li><a href="https://translate.google.co.jp/translate?hl=en&amp;sl=zh-CN&amp;u=https://www.academia.edu/38171833/EAI_cartographer&amp;prev=search">https://translate.google.co.jp/translate?hl=en&amp;sl=zh-CN&amp;u=https://www.academia.edu/38171833/EAI_cartographer&amp;prev=search</a></li>

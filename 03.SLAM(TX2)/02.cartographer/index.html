@@ -333,9 +333,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        TX2にCartographerを構築
+      </label>
+    
     <a href="./" title="TX2にCartographerを構築" class="md-nav__link md-nav__link--active">
       TX2にCartographerを構築
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="パッケージ" class="md-nav__link">
+    パッケージ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartographer" title="Cartographerをソースからビルド" class="md-nav__link">
+    Cartographerをソースからビルド
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -638,6 +674,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="パッケージ" class="md-nav__link">
+    パッケージ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartographer" title="Cartographerをソースからビルド" class="md-nav__link">
+    Cartographerをソースからビルド
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -650,14 +709,64 @@
                 
                 
                 <h1 id="tx2cartographer">TX2にCartographerを構築</h1>
-<p>Cartographer関連パッケージをインストール</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>apt-get install ros-melodic-cartographer ros-melodic-cartographer-ros ros-melodic-cartographer-ros-msgs ros-melodic-cartographer-rviz
+<h2 id="_1">パッケージ</h2>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install -y python-wstool python-rosdep ninja-build
 </pre></div></td></tr></table></p>
-<p>Cartographerのサンプルを持ってくる</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src 
-git clone https://github.com/ros-japan-users/cartographer_example
-</pre></div></td></tr></table></p>
+<h2 id="cartographer">Cartographerをソースからビルド</h2>
+<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_ae5lbjuue6denvj checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_ae5lbjuue6denvj-panel role=tab><label for=tab-group-1-0_ae5lbjuue6denvj class=code-tab-label data-lang id=tab-group-1-0_ae5lbjuue6denvj-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_ae5lbjuue6denvj-panel aria-labelledby=tab-group-1-0_ae5lbjuue6denvj-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir ~/catkin_ws
+cd catkin_ws
+wstool init src
+wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
+</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_wszusjf2vvshs55 class=code-tab data-lang aria-controls=tab-group-1-1_wszusjf2vvshs55-panel role=tab><label for=tab-group-1-1_wszusjf2vvshs55 class=code-tab-label data-lang id=tab-group-1-1_wszusjf2vvshs55-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_wszusjf2vvshs55-panel aria-labelledby=tab-group-1-1_wszusjf2vvshs55-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi /home/ubuntu/catkin_ws/src/.rosinstall
+</pre></div></td></tr></table></div></div>
+
+<p>diffコマンドの結果：<br></p>
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_ttkbbn6yc9m35dj checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_ttkbbn6yc9m35dj-panel role=tab><label for=tab-group-2-0_ttkbbn6yc9m35dj class=code-tab-label data-lang id=tab-group-2-0_ttkbbn6yc9m35dj-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_ttkbbn6yc9m35dj-panel aria-labelledby=tab-group-2-0_ttkbbn6yc9m35dj-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/src/.rosinstall.org  2019-04-22 06:01:15.018463519 +0000</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/src/.rosinstall  2019-04-22 06:01:29.370431975 +0000</span>
+<span class=gu>@@ -2,11 +2,11 @@</span>
+ - git:
+     local-name: cartographer
+     uri: https://github.com/googlecartographer/cartographer.git
+<span class=gd>-    version: 1.0.0</span>
+<span class=gi>+    version: master</span>
+ - git:
+     local-name: cartographer_ros
+     uri: https://github.com/googlecartographer/cartographer_ros.git
+<span class=gd>-    version: 1.0.0</span>
+<span class=gi>+    version: master</span>
+ - git:
+     local-name: ceres-solver
+     uri: https://ceres-solver.googlesource.com/ceres-solver.git
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_17xtqq3wc8qwzco class=code-tab data-lang aria-controls=tab-group-2-1_17xtqq3wc8qwzco-panel role=tab><label for=tab-group-2-1_17xtqq3wc8qwzco class=code-tab-label data-lang id=tab-group-2-1_17xtqq3wc8qwzco-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_17xtqq3wc8qwzco-panel aria-labelledby=tab-group-2-1_17xtqq3wc8qwzco-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>wstool update -t src
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-2_on6apxcmi7qa8i2 class=code-tab data-lang aria-controls=tab-group-2-2_on6apxcmi7qa8i2-panel role=tab><label for=tab-group-2-2_on6apxcmi7qa8i2 class=code-tab-label data-lang id=tab-group-2-2_on6apxcmi7qa8i2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-2_on6apxcmi7qa8i2-panel aria-labelledby=tab-group-2-2_on6apxcmi7qa8i2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4</pre></div></td><td class=code><div class=codehilite><pre><span></span>src/cartographer/scripts/install_proto3.sh
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span><span class=n>ROS_DISTRO</span><span class=cp>}</span> -y
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-3_x1za8a3jrfzjza1 class=code-tab data-lang aria-controls=tab-group-2-3_x1za8a3jrfzjza1-panel role=tab><label for=tab-group-2-3_x1za8a3jrfzjza1 class=code-tab-label data-lang id=tab-group-2-3_x1za8a3jrfzjza1-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-3_x1za8a3jrfzjza1-panel aria-labelledby=tab-group-2-3_x1za8a3jrfzjza1-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>cp *.launch /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/
+cp *.lua /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/
+</pre></div></td></tr></table></div></div>
                 
                   
                 

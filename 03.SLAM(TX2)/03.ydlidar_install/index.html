@@ -731,8 +731,9 @@ git clone https://github.com/EAIBOT/ydlidar.git
 cd ..
 </pre></div></td></tr></table></p>
 <p>scan_msg.scan_time, scan_msg.time_incrementのフォーマットが合っていないようなので、YDLiDARのIssue<a href="https://github.com/EAIBOT/ydlidar/issues/14">https://github.com/EAIBOT/ydlidar/issues/14</a>にあがっている修正を実施する。</p>
-<p>vi ~/catkin_ws/src/ydlidar/src/ydlidar_node.cpp<br>
-diffコマンドの結果:<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/src/ydlidar_node.cpp&lt;br&gt;
+</pre></div></td></tr></table></p>
+<p>diffコマンドの結果:<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
@@ -760,8 +761,8 @@ diffコマンドの結果:<br></p>
              scan_msg.range_max = scan.config.max_range;
 </pre></div></td></tr></table></p>
 <p>lidar.launchを編集<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_i2i9xhjb40nt3mh checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_i2i9xhjb40nt3mh-panel role=tab><label for=tab-group-2-0_i2i9xhjb40nt3mh class=code-tab-label data-lang id=tab-group-2-0_i2i9xhjb40nt3mh-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_i2i9xhjb40nt3mh-panel aria-labelledby=tab-group-2-0_i2i9xhjb40nt3mh-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/launch/lidar.launch
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_fpfpawus7dze0v2 class=code-tab data-lang aria-controls=tab-group-2-1_fpfpawus7dze0v2-panel role=tab><label for=tab-group-2-1_fpfpawus7dze0v2 class=code-tab-label data-lang id=tab-group-2-1_fpfpawus7dze0v2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_fpfpawus7dze0v2-panel aria-labelledby=tab-group-2-1_fpfpawus7dze0v2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_nxnyycg0c08ghye checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_nxnyycg0c08ghye-panel role=tab><label for=tab-group-3-0_nxnyycg0c08ghye class=code-tab-label data-lang id=tab-group-3-0_nxnyycg0c08ghye-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_nxnyycg0c08ghye-panel aria-labelledby=tab-group-3-0_nxnyycg0c08ghye-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/launch/lidar.launch
+</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_odq5kiau37deamw class=code-tab data-lang aria-controls=tab-group-3-1_odq5kiau37deamw-panel role=tab><label for=tab-group-3-1_odq5kiau37deamw class=code-tab-label data-lang id=tab-group-3-1_odq5kiau37deamw-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_odq5kiau37deamw-panel aria-labelledby=tab-group-3-1_odq5kiau37deamw-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
