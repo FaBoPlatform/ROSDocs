@@ -813,7 +813,7 @@ git clone https://github.com/EAIBOT/ydlidar.git
 cd ..
 </pre></div></td></tr></table></p>
 <h2 id="edit">Edit</h2>
-<p>scan_msg.scan_time, scan_msg.time_incrementのフォーマットが合っていないようなので、YDLiDARのIssue<a href="https://github.com/EAIBOT/ydlidar/issues/14">https://github.com/EAIBOT/ydlidar/issues/14</a>にあがっている修正を実施する。</p>
+<p><code>scan_msg.scan_time</code>と<code>scan_msg.time_increment</code>のフォーマットに問題があるようなので、YDLIDARのIssues <a href="https://github.com/EAIBOT/ydlidar/issues/14">https://github.com/EAIBOT/ydlidar/issues/14</a> にあがっている修正を実施する。</p>
 <h3 id="ydlidar_nodecpp">ydlidar_node.cpp</h3>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/src/ydlidar_node.cpp
 </pre></div></td></tr></table></p>
@@ -1078,8 +1078,8 @@ cd ..
 <code>period_in_ms</code>はpublishする周期をミリセカンドで指定します。ROSでは100ms(10Hz)がよい値とされています。<br></p>
 <p>その他のパラメータについては、<br>
 <a href="https://github.com/EAIBOT/ydlidar">https://github.com/EAIBOT/ydlidar</a>ここを参考にしてください。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_geghfh376nt43wf checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_geghfh376nt43wf-panel role=tab><label for=tab-group-3-0_geghfh376nt43wf class=code-tab-label data-lang id=tab-group-3-0_geghfh376nt43wf-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_geghfh376nt43wf-panel aria-labelledby=tab-group-3-0_geghfh376nt43wf-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/launch/lidar.launch
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_xlmmjy2xafidhwt class=code-tab data-lang aria-controls=tab-group-3-1_xlmmjy2xafidhwt-panel role=tab><label for=tab-group-3-1_xlmmjy2xafidhwt class=code-tab-label data-lang id=tab-group-3-1_xlmmjy2xafidhwt-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_xlmmjy2xafidhwt-panel aria-labelledby=tab-group-3-1_xlmmjy2xafidhwt-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_cvn4gaaoag3q2qb checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_cvn4gaaoag3q2qb-panel role=tab><label for=tab-group-3-0_cvn4gaaoag3q2qb class=code-tab-label data-lang id=tab-group-3-0_cvn4gaaoag3q2qb-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_cvn4gaaoag3q2qb-panel aria-labelledby=tab-group-3-0_cvn4gaaoag3q2qb-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/launch/lidar.launch
+</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_3f1lp3o5n75o0jn class=code-tab data-lang aria-controls=tab-group-3-1_3f1lp3o5n75o0jn-panel role=tab><label for=tab-group-3-1_3f1lp3o5n75o0jn class=code-tab-label data-lang id=tab-group-3-1_3f1lp3o5n75o0jn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_3f1lp3o5n75o0jn-panel aria-labelledby=tab-group-3-1_3f1lp3o5n75o0jn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
