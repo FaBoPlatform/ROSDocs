@@ -911,8 +911,9 @@ TX2で実行したonline SLAMの起動を待ってから実行してください
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/YDLIDAR-Cartographer.png" /></p>
 <h2 id="_3">走行</h2>
-<p>室内を移動してマップを完成させます。<br>
-<img alt="" src="../img/rccar.jpg" /><br>
+<p>室内を2周してマップを完成させます。loop closureにより、1周よりも精度がよくなりやすいです<br>
+自己位置推定は旋回に弱いので、出来るだけゆっくり走行します。（0.5km/h程度）</p>
+<p><img alt="" src="../img/rccar.jpg" /><br>
 <img alt="" src="../img/online_slam.png" /><br></p>
 <h2 id="_4">マップ保存</h2>
 <p>pbstream形式で保存します。<br>
@@ -1069,10 +1070,10 @@ source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 <p>走行後、ros mapとして保存することが出来ます。<br>
 <code>gridmap_2d.pgm</code>とgridmap_2d.yaml<code>が作成されます。&lt;br&gt;
 pgmファイルは画像ファイルなので、</code>gimp`を使ってpngファイルに変換することが出来ます。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-19><input name=tab-group-19 type=radio id=tab-group-19-0_f53mqns13am1ay0 checked=checked class=code-tab data-lang aria-controls=tab-group-19-0_f53mqns13am1ay0-panel role=tab><label for=tab-group-19-0_f53mqns13am1ay0 class=code-tab-label data-lang id=tab-group-19-0_f53mqns13am1ay0-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-0_f53mqns13am1ay0-panel aria-labelledby=tab-group-19-0_f53mqns13am1ay0-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-19><input name=tab-group-19 type=radio id=tab-group-19-0_030q7bkmxy0evnq checked=checked class=code-tab data-lang aria-controls=tab-group-19-0_030q7bkmxy0evnq-panel role=tab><label for=tab-group-19-0_030q7bkmxy0evnq class=code-tab-label data-lang id=tab-group-19-0_030q7bkmxy0evnq-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-0_030q7bkmxy0evnq-panel aria-labelledby=tab-group-19-0_030q7bkmxy0evnq-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir map
 ./04.online_save_map.sh
-</pre></div></td></tr></table></div><input name=tab-group-19 type=radio id=tab-group-19-1_px1feqm93pu6uso class=code-tab data-lang aria-controls=tab-group-19-1_px1feqm93pu6uso-panel role=tab><label for=tab-group-19-1_px1feqm93pu6uso class=code-tab-label data-lang id=tab-group-19-1_px1feqm93pu6uso-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-1_px1feqm93pu6uso-panel aria-labelledby=tab-group-19-1_px1feqm93pu6uso-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-19 type=radio id=tab-group-19-1_tq9wb3v8errgv5n class=code-tab data-lang aria-controls=tab-group-19-1_tq9wb3v8errgv5n-panel role=tab><label for=tab-group-19-1_tq9wb3v8errgv5n class=code-tab-label data-lang id=tab-group-19-1_tq9wb3v8errgv5n-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-1_tq9wb3v8errgv5n-panel aria-labelledby=tab-group-19-1_tq9wb3v8errgv5n-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
 export ROS_ID=自分のIP
