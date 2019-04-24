@@ -400,7 +400,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="実行" class="md-nav__link">
+  <a href="#_2" title="動画" class="md-nav__link">
+    動画
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="実行" class="md-nav__link">
     実行
   </a>
   
@@ -414,14 +421,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="走行" class="md-nav__link">
+  <a href="#_4" title="走行" class="md-nav__link">
     走行
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="説明" class="md-nav__link">
+  <a href="#_5" title="説明" class="md-nav__link">
     説明
   </a>
   
@@ -429,22 +436,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#localization" title="Localizationとは？" class="md-nav__link">
-    Localizationとは？
+  <a href="#08online_localizationsh" title="08.online_localization.sh" class="md-nav__link">
+    08.online_localization.sh
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#06localizationsh" title="06.localization.sh" class="md-nav__link">
-    06.localization.sh
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#02rvizsh" title="02.rviz.sh" class="md-nav__link">
-    02.rviz.sh
+  <a href="#02online_rvizsh" title="02.online_rviz.sh" class="md-nav__link">
+    02.online_rviz.sh
   </a>
   
 </li>
@@ -719,7 +719,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="実行" class="md-nav__link">
+  <a href="#_2" title="動画" class="md-nav__link">
+    動画
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="実行" class="md-nav__link">
     実行
   </a>
   
@@ -733,14 +740,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="走行" class="md-nav__link">
+  <a href="#_4" title="走行" class="md-nav__link">
     走行
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="説明" class="md-nav__link">
+  <a href="#_5" title="説明" class="md-nav__link">
     説明
   </a>
   
@@ -748,22 +755,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#localization" title="Localizationとは？" class="md-nav__link">
-    Localizationとは？
+  <a href="#08online_localizationsh" title="08.online_localization.sh" class="md-nav__link">
+    08.online_localization.sh
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#06localizationsh" title="06.localization.sh" class="md-nav__link">
-    06.localization.sh
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#02rvizsh" title="02.rviz.sh" class="md-nav__link">
-    02.rviz.sh
+  <a href="#02online_rvizsh" title="02.online_rviz.sh" class="md-nav__link">
+    02.online_rviz.sh
   </a>
   
 </li>
@@ -791,30 +791,32 @@
                 
                 
                 <h1 id="_1">自己位置推定</h1>
-<h2 id="_2">実行</h2>
+<p>自己位置推定は、読み込んだマップの中のどこに居るのかを推定する機能のことになります。<br>
+初期位置として、マップ作成時の初期位置に合わせておくことが望ましいです。<br>
+初期位置が不一致した状態では、うまく認識することが出来ません。<br>
+また、回転に対して極端に弱いため、カーブはゆっくり走行する必要があります。<br></p>
+<h2 id="_2">動画</h2>
+<p><a href="https://www.youtube.com/watch?v=gQTDASVGWfs"><img alt="online localizaton" src="https://img.youtube.com/vi/gQTDASVGWfs/2.jpg" /></a></p>
+<h2 id="_3">実行</h2>
+<p>TX2(car)で実行<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/github/YDLIDAR-Cartographer-ROS/scripts
-./06.localization.sh myroom.bag.pbstream
+./08.online_localization.sh myroom.bag.pbstream
 </pre></div></td></tr></table></p>
 <h2 id="rviz">RViz</h2>
-<p>RVizは他のPCで起動する時は、スクリプト内にあるIPアドレス設定をおこなってください。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./02.rviz.sh
+<p>RVizは他のPCで起動します。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./02.online_rviz.sh
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/localization.png" /><br></p>
-<h2 id="_3">走行</h2>
+<h2 id="_4">走行</h2>
 <p>ラジコンに乗せて部屋の中を移動します。<br>
-<img alt="" src="../img/localization2.png" /><br>
-<a href="https://www.youtube.com/watch?v=qhoVwlwEMwQ"><img alt="Localization" src="https://img.youtube.com/vi/qhoVwlwEMwQ/2.jpg" /></a></p>
-<h2 id="_4">説明</h2>
-<h3 id="localization">Localizationとは？</h3>
-<p>Localizationとは、マップの中で自分の位置を推定することです。<br>
-動画の初期には位置ずれが発生しています。<br>
-少し走行すると、動画の最後にはマップの中で自分の位置が正確に判明していることがわかります。これがLocalizationの機能です。<br>
-<a href="https://www.youtube.com/watch?v=hTvcx-LZyx4"><img alt="What is Localization?" src="https://img.youtube.com/vi/hTvcx-LZyx4/2.jpg" /></a></p>
-<h3 id="06localizationsh">06.localization.sh</h3>
-<p>引数にマップデータを指定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_76350sgil24afqf checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_76350sgil24afqf-panel role=tab><label for=tab-group-2-0_76350sgil24afqf class=code-tab-label data-lang id=tab-group-2-0_76350sgil24afqf-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_76350sgil24afqf-panel aria-labelledby=tab-group-2-0_76350sgil24afqf-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.localization.sh input.bag.pbstream
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_fjjs4157mps61c0 class=code-tab data-lang aria-controls=tab-group-2-1_fjjs4157mps61c0-panel role=tab><label for=tab-group-2-1_fjjs4157mps61c0 class=code-tab-label data-lang id=tab-group-2-1_fjjs4157mps61c0-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_fjjs4157mps61c0-panel aria-labelledby=tab-group-2-1_fjjs4157mps61c0-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<a href="https://www.youtube.com/watch?v=gQTDASVGWfs"><img alt="online localizaton" src="https://img.youtube.com/vi/gQTDASVGWfs/2.jpg" /></a></p>
+<h2 id="_5">説明</h2>
+<h3 id="08online_localizationsh">08.online_localization.sh</h3>
+<p>リアルタイム自己位置推定を実行します。<br>
+引数にマップデータを指定します。<br></p>
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_15d3hpa0qylg73v checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_15d3hpa0qylg73v-panel role=tab><label for=tab-group-2-0_15d3hpa0qylg73v class=code-tab-label data-lang id=tab-group-2-0_15d3hpa0qylg73v-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_15d3hpa0qylg73v-panel aria-labelledby=tab-group-2-0_15d3hpa0qylg73v-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./08.online_localization.sh input.bag.pbstream
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_c0s9sv6nbewgy9i class=code-tab data-lang aria-controls=tab-group-2-1_c0s9sv6nbewgy9i-panel role=tab><label for=tab-group-2-1_c0s9sv6nbewgy9i class=code-tab-label data-lang id=tab-group-2-1_c0s9sv6nbewgy9i-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_c0s9sv6nbewgy9i-panel aria-labelledby=tab-group-2-1_c0s9sv6nbewgy9i-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -825,7 +827,7 @@
  9
 10
 11</pre></div></td><td class=code><div class=codehilite><pre><span></span># usage:
-# ./localization.sh input.bag.pbstream
+# ./08.online_localization.sh input.bag.pbstream
 
 case $1 in
     /*\.pbstream)
@@ -840,8 +842,8 @@ echo <span class=cp>${</span><span class=n>INPUT_PB</span><span class=cp>}</span
 <p>ラジコンの走行中はモニターが見れないので、他のPCでRVizを起動出来るようにexportを有効にすることが出来ます。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://自分のIP:11311
-export ROS_IP=自分のIP
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://自分(tx2)のIP:11311
+export ROS_IP=自分(tx2)のIP
 source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 </pre></div></td></tr></table></p>
 <p>roscoreを起動</p>
@@ -855,19 +857,18 @@ sleep 5 # wait until roscore launch
 sleep 15 # wait until ydlidar launch
 </pre></div></td></tr></table></p>
 <p>Localizationを起動</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d_localization.launch load_state_filename:=<span class=cp>${</span><span class=n>INPUT_PB</span><span class=cp>}</span>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros online_ydlidar_2d_localization.launch load_state_filename:=<span class=cp>${</span><span class=n>INPUT_PB</span><span class=cp>}</span>
 </pre></div></td></tr></table></p>
-<h3 id="02rvizsh">02.rviz.sh</h3>
-<p>他のPCでRVizを起動する場合は、exportを有効にします。<br>
-この場合、02.rviz.shは他のPC上で実行することになります。<br></p>
+<h3 id="02online_rvizsh">02.online_rviz.sh</h3>
+<p>RVizはPCで実行します。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
-export ROS_ID=自分のIP
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシン(tx2)のIP:11311
+export ROS_ID=自分(px)のIP
 source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 </pre></div></td></tr></table></p>
 <p>rvizを起動</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d_rviz.launch
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros online_ydlidar_2d_rviz.launch
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/localization.png" /><br></p>
                 

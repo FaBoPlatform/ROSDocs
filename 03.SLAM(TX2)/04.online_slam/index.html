@@ -376,7 +376,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="起動" class="md-nav__link">
+  <a href="#_1" title="動画" class="md-nav__link">
+    動画
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="起動" class="md-nav__link">
     起動
   </a>
   
@@ -390,28 +397,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="走行" class="md-nav__link">
+  <a href="#_3" title="走行" class="md-nav__link">
     走行
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#_4" title="その他" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ros-map" title="ros map保存" class="md-nav__link">
     ros map保存
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="グラフ表示" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="グラフ表示" class="md-nav__link">
     グラフ表示
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="説明" class="md-nav__link">
+  <a href="#_6" title="説明" class="md-nav__link">
     説明
   </a>
   
@@ -426,8 +446,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#02rvizsh" title="02.rviz.sh" class="md-nav__link">
-    02.rviz.sh
+  <a href="#02online_rvizsh" title="02.online_rviz.sh" class="md-nav__link">
+    02.online_rviz.sh
   </a>
   
 </li>
@@ -438,8 +458,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#03save_to_mapsh" title="03.save_to_map.sh" class="md-nav__link">
-    03.save_to_map.sh
+  <a href="#03online_save_mapsh" title="03.online_save_map.sh" class="md-nav__link">
+    03.online_save_map.sh
   </a>
   
 </li>
@@ -733,7 +753,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="起動" class="md-nav__link">
+  <a href="#_1" title="動画" class="md-nav__link">
+    動画
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="起動" class="md-nav__link">
     起動
   </a>
   
@@ -747,28 +774,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="走行" class="md-nav__link">
+  <a href="#_3" title="走行" class="md-nav__link">
     走行
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#_4" title="その他" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ros-map" title="ros map保存" class="md-nav__link">
     ros map保存
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="グラフ表示" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="グラフ表示" class="md-nav__link">
     グラフ表示
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="説明" class="md-nav__link">
+  <a href="#_6" title="説明" class="md-nav__link">
     説明
   </a>
   
@@ -783,8 +823,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#02rvizsh" title="02.rviz.sh" class="md-nav__link">
-    02.rviz.sh
+  <a href="#02online_rvizsh" title="02.online_rviz.sh" class="md-nav__link">
+    02.online_rviz.sh
   </a>
   
 </li>
@@ -795,8 +835,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#03save_to_mapsh" title="03.save_to_map.sh" class="md-nav__link">
-    03.save_to_map.sh
+  <a href="#03online_save_mapsh" title="03.online_save_map.sh" class="md-nav__link">
+    03.online_save_map.sh
   </a>
   
 </li>
@@ -823,23 +863,38 @@
 CartographerではYDLIDARの動作確認のために使います。<br>
 この方法ではpbstream形式で保存出来ないため、Cartographerでマップを読み込んで自己位置推定を行うことは出来ません。<br>
 ros mapとして保存することは可能です。<br></p>
-<h2 id="_1">起動</h2>
+<h2 id="_1">動画</h2>
+<p><a href="https://www.youtube.com/watch?v=mbSZBZoFZiA"><img alt="online slam" src="https://img.youtube.com/vi/mbSZBZoFZiA/2.jpg" /></a></p>
+<h2 id="_2">起動</h2>
+<p>rosbagに保存する時、引数に保存するファイル名を指定します。拡張子は<code>.bag</code>にします。<br>
+実行はTX2(car)でおこないます。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/github/YDLIDAR-Cartographer-ROS/scripts
+./01.online_slam.sh myroom.bag
+</pre></div></td></tr></table></p>
+<p>引数を与えない場合はrosbagに保存しません。この場合はlocalizationに必要なpbstreamファイルを作成出来ないので、動作確認だけになります。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/github/YDLIDAR-Cartographer-ROS/scripts
 ./01.online_slam.sh
 </pre></div></td></tr></table></p>
-<p><img alt="" src="../img/YDLIDAR-Terminal.png" /></p>
+<p><img alt="" src="../img/terminal.png" /></p>
 <h2 id="rviz">rviz</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./02.rviz.sh
+<p>RVizはPCで起動します。<br>
+TX2で実行したonline SLAMの起動が完了してから起動してください。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./02.online_rviz.sh
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/YDLIDAR-Cartographer.png" /></p>
-<h2 id="_2">走行</h2>
+<h2 id="_3">走行</h2>
 <p>室内を移動してマップを完成させます。<br>
 <img alt="" src="../img/rccar.jpg" /><br>
-<img alt="" src="../img/YDLIDAR-SLAM.png" /><br></p>
-<h2 id="ros-map">ros map保存</h2>
-<p><code>gridmap_2d.pgm</code>とgridmap_2d.yaml`が作成されます。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./03.save_to_map.sh
+<img alt="" src="../img/online_slam.png" /><br></p>
+<h2 id="_4">その他</h2>
+<h3 id="ros-map">ros map保存</h3>
+<p>online SLAM実行後、終了前にros mapに保存することが出来ます。<br>
+<code>gridmap_2d.pgm</code>とgridmap_2d.yaml`が作成されます。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir map
+./03.online_save_map.sh
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/gridmap_2d.png" /><br>
 gridmap_2d.yaml<br></p>
@@ -855,20 +910,36 @@ negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196
 </pre></div></td></tr></table></p>
-<h2 id="_3">グラフ表示</h2>
+<h3 id="_5">グラフ表示</h3>
 <p>ノードをグラフで表示</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>rosrun rqt_graph rqt_graph
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/YDLIDAR-graph.png" /></p>
-<h2 id="_4">説明</h2>
+<h2 id="_6">説明</h2>
 <h3 id="01online_slamsh">01.online_slam.sh</h3>
 <p><code>01.online_slam.sh</code>ではいくつかの実行を行っています。<br></p>
-<p>ラジコンの走行中はモニターが見れないので、他のPCでRVizを起動出来るようにexportを有効にすることが出来ます。<br></p>
+<p>ラジコンの走行中はモニターが見れないので、他のPCでRVizを起動出来るようにexportで環境変数を設定しています。<br>
+<code>自分(tx2)のIP</code>はJetson TX2(car)のIPアドレスになります。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://自分のIP:11311
-export ROS_IP=自分のIP
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://自分(tx2)のIP:11311
+export ROS_IP=自分(tx2)のIP
 source /home/ubuntu/catkin_ws/install_isolated/setup.bash
+</pre></div></td></tr></table></p>
+<p>rosbagに保存する為のファイル名を引数から取得します。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class=code><div class=codehilite><pre><span></span>case $1 in
+    /*\.bag)
+        OUTPUT_BAG=$1
+        ;;
+    *.bag)
+        OUTPUT_BAG=$PWD/$1
+esac
 </pre></div></td></tr></table></p>
 <p>roscoreを起動</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
@@ -880,37 +951,55 @@ sleep 5 # wait until roscore launch
 2</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch ydlidar lidar.launch &amp;
 sleep 15 # wait until roscore launch
 </pre></div></td></tr></table></p>
-<p>online SLAMを起動</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d.launch
-</pre></div></td></tr></table></p>
-<h3 id="02rvizsh">02.rviz.sh</h3>
-<p>他のPCでRVizを起動する場合は、exportを有効にします。<br>
-この場合、02.rviz.shは他のPC上で実行することになります。<br></p>
+<p>online SLAMを起動<br>
+引数があるときはrosbagへの保存を実施。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
-export ROS_ID=自分のIP
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class=code><div class=codehilite><pre><span></span>if [ -z <span class=cp>${</span><span class=n>OUTPUT_BAG</span><span class=cp>}</span> ]; then
+    # <span class=cp>${</span><span class=n>OUTPUT_BAG</span><span class=cp>}</span> is empty.
+    roslaunch cartographer_ros online_ydlidar_2d_slam.launch
+else
+    # Save to rosbag.
+    roslaunch cartographer_ros online_ydlidar_2d_slam.launch <span class=err>&amp;</span>
+    sleep 5
+    rosrun rosbag record -a -O <span class=nv>$OUTPUT_BAG</span>
+fi
+</pre></div></td></tr></table></p>
+<h3 id="02online_rvizsh">02.online_rviz.sh</h3>
+<p>02.online_rviz.shは他のPC上で実行することになります。<br>
+<code>roscoreを起動しているマシン(tx2)のIP</code>はJetson TX2(car)のIPアドレスになります。<br>
+<code>自分(pc)のIP</code>は<code>02.online_rviz.sh</code>を実行するPCのIPアドレスになります。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシン(tx2)のIP:11311
+export ROS_ID=自分(pc)のIP
 source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 </pre></div></td></tr></table></p>
 <p>rvizを起動</p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros ydlidar_2d_rviz.launch
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros online_ydlidar_2d_rviz.launch
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/YDLIDAR-Cartographer.png" /><br></p>
 <p>他のPCのROSバージョンが異なる場合は、RVizは<code>md5sum Error</code>が発生して正常に動作しない可能性があります。<br>
-<a href="https://answers.ros.org/question/261071/rviz-client-md5sum-error/">https://answers.ros.org/question/261071/rviz-client-md5sum-error/</a></p>
-<h2 id="03save_to_mapsh">03.save_to_map.sh</h2>
+<a href="https://answers.ros.org/question/261071/rviz-client-md5sum-error/">https://answers.ros.org/question/261071/rviz-client-md5sum-error/</a><br>
+Cartographer-rosは<code>master branch</code>を使うため、TX2とPCで同じコミットを利用する必要があります。<br></p>
+<h2 id="03online_save_mapsh">03.online_save_map.sh</h2>
 <p>走行後、ros mapとして保存することが出来ます。<br>
 <code>gridmap_2d.pgm</code>とgridmap_2d.yaml<code>が作成されます。&lt;br&gt;
 pgmファイルは画像ファイルなので、</code>gimp`を使ってpngファイルに変換することが出来ます。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir map
-</pre></div></td></tr></table></p>
-<p>他のPCで実行する場合は、exportを有効にします。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-13><input name=tab-group-13 type=radio id=tab-group-13-0_jnavftmyhpdx0px checked=checked class=code-tab data-lang aria-controls=tab-group-13-0_jnavftmyhpdx0px-panel role=tab><label for=tab-group-13-0_jnavftmyhpdx0px class=code-tab-label data-lang id=tab-group-13-0_jnavftmyhpdx0px-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-13-0_jnavftmyhpdx0px-panel aria-labelledby=tab-group-13-0_jnavftmyhpdx0px-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir map
+</pre></div></td></tr></table></div><input name=tab-group-13 type=radio id=tab-group-13-1_ssqyjmh2h3av47t class=code-tab data-lang aria-controls=tab-group-13-1_ssqyjmh2h3av47t-panel role=tab><label for=tab-group-13-1_ssqyjmh2h3av47t class=code-tab-label data-lang id=tab-group-13-1_ssqyjmh2h3av47t-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-13-1_ssqyjmh2h3av47t-panel aria-labelledby=tab-group-13-1_ssqyjmh2h3av47t-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
 export ROS_ID=自分のIP
 source /home/ubuntu/catkin_ws/install_isolated/setup.bash
-</pre></div></td></tr></table></p>
+</pre></div></td></tr></table></div></div>
+
 <p>ros mapとして保存</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
