@@ -1,7 +1,6 @@
-image: ./map/gridmap_2d.pgm
+image: rosmap_2d.pgm
 resolution: 0.050000
 origin: [-8.979110, -11.103004, 0.000000]
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196
-

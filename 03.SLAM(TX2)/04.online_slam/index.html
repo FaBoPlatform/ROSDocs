@@ -408,6 +408,26 @@
     マップ保存
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pbstream" title="pbstream" class="md-nav__link">
+    pbstream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-map" title="ros map" class="md-nav__link">
+    ros map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -417,13 +437,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ros-map" title="ros map保存" class="md-nav__link">
-    ros map保存
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_6" title="グラフ表示" class="md-nav__link">
@@ -472,8 +485,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04online_save_mapsh" title="04.online_save_map.sh" class="md-nav__link">
-    04.online_save_map.sh
+  <a href="#04online_save_rosmapsh" title="04.online_save_rosmap.sh" class="md-nav__link">
+    04.online_save_rosmap.sh
   </a>
   
 </li>
@@ -799,6 +812,26 @@
     マップ保存
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pbstream" title="pbstream" class="md-nav__link">
+    pbstream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-map" title="ros map" class="md-nav__link">
+    ros map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -808,13 +841,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ros-map" title="ros map保存" class="md-nav__link">
-    ros map保存
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_6" title="グラフ表示" class="md-nav__link">
@@ -863,8 +889,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04online_save_mapsh" title="04.online_save_map.sh" class="md-nav__link">
-    04.online_save_map.sh
+  <a href="#04online_save_rosmapsh" title="04.online_save_rosmap.sh" class="md-nav__link">
+    04.online_save_rosmap.sh
   </a>
   
 </li>
@@ -916,33 +942,31 @@ TX2で実行したonline SLAMの起動を待ってから実行してください
 <p><img alt="" src="../img/rccar.jpg" /><br>
 <img alt="" src="../img/online_slam.png" /><br></p>
 <h2 id="_4">マップ保存</h2>
-<p>pbstream形式で保存します。<br>
+<h3 id="pbstream">pbstream</h3>
+<p>pbstreamはCartographer-ROSでLocalization（自己位置推定）を実行する時に使います。<br>
 引数で出力ファイルに指定するファイルの拡張は<code>.pbstream</code>にしてください。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./03.online_save_pbstream.sh myroom.bag.pbstream
 </pre></div></td></tr></table></p>
-<p>pbstreamファイルを自己位置推定(Localization)で利用します。<br></p>
-<h2 id="_5">その他</h2>
-<h3 id="ros-map">ros map保存</h3>
-<p>online SLAM実行後、終了前にros mapに保存することが出来ます。<br>
-<code>gridmap_2d.pgm</code>とgridmap_2d.yaml`が作成されます。<br></p>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir map
-./04.online_save_map.sh
+<h3 id="ros-map">ros map</h3>
+<p>ros mapはros navigationでLocalizationとPath Plannerを実行する時に使います。<br>
+<code>rosmap_2d_yyyymmddhhmmss.pgm</code>とrosmap_2d_yyyymmddhhmmss.yaml`が作成されます。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./04.online_save_rosmap.sh
 </pre></div></td></tr></table></p>
-<p><img alt="" src="../img/gridmap_2d.png" /><br>
-gridmap_2d.yaml<br></p>
+<p><img alt="" src="../img/rosmap_2d.png" /><br>
+rosmap_2d.yaml<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
 5
-6</pre></div></td><td class=code><div class=codehilite><pre><span></span>image: ./map/gridmap_2d.pgm
-resolution: 0.050000
-origin: [-8.979110, -11.103004, 0.000000]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
+6</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=n>image</span><span class=o>:</span> <span class=n>rosmap_2d</span><span class=o>.</span><span class=na>pgm</span>
+<span class=n>resolution</span><span class=o>:</span> <span class=mf>0.050000</span>
+<span class=n>origin</span><span class=o>:</span> <span class=o>[-</span><span class=mf>8.979110</span><span class=o>,</span> <span class=o>-</span><span class=mf>11.103004</span><span class=o>,</span> <span class=mf>0.000000</span><span class=o>]</span>
+<span class=n>negate</span><span class=o>:</span> <span class=mi>0</span>
+<span class=n>occupied_thresh</span><span class=o>:</span> <span class=mf>0.65</span>
+<span class=n>free_thresh</span><span class=o>:</span> <span class=mf>0.196</span>
 </pre></div></td></tr></table></p>
+<h2 id="_5">その他</h2>
 <h3 id="_6">グラフ表示</h3>
 <p>ノードをグラフで表示</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>rosrun rqt_graph rqt_graph
@@ -1066,14 +1090,13 @@ source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>rosservice call /write_state &quot;{filename: &#39;<span class=cp>${</span><span class=n>OUTPUT_PB</span><span class=cp>}</span>&#39;, include_unfinished_submaps: true}&quot;
 </pre></div></td></tr></table></p>
 <p>公式ドキュメントでは<code>include_unfinished_submaps: 'true'</code>となっていますが、trueは文字列型<code>'true'</code>ではなくbool型<code>true</code>である必要があるため、bool型の<code>true</code>指定します。<code>true</code>の代わりに<code>1</code>でも可能です。<br></p>
-<h2 id="04online_save_mapsh">04.online_save_map.sh</h2>
+<h2 id="04online_save_rosmapsh">04.online_save_rosmap.sh</h2>
 <p>走行後、ros mapとして保存することが出来ます。<br>
-<code>gridmap_2d.pgm</code>とgridmap_2d.yaml<code>が作成されます。&lt;br&gt;
-pgmファイルは画像ファイルなので、</code>gimp`を使ってpngファイルに変換することが出来ます。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-19><input name=tab-group-19 type=radio id=tab-group-19-0_jdhejaig3a0gq0d checked=checked class=code-tab data-lang aria-controls=tab-group-19-0_jdhejaig3a0gq0d-panel role=tab><label for=tab-group-19-0_jdhejaig3a0gq0d class=code-tab-label data-lang id=tab-group-19-0_jdhejaig3a0gq0d-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-0_jdhejaig3a0gq0d-panel aria-labelledby=tab-group-19-0_jdhejaig3a0gq0d-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir map
-./04.online_save_map.sh
-</pre></div></td></tr></table></div><input name=tab-group-19 type=radio id=tab-group-19-1_t0pi7qaincpm3b3 class=code-tab data-lang aria-controls=tab-group-19-1_t0pi7qaincpm3b3-panel role=tab><label for=tab-group-19-1_t0pi7qaincpm3b3 class=code-tab-label data-lang id=tab-group-19-1_t0pi7qaincpm3b3-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-1_t0pi7qaincpm3b3-panel aria-labelledby=tab-group-19-1_t0pi7qaincpm3b3-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<code>rosmap_2d_yyyymmddhhmmss.pgm</code>とrosmap_2d_yyyymmddhhmmss.yaml<code>が作成されます。&lt;br&gt;
+pgmファイルは画像ファイルなので、</code>gimp<code>を使ってpngファイルに変換することが出来ます。&lt;br&gt;
+実行は、</code>01.online.sh`を終了する前におこないます。<br></p>
+<div class=md-fenced-code-tabs id=tab-tab-group-19><input name=tab-group-19 type=radio id=tab-group-19-0_u354pgxx1zcgwwn checked=checked class=code-tab data-lang aria-controls=tab-group-19-0_u354pgxx1zcgwwn-panel role=tab><label for=tab-group-19-0_u354pgxx1zcgwwn class=code-tab-label data-lang id=tab-group-19-0_u354pgxx1zcgwwn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-0_u354pgxx1zcgwwn-panel aria-labelledby=tab-group-19-0_u354pgxx1zcgwwn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./04.online_save_rosmap.sh
+</pre></div></td></tr></table></div><input name=tab-group-19 type=radio id=tab-group-19-1_baksmpsvjdd1x9o class=code-tab data-lang aria-controls=tab-group-19-1_baksmpsvjdd1x9o-panel role=tab><label for=tab-group-19-1_baksmpsvjdd1x9o class=code-tab-label data-lang id=tab-group-19-1_baksmpsvjdd1x9o-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-1_baksmpsvjdd1x9o-panel aria-labelledby=tab-group-19-1_baksmpsvjdd1x9o-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
 export ROS_ID=自分のIP

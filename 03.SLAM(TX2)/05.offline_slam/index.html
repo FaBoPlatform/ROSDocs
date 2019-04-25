@@ -409,9 +409,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pbstream" title="pbstream保存" class="md-nav__link">
-    pbstream保存
+  <a href="#_3" title="マップ保存" class="md-nav__link">
+    マップ保存
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pbstream" title="pbstream" class="md-nav__link">
+    pbstream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-map" title="ros map" class="md-nav__link">
+    ros map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -423,14 +443,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="軌跡" class="md-nav__link">
+  <a href="#_4" title="軌跡" class="md-nav__link">
     軌跡
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="説明" class="md-nav__link">
+  <a href="#_5" title="説明" class="md-nav__link">
     説明
   </a>
   
@@ -460,6 +480,19 @@
   <a href="#07offline_trajectorysh" title="07.offline_trajectory.sh" class="md-nav__link">
     07.offline_trajectory.sh
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10offline_save_rosmapsh" title="10.offline_save_rosmap.sh" class="md-nav__link">
+    10.offline_save_rosmap.sh
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -761,9 +794,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pbstream" title="pbstream保存" class="md-nav__link">
-    pbstream保存
+  <a href="#_3" title="マップ保存" class="md-nav__link">
+    マップ保存
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pbstream" title="pbstream" class="md-nav__link">
+    pbstream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-map" title="ros map" class="md-nav__link">
+    ros map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -775,14 +828,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="軌跡" class="md-nav__link">
+  <a href="#_4" title="軌跡" class="md-nav__link">
     軌跡
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="説明" class="md-nav__link">
+  <a href="#_5" title="説明" class="md-nav__link">
     説明
   </a>
   
@@ -812,6 +865,19 @@
   <a href="#07offline_trajectorysh" title="07.offline_trajectory.sh" class="md-nav__link">
     07.offline_trajectory.sh
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10offline_save_rosmapsh" title="10.offline_save_rosmap.sh" class="md-nav__link">
+    10.offline_save_rosmap.sh
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -851,19 +917,28 @@
 <img alt="" src="../img/rccar.jpg" /><br>
 室内を2周したら、<code>Ctrol + c</code>で記録を終了します。loop closureにより、1周よりも精度がよくなりやすいです<br>
 自己位置推定は旋回に弱いので、出来るだけゆっくり走行します。（0.5km/h程度）</p>
-<h2 id="pbstream">pbstream保存</h2>
-<p>rosbagファイルを使って2Dマップを作成します。<br>
+<h2 id="_3">マップ保存</h2>
+<h3 id="pbstream">pbstream</h3>
+<p>pbstreamはCartographer-ROSでLocalization（自己位置推定）を実行する時に使います。<br>
+rosbagファイルを使って2Dマップを作成します。<br>
 TX2で実行します。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.offline_slam.sh myroom.bag
 </pre></div></td></tr></table></p>
 <p><code>myroom.bag.pbstream</code>が作成されます。</p>
+<h3 id="ros-map">ros map</h3>
+<p>rosbagファイルとpbstreamファイルからros mapファイルを作成します。<br>
+ros mapはros navigationでLocalizationとPath Plannerを実行する時に使います。<br>
+引数は<code>myroom.bag</code>だけですが、実行時に<code>myroom.bag.pbstream</code>ファイルも参照します。<br>
+<code>myroom.bag_map.pgm</code>と<code>myroom_bag_map.yaml</code>が作成されます。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./10.offline_save_rosmap.sh myroom.bag
+</pre></div></td></tr></table></p>
 <h2 id="rviz">RViz</h2>
 <p>マップ作成状況を表示します。<br>
 PCで実行します。<br>
 offline SLAMは計算速度が速ければリアルタイムよりも速く処理が終わります。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./08.offline_rviz.sh
 </pre></div></td></tr></table></p>
-<h2 id="_3">軌跡</h2>
+<h2 id="_4">軌跡</h2>
 <p>走行軌跡を画像に出力することが出来ます。<br>
 第一引数のrosbagファイルは走行を保存したbagファイルを指定します。今回はマップ作成用に走行した<code>myroom.bag</code>を指定しています。<br>
 第二引数のpbstreamファイルはマップデータの<code>myroom.bag.pbstream</code>ファイルを指定します。<br>
@@ -871,12 +946,12 @@ offline SLAMは計算速度が速ければリアルタイムよりも速く処�
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./07.offline_trajectory.sh myroom.bag myroom.bag.pbstream
 </pre></div></td></tr></table></p>
 <p><img alt="" src="../img/myroom.bag_xray_xy_all.png" /></p>
-<h2 id="_4">説明</h2>
+<h2 id="_5">説明</h2>
 <h3 id="05online_recordsh">05.online_record.sh</h3>
 <p>YDLIDAR X4のセンサー値をrosbagに保存します。<br>
 引数に出力ファイル名を指定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-4><input name=tab-group-4 type=radio id=tab-group-4-0_624bsejlhokqlku checked=checked class=code-tab data-lang aria-controls=tab-group-4-0_624bsejlhokqlku-panel role=tab><label for=tab-group-4-0_624bsejlhokqlku class=code-tab-label data-lang id=tab-group-4-0_624bsejlhokqlku-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-0_624bsejlhokqlku-panel aria-labelledby=tab-group-4-0_624bsejlhokqlku-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./05.online_record.sh output.bag
-</pre></div></td></tr></table></div><input name=tab-group-4 type=radio id=tab-group-4-1_bfm401afr19zwnk class=code-tab data-lang aria-controls=tab-group-4-1_bfm401afr19zwnk-panel role=tab><label for=tab-group-4-1_bfm401afr19zwnk class=code-tab-label data-lang id=tab-group-4-1_bfm401afr19zwnk-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-4-1_bfm401afr19zwnk-panel aria-labelledby=tab-group-4-1_bfm401afr19zwnk-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-5><input name=tab-group-5 type=radio id=tab-group-5-0_qncx20agzsme9ii checked=checked class=code-tab data-lang aria-controls=tab-group-5-0_qncx20agzsme9ii-panel role=tab><label for=tab-group-5-0_qncx20agzsme9ii class=code-tab-label data-lang id=tab-group-5-0_qncx20agzsme9ii-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-0_qncx20agzsme9ii-panel aria-labelledby=tab-group-5-0_qncx20agzsme9ii-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./05.online_record.sh output.bag
+</pre></div></td></tr></table></div><input name=tab-group-5 type=radio id=tab-group-5-1_d94u0x8e7aamrnz class=code-tab data-lang aria-controls=tab-group-5-1_d94u0x8e7aamrnz-panel role=tab><label for=tab-group-5-1_d94u0x8e7aamrnz class=code-tab-label data-lang id=tab-group-5-1_d94u0x8e7aamrnz-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-1_d94u0x8e7aamrnz-panel aria-labelledby=tab-group-5-1_d94u0x8e7aamrnz-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -918,10 +993,10 @@ sleep 15 # wait until ydlidar launch
 </pre></div></td></tr></table></p>
 <p>走行後に<code>Ctrl + c</code>で終了します。</p>
 <h3 id="06offline_slamsh">06.offline_slam.sh</h3>
-<p>Localizationで利用するpbstream形式のマップを作成します。<br>
+<p>Cartographer-ROSのLocalizationで利用するpbstream形式のマップを作成します。<br>
 引数に入力rosbagファイル名を指定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-8><input name=tab-group-8 type=radio id=tab-group-8-0_dzavegtvoyg8z79 checked=checked class=code-tab data-lang aria-controls=tab-group-8-0_dzavegtvoyg8z79-panel role=tab><label for=tab-group-8-0_dzavegtvoyg8z79 class=code-tab-label data-lang id=tab-group-8-0_dzavegtvoyg8z79-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-8-0_dzavegtvoyg8z79-panel aria-labelledby=tab-group-8-0_dzavegtvoyg8z79-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.offline_slam.sh input.bag
-</pre></div></td></tr></table></div><input name=tab-group-8 type=radio id=tab-group-8-1_31kmdrrrx1gsfas class=code-tab data-lang aria-controls=tab-group-8-1_31kmdrrrx1gsfas-panel role=tab><label for=tab-group-8-1_31kmdrrrx1gsfas class=code-tab-label data-lang id=tab-group-8-1_31kmdrrrx1gsfas-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-8-1_31kmdrrrx1gsfas-panel aria-labelledby=tab-group-8-1_31kmdrrrx1gsfas-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-9><input name=tab-group-9 type=radio id=tab-group-9-0_9zcynhik013lhyx checked=checked class=code-tab data-lang aria-controls=tab-group-9-0_9zcynhik013lhyx-panel role=tab><label for=tab-group-9-0_9zcynhik013lhyx class=code-tab-label data-lang id=tab-group-9-0_9zcynhik013lhyx-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-0_9zcynhik013lhyx-panel aria-labelledby=tab-group-9-0_9zcynhik013lhyx-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.offline_slam.sh input.bag
+</pre></div></td></tr></table></div><input name=tab-group-9 type=radio id=tab-group-9-1_yvjy45pb1tk3bfg class=code-tab data-lang aria-controls=tab-group-9-1_yvjy45pb1tk3bfg-panel role=tab><label for=tab-group-9-1_yvjy45pb1tk3bfg class=code-tab-label data-lang id=tab-group-9-1_yvjy45pb1tk3bfg-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-1_yvjy45pb1tk3bfg-panel aria-labelledby=tab-group-9-1_yvjy45pb1tk3bfg-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1033,6 +1108,54 @@ sleep 5 # wait until roscore launch
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros offline_ydlidar_2d_assets_writer.launch \
     bag_filenames:=<span class=cp>${</span><span class=n>INPUT_BAG</span><span class=cp>}</span> \
     pose_graph_filename:=<span class=cp>${</span><span class=n>INPUT_PB</span><span class=cp>}</span>
+</pre></div></td></tr></table></p>
+<h3 id="10offline_save_rosmapsh">10.offline_save_rosmap.sh</h3>
+<p>rosbagファイルとpbstreamファイルからros mapファイルを作成します。<br>
+ros mapはros navigationでLocalizationとPath Plannerを実行する時に使います。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./10.offline_save_rosmap.sh myroom.bag
+</pre></div></td></tr></table></p>
+<p>引数にbagファイルを指定します。<br>
+pbstreamのファイル名は<code>bagファイル名</code>.pbstreamとしています。<br></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class=code><div class=codehilite><pre><span></span># usage:
+# ./10.offline_save_rosmap.sh input.bag
+
+#https://www.ncnynl.com/archives/201811/2789.html
+
+case $1 in
+    /*\.bag)
+        INPUT_BAG=$1
+        ;;
+    *.bag)
+        INPUT_BAG=<span class=nv>$PWD</span>/$1
+esac
+echo <span class=cp>${</span><span class=n>INPUT_BAG</span><span class=cp>}</span>
+</pre></div></td></tr></table></p>
+<p>環境変数設定</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2
+3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://192.168.0.48:11311
+export ROS_IP=192.168.0.48
+source /home/ubuntu/catkin_ws/install_isolated/setup.bash
+</pre></div></td></tr></table></p>
+<p>roscore起動</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>roscore &amp;
+sleep 5 # wait until roscore launch
+</pre></div></td></tr></table></p>
+<p>ros map作成</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>roslaunch cartographer_ros offline_ydlidar_2d_assets_writer_ros_map.launch bag_filenames:=<span class=cp>${</span><span class=n>INPUT_BAG</span><span class=cp>}</span> pose_graph_filename:=<span class=cp>${</span><span class=n>INPUT_BAG</span><span class=cp>}</span>.pbstream
 </pre></div></td></tr></table></p>
                 
                   
