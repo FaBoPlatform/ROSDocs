@@ -484,6 +484,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08.cartographer_ros_tartlebot3_navigation/" title="Cartographer ROS TurtleBot3 Navigation" class="md-nav__link">
+      Cartographer ROS TurtleBot3 Navigation
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1076,12 +1088,11 @@ cd ..
 <p>ノードタイプ<code>static_transform_publisher</code>の<code>x</code> <code>y</code> <code>z</code> <code>yaw</code> <code>pitch</code> <code>roll</code> <code>frame_id</code> <code>child_frame_id</code> <code>period_in_ms</code>について、<br>
 <code>x</code> <code>y</code> <code>z</code> <code>yaw</code> <code>pitch</code> <code>roll</code>はYDLIDAR X4の取り付け位置に関する設定で、全て<code>0</code>にします。<br>
 turtlebot3のnavigation走行には、<code>/map</code>フレームに<code>/base_footprint</code>が必要になるので、<code>frame_id</code> <code>child_frame_id</code>は<code>/map</code>と<code>/base_footprint</code>を指定します。<br>
-turtlebot3のnavigation走行には、<code>/odom</code>フレームに<code>/base_footprint</code>が必要になるので、<code>frame_id</code> <code>child_frame_id</code>は<code>/odom</code>フレームに<code>/base_footprint</code>を指定します。<br>
 <code>period_in_ms</code>はpublishする周期をミリセカンドで指定します。ROSでは100ms(10Hz)がよい値とされています。<br></p>
 <p>その他のパラメータについては、<br>
 <a href="https://github.com/EAIBOT/ydlidar">https://github.com/EAIBOT/ydlidar</a>ここを参考にしてください。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_tm1u0nz28i19tnv checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_tm1u0nz28i19tnv-panel role=tab><label for=tab-group-3-0_tm1u0nz28i19tnv class=code-tab-label data-lang id=tab-group-3-0_tm1u0nz28i19tnv-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_tm1u0nz28i19tnv-panel aria-labelledby=tab-group-3-0_tm1u0nz28i19tnv-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/launch/lidar.launch
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_mtgyflo3qcyh0vz class=code-tab data-lang aria-controls=tab-group-3-1_mtgyflo3qcyh0vz-panel role=tab><label for=tab-group-3-1_mtgyflo3qcyh0vz class=code-tab-label data-lang id=tab-group-3-1_mtgyflo3qcyh0vz-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_mtgyflo3qcyh0vz-panel aria-labelledby=tab-group-3-1_mtgyflo3qcyh0vz-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_d719qlowxxbstvd checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_d719qlowxxbstvd-panel role=tab><label for=tab-group-3-0_d719qlowxxbstvd class=code-tab-label data-lang id=tab-group-3-0_d719qlowxxbstvd-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_d719qlowxxbstvd-panel aria-labelledby=tab-group-3-0_d719qlowxxbstvd-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/ydlidar/launch/lidar.launch
+</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_1ppqhkmvw4rjrht class=code-tab data-lang aria-controls=tab-group-3-1_1ppqhkmvw4rjrht-panel role=tab><label for=tab-group-3-1_1ppqhkmvw4rjrht class=code-tab-label data-lang id=tab-group-3-1_1ppqhkmvw4rjrht-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_1ppqhkmvw4rjrht-panel aria-labelledby=tab-group-3-1_1ppqhkmvw4rjrht-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1110,11 +1121,9 @@ turtlebot3のnavigation走行には、<code>/odom</code>フレームに<code>/ba
 27
 28
 29
-30
-31
-32</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/src/ydlidar/launch/lidar.launch.org  2019-04-23 12:03:31.620454277 +0900</span>
-<span class=gi>+++ /home/ubuntu/catkin_ws/src/ydlidar/launch/lidar.launch  2019-04-25 17:06:56.181032218 +0900</span>
-<span class=gu>@@ -1,20 +1,22 @@</span>
+30</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/src/ydlidar/launch/lidar.launch.org  2019-04-23 12:03:31.620454277 +0900</span>
+<span class=gi>+++ /home/ubuntu/catkin_ws/src/ydlidar/launch/lidar.launch  2019-04-26 14:39:02.769743117 +0900</span>
+<span class=gu>@@ -1,20 +1,20 @@</span>
  &lt;launch&gt;
    &lt;node name=&quot;ydlidar_node&quot;  pkg=&quot;ydlidar&quot;  type=&quot;ydlidar_node&quot; output=&quot;screen&quot; respawn=&quot;false&quot; &gt;
      &lt;param name=&quot;port&quot;         type=&quot;string&quot; value=&quot;/dev/ydlidar&quot;/&gt;  
@@ -1139,10 +1148,8 @@ turtlebot3のnavigation走行には、<code>/odom</code>フレームに<code>/ba
    &lt;/node&gt;
 <span class=gd>-  &lt;node pkg=&quot;tf&quot; type=&quot;static_transform_publisher&quot; name=&quot;base_link_to_laser4&quot;</span>
 <span class=gd>-    args=&quot;0.2245 0.0 0.2 0.0 0.0  0.0 /base_footprint /laser_frame 40&quot; /&gt;</span>
-<span class=gi>+  &lt;node pkg=&quot;tf&quot; type=&quot;static_transform_publisher&quot; name=&quot;laser_tf&quot;</span>
-<span class=gi>+    args=&quot;0.0 0.0 0.0 0.0 0.0  0.0 /map /base_footprint 100&quot; /&gt;</span>
-<span class=gi>+  &lt;node pkg=&quot;tf&quot; type=&quot;static_transform_publisher&quot; name=&quot;odom_tf&quot;</span>
-<span class=gi>+    args=&quot;0.0 0.0 0.0 0.0 0.0  0.0 /odom /base_footprint 100&quot; /&gt;</span>
+<span class=gi>+  &lt;node pkg=&quot;tf&quot; type=&quot;static_transform_publisher&quot; name=&quot;base_footprint_to_map&quot;</span>
+<span class=gi>+    args=&quot;0.0 0.0 0.0 0.0 0.0  0.0 /base_footprint /map 100&quot; /&gt;</span>
  &lt;/launch&gt;
 </pre></div></td></tr></table></div></div>
 
@@ -1167,8 +1174,8 @@ cd ~/github
 git clone https://github.com/FaBoPlatform/YDLIDAR-Cartographer-ROS
 
 cd YDLIDAR-Cartographer-ROS/parameters/
-sudo cp *.launch /opt/ros/melodic/share/cartographer_ros/launch/
-sudo cp *.lua /opt/ros/melodic/share/cartographer_ros/configuration_files/
+sudo cp *.launch /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/launch/
+sudo cp *.lua /home/ubuntu/catkin_ws/install_isolated/share/cartographer_ros/configuration_files/
 </pre></div></td></tr></table></p>
 <h2 id="reference">Reference</h2>
 <p>YDLIDAR X4 データシート：<a href="http://www.ydlidar.com/download">http://www.ydlidar.com/download</a><br>

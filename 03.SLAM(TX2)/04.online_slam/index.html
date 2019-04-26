@@ -538,6 +538,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08.cartographer_ros_tartlebot3_navigation/" title="Cartographer ROS TurtleBot3 Navigation" class="md-nav__link">
+      Cartographer ROS TurtleBot3 Navigation
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -944,11 +956,12 @@ TX2で実行したonline SLAMの起動を待ってから実行してください
 <h2 id="_4">マップ保存</h2>
 <h3 id="pbstream">pbstream</h3>
 <p>pbstreamはCartographer-ROSでLocalization（自己位置推定）を実行する時に使います。<br>
+turtlebot3 navigationでは、デフォルトの<code>map_server</code>を<code>cartographer_ros</code>に変更することで、navigationにも利用できます。この場合、IMU無しで動作可能になります。<br>
 引数で出力ファイルに指定するファイルの拡張は<code>.pbstream</code>にしてください。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./03.online_save_pbstream.sh myroom.bag.pbstream
 </pre></div></td></tr></table></p>
 <h3 id="ros-map">ros map</h3>
-<p>ros mapはros navigationでLocalizationとPath Plannerを実行する時に使います。<br>
+<p>ros mapはturtlebot3 navigationでLocalizationとPath Plannerを実行する時に使います。この場合、別途IMUが必要になります。<br>
 <code>rosmap_2d_yyyymmddhhmmss.pgm</code>とrosmap_2d_yyyymmddhhmmss.yaml`が作成されます。<br></p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./04.online_save_rosmap.sh
 </pre></div></td></tr></table></p>
@@ -1095,8 +1108,8 @@ source /home/ubuntu/catkin_ws/install_isolated/setup.bash
 <code>rosmap_2d_yyyymmddhhmmss.pgm</code>とrosmap_2d_yyyymmddhhmmss.yaml<code>が作成されます。&lt;br&gt;
 pgmファイルは画像ファイルなので、</code>gimp<code>を使ってpngファイルに変換することが出来ます。&lt;br&gt;
 実行は、</code>01.online.sh`を終了する前におこないます。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-19><input name=tab-group-19 type=radio id=tab-group-19-0_u354pgxx1zcgwwn checked=checked class=code-tab data-lang aria-controls=tab-group-19-0_u354pgxx1zcgwwn-panel role=tab><label for=tab-group-19-0_u354pgxx1zcgwwn class=code-tab-label data-lang id=tab-group-19-0_u354pgxx1zcgwwn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-0_u354pgxx1zcgwwn-panel aria-labelledby=tab-group-19-0_u354pgxx1zcgwwn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./04.online_save_rosmap.sh
-</pre></div></td></tr></table></div><input name=tab-group-19 type=radio id=tab-group-19-1_baksmpsvjdd1x9o class=code-tab data-lang aria-controls=tab-group-19-1_baksmpsvjdd1x9o-panel role=tab><label for=tab-group-19-1_baksmpsvjdd1x9o class=code-tab-label data-lang id=tab-group-19-1_baksmpsvjdd1x9o-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-1_baksmpsvjdd1x9o-panel aria-labelledby=tab-group-19-1_baksmpsvjdd1x9o-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-19><input name=tab-group-19 type=radio id=tab-group-19-0_zbx2rvjklszijkn checked=checked class=code-tab data-lang aria-controls=tab-group-19-0_zbx2rvjklszijkn-panel role=tab><label for=tab-group-19-0_zbx2rvjklszijkn class=code-tab-label data-lang id=tab-group-19-0_zbx2rvjklszijkn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-0_zbx2rvjklszijkn-panel aria-labelledby=tab-group-19-0_zbx2rvjklszijkn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./04.online_save_rosmap.sh
+</pre></div></td></tr></table></div><input name=tab-group-19 type=radio id=tab-group-19-1_eps0xzrse3eieqx class=code-tab data-lang aria-controls=tab-group-19-1_eps0xzrse3eieqx-panel role=tab><label for=tab-group-19-1_eps0xzrse3eieqx class=code-tab-label data-lang id=tab-group-19-1_eps0xzrse3eieqx-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-19-1_eps0xzrse3eieqx-panel aria-labelledby=tab-group-19-1_eps0xzrse3eieqx-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>export ROS_MASTER_URI=http://roscoreを起動しているマシンのIP:11311
 export ROS_ID=自分のIP
