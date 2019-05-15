@@ -189,11 +189,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      01.bom
+      01.組み立て
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        01.bom
+        01.組み立て
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -204,8 +204,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01.bom/01.bom/" title="BOM" class="md-nav__link">
+    <a href="../../01.組み立て/01.bom/" title="BOM" class="md-nav__link">
       BOM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01.組み立て/02.make/" title="組み立て" class="md-nav__link">
+      組み立て
     </a>
   </li>
 
@@ -999,8 +1011,8 @@ offline SLAMは計算速度が速ければリアルタイムよりも速く処�
 <h3 id="05online_recordsh">05.online_record.sh</h3>
 <p>YDLIDAR X4のセンサー値をrosbagに保存します。<br>
 引数に出力ファイル名を指定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-5><input name=tab-group-5 type=radio id=tab-group-5-0_7gweg85btoy7lt2 checked=checked class=code-tab data-lang aria-controls=tab-group-5-0_7gweg85btoy7lt2-panel role=tab><label for=tab-group-5-0_7gweg85btoy7lt2 class=code-tab-label data-lang id=tab-group-5-0_7gweg85btoy7lt2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-0_7gweg85btoy7lt2-panel aria-labelledby=tab-group-5-0_7gweg85btoy7lt2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./05.online_record.sh output.bag
-</pre></div></td></tr></table></div><input name=tab-group-5 type=radio id=tab-group-5-1_0kmj46fu79s93en class=code-tab data-lang aria-controls=tab-group-5-1_0kmj46fu79s93en-panel role=tab><label for=tab-group-5-1_0kmj46fu79s93en class=code-tab-label data-lang id=tab-group-5-1_0kmj46fu79s93en-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-1_0kmj46fu79s93en-panel aria-labelledby=tab-group-5-1_0kmj46fu79s93en-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-5><input name=tab-group-5 type=radio id=tab-group-5-0_hbll4wf7uidf2kn checked=checked class=code-tab data-lang aria-controls=tab-group-5-0_hbll4wf7uidf2kn-panel role=tab><label for=tab-group-5-0_hbll4wf7uidf2kn class=code-tab-label data-lang id=tab-group-5-0_hbll4wf7uidf2kn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-0_hbll4wf7uidf2kn-panel aria-labelledby=tab-group-5-0_hbll4wf7uidf2kn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./05.online_record.sh output.bag
+</pre></div></td></tr></table></div><input name=tab-group-5 type=radio id=tab-group-5-1_4rz6v8dpqucox2r class=code-tab data-lang aria-controls=tab-group-5-1_4rz6v8dpqucox2r-panel role=tab><label for=tab-group-5-1_4rz6v8dpqucox2r class=code-tab-label data-lang id=tab-group-5-1_4rz6v8dpqucox2r-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-5-1_4rz6v8dpqucox2r-panel aria-labelledby=tab-group-5-1_4rz6v8dpqucox2r-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -1044,8 +1056,8 @@ sleep 15 # wait until ydlidar launch
 <h3 id="06offline_slamsh">06.offline_slam.sh</h3>
 <p>Cartographer-ROSのLocalizationで利用するpbstream形式のマップを作成します。<br>
 引数に入力rosbagファイル名を指定します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-9><input name=tab-group-9 type=radio id=tab-group-9-0_nvqpfdsro6t036g checked=checked class=code-tab data-lang aria-controls=tab-group-9-0_nvqpfdsro6t036g-panel role=tab><label for=tab-group-9-0_nvqpfdsro6t036g class=code-tab-label data-lang id=tab-group-9-0_nvqpfdsro6t036g-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-0_nvqpfdsro6t036g-panel aria-labelledby=tab-group-9-0_nvqpfdsro6t036g-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.offline_slam.sh input.bag
-</pre></div></td></tr></table></div><input name=tab-group-9 type=radio id=tab-group-9-1_nkocozohelcjgem class=code-tab data-lang aria-controls=tab-group-9-1_nkocozohelcjgem-panel role=tab><label for=tab-group-9-1_nkocozohelcjgem class=code-tab-label data-lang id=tab-group-9-1_nkocozohelcjgem-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-1_nkocozohelcjgem-panel aria-labelledby=tab-group-9-1_nkocozohelcjgem-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-9><input name=tab-group-9 type=radio id=tab-group-9-0_ably5jxo045yuel checked=checked class=code-tab data-lang aria-controls=tab-group-9-0_ably5jxo045yuel-panel role=tab><label for=tab-group-9-0_ably5jxo045yuel class=code-tab-label data-lang id=tab-group-9-0_ably5jxo045yuel-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-0_ably5jxo045yuel-panel aria-labelledby=tab-group-9-0_ably5jxo045yuel-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>./06.offline_slam.sh input.bag
+</pre></div></td></tr></table></div><input name=tab-group-9 type=radio id=tab-group-9-1_uflyb7714upzrr2 class=code-tab data-lang aria-controls=tab-group-9-1_uflyb7714upzrr2-panel role=tab><label for=tab-group-9-1_uflyb7714upzrr2 class=code-tab-label data-lang id=tab-group-9-1_uflyb7714upzrr2-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-9-1_uflyb7714upzrr2-panel aria-labelledby=tab-group-9-1_uflyb7714upzrr2-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4

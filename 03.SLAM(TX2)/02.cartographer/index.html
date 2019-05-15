@@ -189,11 +189,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      01.bom
+      01.組み立て
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        01.bom
+        01.組み立て
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -204,8 +204,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01.bom/01.bom/" title="BOM" class="md-nav__link">
+    <a href="../../01.組み立て/01.bom/" title="BOM" class="md-nav__link">
       BOM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01.組み立て/02.make/" title="組み立て" class="md-nav__link">
+      組み立て
     </a>
   </li>
 
@@ -762,18 +774,18 @@
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install -y python-wstool python-rosdep ninja-build
 </pre></div></td></tr></table></p>
 <h2 id="cartographer">Cartographerをソースからビルド</h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_c3fb21ovkyyt5r3 checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_c3fb21ovkyyt5r3-panel role=tab><label for=tab-group-1-0_c3fb21ovkyyt5r3 class=code-tab-label data-lang id=tab-group-1-0_c3fb21ovkyyt5r3-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_c3fb21ovkyyt5r3-panel aria-labelledby=tab-group-1-0_c3fb21ovkyyt5r3-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_9145pf4mxw1lbou checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_9145pf4mxw1lbou-panel role=tab><label for=tab-group-1-0_9145pf4mxw1lbou class=code-tab-label data-lang id=tab-group-1-0_9145pf4mxw1lbou-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_9145pf4mxw1lbou-panel aria-labelledby=tab-group-1-0_9145pf4mxw1lbou-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir ~/catkin_ws
 cd catkin_ws
 wstool init src
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
-</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_o00w1ajra3003rq class=code-tab data-lang aria-controls=tab-group-1-1_o00w1ajra3003rq-panel role=tab><label for=tab-group-1-1_o00w1ajra3003rq class=code-tab-label data-lang id=tab-group-1-1_o00w1ajra3003rq-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_o00w1ajra3003rq-panel aria-labelledby=tab-group-1-1_o00w1ajra3003rq-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi /home/ubuntu/catkin_ws/src/.rosinstall
+</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_7yej4t5b1r527cb class=code-tab data-lang aria-controls=tab-group-1-1_7yej4t5b1r527cb-panel role=tab><label for=tab-group-1-1_7yej4t5b1r527cb class=code-tab-label data-lang id=tab-group-1-1_7yej4t5b1r527cb-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_7yej4t5b1r527cb-panel aria-labelledby=tab-group-1-1_7yej4t5b1r527cb-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi /home/ubuntu/catkin_ws/src/.rosinstall
 </pre></div></td></tr></table></div></div>
 
 <p>diffコマンドの結果：<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_cw6de41f360p9eg checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_cw6de41f360p9eg-panel role=tab><label for=tab-group-2-0_cw6de41f360p9eg class=code-tab-label data-lang id=tab-group-2-0_cw6de41f360p9eg-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_cw6de41f360p9eg-panel aria-labelledby=tab-group-2-0_cw6de41f360p9eg-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_y2ras36db8vqyt9 checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_y2ras36db8vqyt9-panel role=tab><label for=tab-group-2-0_y2ras36db8vqyt9 class=code-tab-label data-lang id=tab-group-2-0_y2ras36db8vqyt9-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_y2ras36db8vqyt9-panel aria-labelledby=tab-group-2-0_y2ras36db8vqyt9-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -804,8 +816,8 @@ wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartogr
  - git:
      local-name: ceres-solver
      uri: https://ceres-solver.googlesource.com/ceres-solver.git
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_v3xw1dbkqvilcfr class=code-tab data-lang aria-controls=tab-group-2-1_v3xw1dbkqvilcfr-panel role=tab><label for=tab-group-2-1_v3xw1dbkqvilcfr class=code-tab-label data-lang id=tab-group-2-1_v3xw1dbkqvilcfr-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_v3xw1dbkqvilcfr-panel aria-labelledby=tab-group-2-1_v3xw1dbkqvilcfr-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>wstool update -t src
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-2_0ce2wcap98fx3wt class=code-tab data-lang aria-controls=tab-group-2-2_0ce2wcap98fx3wt-panel role=tab><label for=tab-group-2-2_0ce2wcap98fx3wt class=code-tab-label data-lang id=tab-group-2-2_0ce2wcap98fx3wt-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-2_0ce2wcap98fx3wt-panel aria-labelledby=tab-group-2-2_0ce2wcap98fx3wt-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_5xlo0uxknyq7p27 class=code-tab data-lang aria-controls=tab-group-2-1_5xlo0uxknyq7p27-panel role=tab><label for=tab-group-2-1_5xlo0uxknyq7p27 class=code-tab-label data-lang id=tab-group-2-1_5xlo0uxknyq7p27-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_5xlo0uxknyq7p27-panel aria-labelledby=tab-group-2-1_5xlo0uxknyq7p27-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>wstool update -t src
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-2_ux4kl5trizmx56j class=code-tab data-lang aria-controls=tab-group-2-2_ux4kl5trizmx56j-panel role=tab><label for=tab-group-2-2_ux4kl5trizmx56j class=code-tab-label data-lang id=tab-group-2-2_ux4kl5trizmx56j-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-2_ux4kl5trizmx56j-panel aria-labelledby=tab-group-2-2_ux4kl5trizmx56j-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4</pre></div></td><td class=code><div class=codehilite><pre><span></span>src/cartographer/scripts/install_proto3.sh
@@ -815,17 +827,17 @@ rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span
 </pre></div></td></tr></table></div></div>
 
 <p>今回使ったcartographerのコミットバージョンを確認</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_x6fklmd1na2v1wh checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_x6fklmd1na2v1wh-panel role=tab><label for=tab-group-3-0_x6fklmd1na2v1wh class=code-tab-label data-lang id=tab-group-3-0_x6fklmd1na2v1wh-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_x6fklmd1na2v1wh-panel aria-labelledby=tab-group-3-0_x6fklmd1na2v1wh-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_3rfneuninydiphz checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_3rfneuninydiphz-panel role=tab><label for=tab-group-3-0_3rfneuninydiphz class=code-tab-label data-lang id=tab-group-3-0_3rfneuninydiphz-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_3rfneuninydiphz-panel aria-labelledby=tab-group-3-0_3rfneuninydiphz-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src/cartographer_ros
 git rev-parse HEAD
 9f8bf5b24537e60858df395a30fc8fe06264ad50
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_4ba3cnu6bs7krmk class=code-tab data-lang aria-controls=tab-group-3-1_4ba3cnu6bs7krmk-panel role=tab><label for=tab-group-3-1_4ba3cnu6bs7krmk class=code-tab-label data-lang id=tab-group-3-1_4ba3cnu6bs7krmk-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_4ba3cnu6bs7krmk-panel aria-labelledby=tab-group-3-1_4ba3cnu6bs7krmk-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_kavl8pkb2v7vodq class=code-tab data-lang aria-controls=tab-group-3-1_kavl8pkb2v7vodq-panel role=tab><label for=tab-group-3-1_kavl8pkb2v7vodq class=code-tab-label data-lang id=tab-group-3-1_kavl8pkb2v7vodq-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_kavl8pkb2v7vodq-panel aria-labelledby=tab-group-3-1_kavl8pkb2v7vodq-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src/cartographer
 git rev-parse HEAD
 51df4afcba2dbb83e57ff34e04e8f01015f59625
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-2_hspd17y0skz7xvn class=code-tab data-lang aria-controls=tab-group-3-2_hspd17y0skz7xvn-panel role=tab><label for=tab-group-3-2_hspd17y0skz7xvn class=code-tab-label data-lang id=tab-group-3-2_hspd17y0skz7xvn-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-2_hspd17y0skz7xvn-panel aria-labelledby=tab-group-3-2_hspd17y0skz7xvn-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-2_hzyzow2q5nb26a5 class=code-tab data-lang aria-controls=tab-group-3-2_hzyzow2q5nb26a5-panel role=tab><label for=tab-group-3-2_hzyzow2q5nb26a5 class=code-tab-label data-lang id=tab-group-3-2_hzyzow2q5nb26a5-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-2_hzyzow2q5nb26a5-panel aria-labelledby=tab-group-3-2_hzyzow2q5nb26a5-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src/ceres-solver
 git rev-parse HEAD
