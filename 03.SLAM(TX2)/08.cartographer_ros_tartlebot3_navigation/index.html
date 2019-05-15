@@ -2,7 +2,7 @@
 
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja" class="no-js">
   <head>
     
@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -40,12 +40,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
     
     
       
@@ -60,9 +60,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
-    
-    
-      
     
     
   </head>
@@ -100,19 +97,22 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <span class="md-header-nav__topic">
-              FaBo ROS Docs
-            </span>
-            <span class="md-header-nav__topic">
-              Cartographer ROS TurtleBot3 Navigation
-            </span>
+            
+              <span class="md-header-nav__topic">
+                FaBo ROS Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Cartographer ROS TurtleBot3 Navigation
+              </span>
+            
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -135,6 +135,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -703,6 +704,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      08.EdgeAI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        08.EdgeAI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../08.EdgeAI/list/" title="LiDAR List" class="md-nav__link">
+      LiDAR List
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -806,8 +843,8 @@ cd ~/catkin_ws &amp;&amp; catkin_make_isolated --install --use-ninja
 <p>turtlebot3は<code>odom</code>に<code>imu</code>を利用しています。Cartographer ROSは2Dの場合、imu無しで動作可能なので、turtlebot3のnavigationで利用する<code>map_server</code>をCartographer ROSに入れ替えます。<br></p>
 <h2 id="turtlebot3_navigationlaunch">turtlebot3_navigation.launch</h2>
 <p>turtlebt3の<code>map_server</code>を<code>cartographer_occupancy_grid_node</code>に変更します。<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_bbu498rqedepcb9 checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_bbu498rqedepcb9-panel role=tab><label for=tab-group-1-0_bbu498rqedepcb9 class=code-tab-label data-lang id=tab-group-1-0_bbu498rqedepcb9-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_bbu498rqedepcb9-panel aria-labelledby=tab-group-1-0_bbu498rqedepcb9-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/turtlebot3/turtlebot3_navigation/launch/turtlebot3_navigation.launch
-</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_b1wuiw49vs9zs3v class=code-tab data-lang aria-controls=tab-group-1-1_b1wuiw49vs9zs3v-panel role=tab><label for=tab-group-1-1_b1wuiw49vs9zs3v class=code-tab-label data-lang id=tab-group-1-1_b1wuiw49vs9zs3v-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_b1wuiw49vs9zs3v-panel aria-labelledby=tab-group-1-1_b1wuiw49vs9zs3v-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_vucftwskrr97gmd checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_vucftwskrr97gmd-panel role=tab><label for=tab-group-1-0_vucftwskrr97gmd class=code-tab-label data-lang id=tab-group-1-0_vucftwskrr97gmd-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_vucftwskrr97gmd-panel aria-labelledby=tab-group-1-0_vucftwskrr97gmd-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/src/turtlebot3/turtlebot3_navigation/launch/turtlebot3_navigation.launch
+</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_j03axhzeteholef class=code-tab data-lang aria-controls=tab-group-1-1_j03axhzeteholef-panel role=tab><label for=tab-group-1-1_j03axhzeteholef class=code-tab-label data-lang id=tab-group-1-1_j03axhzeteholef-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_j03axhzeteholef-panel aria-labelledby=tab-group-1-1_j03axhzeteholef-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -853,8 +890,8 @@ cd ~/catkin_ws &amp;&amp; catkin_make_isolated --install --use-ninja
 <h3 id="parameter">parameter</h3>
 <p>デフォルトのまま
 ~/catkin_ws/src/turtlebot3/turtlebot3_navigation/param/costmap_common_params_burger.yaml</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_jn1gsv9aq9eq4wu checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_jn1gsv9aq9eq4wu-panel role=tab><label for=tab-group-2-0_jn1gsv9aq9eq4wu class=code-tab-label data-lang id=tab-group-2-0_jn1gsv9aq9eq4wu-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_jn1gsv9aq9eq4wu-panel aria-labelledby=tab-group-2-0_jn1gsv9aq9eq4wu-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/nano_robot.launch
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_qzd4nz1alqvj4fx class=code-tab data-lang aria-controls=tab-group-2-1_qzd4nz1alqvj4fx-panel role=tab><label for=tab-group-2-1_qzd4nz1alqvj4fx class=code-tab-label data-lang id=tab-group-2-1_qzd4nz1alqvj4fx-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_qzd4nz1alqvj4fx-panel aria-labelledby=tab-group-2-1_qzd4nz1alqvj4fx-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_2ygd5huexuxbuu8 checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_2ygd5huexuxbuu8-panel role=tab><label for=tab-group-2-0_2ygd5huexuxbuu8 class=code-tab-label data-lang id=tab-group-2-0_2ygd5huexuxbuu8-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_2ygd5huexuxbuu8-panel aria-labelledby=tab-group-2-0_2ygd5huexuxbuu8-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi ~/catkin_ws/install_isolated/share/cartographer_ros/launch/nano_robot.launch
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_p1gndqcbtofo1sl class=code-tab data-lang aria-controls=tab-group-2-1_p1gndqcbtofo1sl-panel role=tab><label for=tab-group-2-1_p1gndqcbtofo1sl class=code-tab-label data-lang id=tab-group-2-1_p1gndqcbtofo1sl-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_p1gndqcbtofo1sl-panel aria-labelledby=tab-group-2-1_p1gndqcbtofo1sl-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
@@ -889,7 +926,7 @@ cd ~/catkin_ws &amp;&amp; catkin_make_isolated --install --use-ninja
 </pre></div></td></tr></table></p>
 <p><a href="https://www.youtube.com/watch?v=rVEixaYxgJI"><img alt="online localizaton" src="https://img.youtube.com/vi/rVEixaYxgJI/2.jpg" /></a></p>
 <p>on TX2</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-6><input name=tab-group-6 type=radio id=tab-group-6-0_g28h19pc7dblmn9 checked=checked class=code-tab data-lang aria-controls=tab-group-6-0_g28h19pc7dblmn9-panel role=tab><label for=tab-group-6-0_g28h19pc7dblmn9 class=code-tab-label data-lang id=tab-group-6-0_g28h19pc7dblmn9-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-6-0_g28h19pc7dblmn9-panel aria-labelledby=tab-group-6-0_g28h19pc7dblmn9-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+<div class=md-fenced-code-tabs id=tab-tab-group-6><input name=tab-group-6 type=radio id=tab-group-6-0_ss6exsu7qp1sp7j checked=checked class=code-tab data-lang aria-controls=tab-group-6-0_ss6exsu7qp1sp7j-panel role=tab><label for=tab-group-6-0_ss6exsu7qp1sp7j class=code-tab-label data-lang id=tab-group-6-0_ss6exsu7qp1sp7j-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-6-0_ss6exsu7qp1sp7j-panel aria-labelledby=tab-group-6-0_ss6exsu7qp1sp7j-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
@@ -904,7 +941,7 @@ pip install testresources
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install --upgrade smbus2
-</pre></div></td></tr></table></div><input name=tab-group-6 type=radio id=tab-group-6-1_kzlwbclx24w7e4q class=code-tab data-lang aria-controls=tab-group-6-1_kzlwbclx24w7e4q-panel role=tab><label for=tab-group-6-1_kzlwbclx24w7e4q class=code-tab-label data-lang id=tab-group-6-1_kzlwbclx24w7e4q-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-6-1_kzlwbclx24w7e4q-panel aria-labelledby=tab-group-6-1_kzlwbclx24w7e4q-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+</pre></div></td></tr></table></div><input name=tab-group-6 type=radio id=tab-group-6-1_zsx860uo6nyozuz class=code-tab data-lang aria-controls=tab-group-6-1_zsx860uo6nyozuz-panel role=tab><label for=tab-group-6-1_zsx860uo6nyozuz class=code-tab-label data-lang id=tab-group-6-1_zsx860uo6nyozuz-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-6-1_zsx860uo6nyozuz-panel aria-labelledby=tab-group-6-1_zsx860uo6nyozuz-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
 4
@@ -979,13 +1016,15 @@ python run_nanocar.py
           Material for MkDocs</a>
       </div>
       
+        
+      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
       
         
         
@@ -994,6 +1033,10 @@ python run_nanocar.py
           
             
               
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
@@ -1001,6 +1044,9 @@ python run_nanocar.py
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
       
     
   </body>
