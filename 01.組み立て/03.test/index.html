@@ -36,7 +36,7 @@
     
     
       
-        <title>TX2にCartographerを構築 - FaBo ROS Docs</title>
+        <title>動作確認 - FaBo ROS Docs</title>
       
     
     
@@ -76,7 +76,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#tx2cartographer" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -102,7 +102,7 @@
                 FaBo ROS Docs
               </span>
               <span class="md-header-nav__topic">
-                TX2にCartographerを構築
+                動作確認
               </span>
             
           
@@ -183,10 +183,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       01.組み立て
@@ -204,7 +206,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01.組み立て/01.bom/" title="BOM" class="md-nav__link">
+    <a href="../01.bom/" title="BOM" class="md-nav__link">
       BOM
     </a>
   </li>
@@ -216,7 +218,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01.組み立て/02.make/" title="組み立て" class="md-nav__link">
+    <a href="../02.make/" title="組み立て" class="md-nav__link">
       組み立て
     </a>
   </li>
@@ -226,11 +228,70 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../01.組み立て/03.test/" title="動作確認" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        動作確認
+      </label>
+    
+    <a href="./" title="動作確認" class="md-nav__link md-nav__link--active">
       動作確認
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jetson-tx2" title="Jetson TX2のネットワークへの接続" class="md-nav__link">
+    Jetson TX2のネットワークへの接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jetson-tx2_1" title="Jetson TX2への接続" class="md-nav__link">
+    Jetson TX2への接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hokuyo-uts10lx" title="Hokuyo UTS10LXの生存確認" class="md-nav__link">
+    Hokuyo UTS10LXの生存確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="ラジコンとの接続確認" class="md-nav__link">
+    ラジコンとの接続確認
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -315,12 +376,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       03.SLAM(TX2)
@@ -338,7 +397,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01.ros/" title="TX2にROSを構築" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/01.ros/" title="TX2にROSを構築" class="md-nav__link">
       TX2にROSを構築
     </a>
   </li>
@@ -348,56 +407,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        TX2にCartographerを構築
-      </label>
-    
-    <a href="./" title="TX2にCartographerを構築" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../03.SLAM(TX2)/02.cartographer/" title="TX2にCartographerを構築" class="md-nav__link">
       TX2にCartographerを構築
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" title="パッケージ" class="md-nav__link">
-    パッケージ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cartographer" title="Cartographerをソースからビルド" class="md-nav__link">
-    Cartographerをソースからビルド
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -407,7 +421,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../03.ydlidar_install/" title="TX2にYDLIDAR X4" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/03.ydlidar_install/" title="TX2にYDLIDAR X4" class="md-nav__link">
       TX2にYDLIDAR X4
     </a>
   </li>
@@ -419,7 +433,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04.online_slam/" title="Online SLAM" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/04.online_slam/" title="Online SLAM" class="md-nav__link">
       Online SLAM
     </a>
   </li>
@@ -431,7 +445,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../05.offline_slam/" title="Offline SLAM" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/05.offline_slam/" title="Offline SLAM" class="md-nav__link">
       Offline SLAM
     </a>
   </li>
@@ -443,7 +457,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../06.localization/" title="自己位置推定" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/06.localization/" title="自己位置推定" class="md-nav__link">
       自己位置推定
     </a>
   </li>
@@ -455,7 +469,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../07.ydlidar_cartographer_ros/" title="YDLIDAR Cartographer ROS" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/07.ydlidar_cartographer_ros/" title="YDLIDAR Cartographer ROS" class="md-nav__link">
       YDLIDAR Cartographer ROS
     </a>
   </li>
@@ -467,7 +481,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../08.cartographer_ros_tartlebot3_navigation/" title="Cartographer ROS TurtleBot3 Navigation" class="md-nav__link">
+    <a href="../../03.SLAM(TX2)/08.cartographer_ros_tartlebot3_navigation/" title="Cartographer ROS TurtleBot3 Navigation" class="md-nav__link">
       Cartographer ROS TurtleBot3 Navigation
     </a>
   </li>
@@ -751,15 +765,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="パッケージ" class="md-nav__link">
-    パッケージ
+  <a href="#jetson-tx2" title="Jetson TX2のネットワークへの接続" class="md-nav__link">
+    Jetson TX2のネットワークへの接続
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cartographer" title="Cartographerをソースからビルド" class="md-nav__link">
-    Cartographerをソースからビルド
+  <a href="#jetson-tx2_1" title="Jetson TX2への接続" class="md-nav__link">
+    Jetson TX2への接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hokuyo-uts10lx" title="Hokuyo UTS10LXの生存確認" class="md-nav__link">
+    Hokuyo UTS10LXの生存確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="ラジコンとの接続確認" class="md-nav__link">
+    ラジコンとの接続確認
   </a>
   
 </li>
@@ -781,23 +809,23 @@
               
                 
                 
-                <h1 id="tx2cartographer">TX2にCartographerを構築</h1>
-<h2 id="_1">パッケージ</h2>
-<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>sudo apt-get install -y python-wstool python-rosdep ninja-build
+                <h1 id="_1">動作確認</h1>
+<h2 id="jetson-tx2">Jetson TX2のネットワークへの接続</h2>
+<p>Jetson TX2を、HDMIケーブルでDisplayに接続。Keyboard, mouseを接続し、起動する。</p>
+<p>起動後、Ubuntu Desktopが起動するので、右上のWireless Networkのアイコンから、接続ネットワークを選択し、接続。</p>
+<p>Terminalを起動し、ifconfigコマンドで、割り振られたIPをメモする。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ ifconfig -a
 </pre></div></td></tr></table></p>
-<h2 id="cartographer">Cartographerをソースからビルド</h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-1><input name=tab-group-1 type=radio id=tab-group-1-0_bapl7itmq39jvlu checked=checked class=code-tab data-lang aria-controls=tab-group-1-0_bapl7itmq39jvlu-panel role=tab><label for=tab-group-1-0_bapl7itmq39jvlu class=code-tab-label data-lang id=tab-group-1-0_bapl7itmq39jvlu-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-0_bapl7itmq39jvlu-panel aria-labelledby=tab-group-1-0_bapl7itmq39jvlu-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span>mkdir ~/catkin_ws
-cd catkin_ws
-wstool init src
-wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
-</pre></div></td></tr></table></div><input name=tab-group-1 type=radio id=tab-group-1-1_snpdv2h4uimcbwt class=code-tab data-lang aria-controls=tab-group-1-1_snpdv2h4uimcbwt-panel role=tab><label for=tab-group-1-1_snpdv2h4uimcbwt class=code-tab-label data-lang id=tab-group-1-1_snpdv2h4uimcbwt-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-1-1_snpdv2h4uimcbwt-panel aria-labelledby=tab-group-1-1_snpdv2h4uimcbwt-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>vi /home/ubuntu/catkin_ws/src/.rosinstall
-</pre></div></td></tr></table></div></div>
-
-<p>diffコマンドの結果：<br></p>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_s8ar0pkd3x5vnrx checked=checked class=code-tab data-lang aria-controls=tab-group-2-0_s8ar0pkd3x5vnrx-panel role=tab><label for=tab-group-2-0_s8ar0pkd3x5vnrx class=code-tab-label data-lang id=tab-group-2-0_s8ar0pkd3x5vnrx-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-0_s8ar0pkd3x5vnrx-panel aria-labelledby=tab-group-2-0_s8ar0pkd3x5vnrx-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+<h2 id="jetson-tx2_1">Jetson TX2への接続</h2>
+<p>PCからSSHで割り振られたIPアドレスを指定して、接続。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ ssh ubuntu@IPアドレス
+</pre></div></td></tr></table></p>
+<p>|項目|値|
+|id|ubuntu|
+|pass|ubuntu|</p>
+<h2 id="hokuyo-uts10lx">Hokuyo UTS10LXの生存確認</h2>
+<p>Jetson TX2に接続後、ifconfig -aで接続を確認。Hokuyo Lidarは、eth0のネットワークで接続。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
  2
  3
  4
@@ -812,49 +840,59 @@ wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartogr
 13
 14
 15
-16</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=gd>--- /home/ubuntu/catkin_ws/src/.rosinstall.org  2019-04-22 06:01:15.018463519 +0000</span>
-<span class=gi>+++ /home/ubuntu/catkin_ws/src/.rosinstall  2019-04-22 06:01:29.370431975 +0000</span>
-<span class=gu>@@ -2,11 +2,11 @@</span>
- - git:
-     local-name: cartographer
-     uri: https://github.com/googlecartographer/cartographer.git
-<span class=gd>-    version: 1.0.0</span>
-<span class=gi>+    version: master</span>
- - git:
-     local-name: cartographer_ros
-     uri: https://github.com/googlecartographer/cartographer_ros.git
-<span class=gd>-    version: 1.0.0</span>
-<span class=gi>+    version: master</span>
- - git:
-     local-name: ceres-solver
-     uri: https://ceres-solver.googlesource.com/ceres-solver.git
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_9avwwthpnn6yoxt class=code-tab data-lang aria-controls=tab-group-2-1_9avwwthpnn6yoxt-panel role=tab><label for=tab-group-2-1_9avwwthpnn6yoxt class=code-tab-label data-lang id=tab-group-2-1_9avwwthpnn6yoxt-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-1_9avwwthpnn6yoxt-panel aria-labelledby=tab-group-2-1_9avwwthpnn6yoxt-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>wstool update -t src
-</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-2_by1xcw408c3h0g4 class=code-tab data-lang aria-controls=tab-group-2-2_by1xcw408c3h0g4-panel role=tab><label for=tab-group-2-2_by1xcw408c3h0g4 class=code-tab-label data-lang id=tab-group-2-2_by1xcw408c3h0g4-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-2-2_by1xcw408c3h0g4-panel aria-labelledby=tab-group-2-2_by1xcw408c3h0g4-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+16
+17
+18
+19</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ ifconfig -a
+eth0: <span class=nv>flags</span><span class=o>=</span><span class=m>4163</span>&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class=m>1500</span>
+        inet <span class=m>10</span>.0.0.2  netmask <span class=m>255</span>.255.255.0  broadcast <span class=m>10</span>.0.0.255
+        inet6 fe80::603:d054:62d5:4117  prefixlen <span class=m>64</span>  scopeid 0x20&lt;link&gt;
+        ether <span class=m>00</span>:0c:8b:1a:00:75  txqueuelen <span class=m>1000</span>  <span class=o>(</span>Ethernet<span class=o>)</span>
+        RX packets <span class=m>1</span>  bytes <span class=m>64</span> <span class=o>(</span><span class=m>64</span>.0 B<span class=o>)</span>
+        RX errors <span class=m>0</span>  dropped <span class=m>0</span>  overruns <span class=m>0</span>  frame <span class=m>0</span>
+        TX packets <span class=m>109</span>  bytes <span class=m>17156</span> <span class=o>(</span><span class=m>17</span>.1 KB<span class=o>)</span>
+        TX errors <span class=m>0</span>  dropped <span class=m>0</span> overruns <span class=m>0</span>  carrier <span class=m>0</span>  collisions <span class=m>0</span>
+        device interrupt <span class=m>125</span>  memory 0x40100000-40120000 
+
+wlan0: <span class=nv>flags</span><span class=o>=</span><span class=m>4163</span>&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class=m>1500</span>
+        inet <span class=m>192</span>.168.0.41  netmask <span class=m>255</span>.255.255.0  broadcast <span class=m>192</span>.168.0.255
+        inet6 fe80::1339:3afc:c9be:843f  prefixlen <span class=m>64</span>  scopeid 0x20&lt;link&gt;
+        ether <span class=m>00</span>:04:4b:8c:ca:0d  txqueuelen <span class=m>1000</span>  <span class=o>(</span>Ethernet<span class=o>)</span>
+        RX packets <span class=m>150</span>  bytes <span class=m>16949</span> <span class=o>(</span><span class=m>16</span>.9 KB<span class=o>)</span>
+        RX errors <span class=m>0</span>  dropped <span class=m>0</span>  overruns <span class=m>0</span>  frame <span class=m>0</span>
+        TX packets <span class=m>135</span>  bytes <span class=m>18055</span> <span class=o>(</span><span class=m>18</span>.0 KB<span class=o>)</span>
+        TX errors <span class=m>0</span>  dropped <span class=m>0</span> overruns <span class=m>0</span>  carrier <span class=m>0</span>  collisions <span class=m>0</span>
+</pre></div></td></tr></table></p>
+<p>sudo doでrootにアカウントを変更。arp-scanで、<code>10.0.0.10</code>のIPアドレスを発見できれば、Hokuyo UTS10LXは、Jetson TX2と問題なく接続されている。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
 2
 3
-4</pre></div></td><td class=code><div class=codehilite><pre><span></span>src/cartographer/scripts/install_proto3.sh
-sudo rosdep init
-rosdep update
-rosdep install --from-paths src --ignore-src --rosdistro=<span class=cp>${</span><span class=n>ROS_DISTRO</span><span class=cp>}</span> -y
-</pre></div></td></tr></table></div></div>
+4
+5
+6
+7
+8</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo <span class=k>do</span> 
+$ arp-scan -I eth0 -l
+Interface: eth0, datalink type: EN10MB <span class=o>(</span>Ethernet<span class=o>)</span>
+Starting arp-scan <span class=m>1</span>.9 with <span class=m>256</span> hosts <span class=o>(</span>http://www.nta-monitor.com/tools/arp-scan/<span class=o>)</span>
+<span class=m>10</span>.0.0.10   <span class=m>00</span>:1d:9b:11:03:62   Hokuyo Automatic Co., Ltd.
 
-<p>今回使ったcartographerのコミットバージョンを確認</p>
-<div class=md-fenced-code-tabs id=tab-tab-group-3><input name=tab-group-3 type=radio id=tab-group-3-0_4ob4y7tr2rbr88d checked=checked class=code-tab data-lang aria-controls=tab-group-3-0_4ob4y7tr2rbr88d-panel role=tab><label for=tab-group-3-0_4ob4y7tr2rbr88d class=code-tab-label data-lang id=tab-group-3-0_4ob4y7tr2rbr88d-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-0_4ob4y7tr2rbr88d-panel aria-labelledby=tab-group-3-0_4ob4y7tr2rbr88d-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src/cartographer_ros
-git rev-parse HEAD
-9f8bf5b24537e60858df395a30fc8fe06264ad50
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-1_9e8a4834c45dh0t class=code-tab data-lang aria-controls=tab-group-3-1_9e8a4834c45dh0t-panel role=tab><label for=tab-group-3-1_9e8a4834c45dh0t class=code-tab-label data-lang id=tab-group-3-1_9e8a4834c45dh0t-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-1_9e8a4834c45dh0t-panel aria-labelledby=tab-group-3-1_9e8a4834c45dh0t-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src/cartographer
-git rev-parse HEAD
-51df4afcba2dbb83e57ff34e04e8f01015f59625
-</pre></div></td></tr></table></div><input name=tab-group-3 type=radio id=tab-group-3-2_yo702m93yfdwgbs class=code-tab data-lang aria-controls=tab-group-3-2_yo702m93yfdwgbs-panel role=tab><label for=tab-group-3-2_yo702m93yfdwgbs class=code-tab-label data-lang id=tab-group-3-2_yo702m93yfdwgbs-label></label><div class=code-tabpanel role=tabpanel data-lang id=tab-group-3-2_yo702m93yfdwgbs-panel aria-labelledby=tab-group-3-2_yo702m93yfdwgbs-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
-2
-3</pre></div></td><td class=code><div class=codehilite><pre><span></span>cd ~/catkin_ws/src/ceres-solver
-git rev-parse HEAD
-19333b0f55c8462381038e70d42af43b52941128
-</pre></div></td></tr></table></div></div>
+<span class=m>1</span> packets received by filter, <span class=m>0</span> packets dropped by kernel
+Ending arp-scan <span class=m>1</span>.9: <span class=m>256</span> hosts scanned in <span class=m>2</span>.742 seconds <span class=o>(</span><span class=m>93</span>.36 hosts/sec<span class=o>)</span>. <span class=m>1</span> responded
+</pre></div></td></tr></table></p>
+<p>確認が終わったら、rootからexitコマンドで、ubuntuユーザに戻しておく。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>exit</span>
+</pre></div></td></tr></table></p>
+<h2 id="_2">ラジコンとの接続確認</h2>
+<p>ラジコンの電源をOnにする。ラジコン本体のスイッチ(左真ん中あたり)をOnに。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/github/roscar
+</pre></div></td></tr></table></p>
+<p>サーボの動作確認。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo python servo_test.py 
+</pre></div></td></tr></table></p>
+<p>モーターの動作確認。注意) タイヤが空転するように、車体を上げておく。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo python motor_test.py
+</pre></div></td></tr></table></p>
                 
                   
                 
@@ -875,7 +913,7 @@ git rev-parse HEAD
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../01.ros/" title="TX2にROSを構築" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02.make/" title="組み立て" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -884,19 +922,19 @@ git rev-parse HEAD
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                TX2にROSを構築
+                組み立て
               </span>
             </div>
           </a>
         
         
-          <a href="../03.ydlidar_install/" title="TX2にYDLIDAR X4" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../02.SLAM(Nano)/01.ros/" title="Jetson NanoにROSを構築" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                TX2にYDLIDAR X4
+                Jetson NanoにROSを構築
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
