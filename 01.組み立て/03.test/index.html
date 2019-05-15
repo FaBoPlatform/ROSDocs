@@ -284,6 +284,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#joystick" title="Joystickとの接続確認" class="md-nav__link">
+    Joystickとの接続確認
+  </a>
+  
+</li>
+      
       
       
       
@@ -792,6 +799,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#joystick" title="Joystickとの接続確認" class="md-nav__link">
+    Joystickとの接続確認
+  </a>
+  
+</li>
+      
       
       
       
@@ -893,6 +907,19 @@ Ending arp-scan <span class=m>1</span>.9: <span class=m>256</span> hosts scanned
 <p>モーターの動作確認。注意) タイヤが空転するように、車体を上げておく。</p>
 <p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ sudo python motor_test.py
 </pre></div></td></tr></table></p>
+<h2 id="joystick">Joystickとの接続確認</h2>
+<p>JoystickをJetson TX2に接続。注意) USBの給電に異常があるようで、これだけでは動かない。USB Hubを接続し、USB Hub経由で給電する(臨時対応)。USB Hubに、Wireless JoystickのAdapterを刺し、USB HubをJetson TX2に接続。USB Hubのコンセントを電源タップに接続。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ ssh -C -Y ubuntu@IPアドレス
+</pre></div></td></tr></table></p>
+<p>Roscoreを起動。</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ roscore <span class=p>&amp;</span>
+</pre></div></td></tr></table></p>
+<p>Joystickテスト</p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1
+2</pre></div></td><td class=code><div class=codehilite><pre><span></span>$ <span class=nb>cd</span> ~/github/roscar
+$ python joycontrol.py 
+</pre></div></td></tr></table></p>
+<p>画面にX Windowがでてくるので、Joystickの動作確認。</p>
                 
                   
                 
